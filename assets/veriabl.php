@@ -10,7 +10,7 @@ function generate_custom_css() {
     
     $link_color = esc_attr($nine_theme['link_color']);
    
-    $primary_color = esc_attr($nine_theme['primary_color']);
+    $primary_color = esc_attr($nine_theme['primary_colors']);
 
     $primary_text_color = esc_attr($nine_theme['primary_text']);
 
@@ -22,7 +22,7 @@ function generate_custom_css() {
     // Define CSS rules with PHP variables
     $custom_css = "
     :root {
-        --primary: {$body_bg_color};
+        --body-background-color: {$body_bg_color};
         --primary-color: {$primary_color};
         --secondary-color: #ffffff;
         --primary-text: {$primary_text_color};

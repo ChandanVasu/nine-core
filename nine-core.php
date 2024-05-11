@@ -7,47 +7,36 @@ Author: Your Name
 Author URI: https://yourwebsite.com
 */
 
-define( 'HFE_DIR', plugin_dir_path( __FILE__ ) );
+// Define constant for plugin directory path
+define( 'NINE_DIR', plugin_dir_path( __FILE__ ) );
 
-
-if( !class_exists('ReduxFramework')){
-    require_once(dirname(__FILE__) . '/redux-core/framework.php');
+// Include ReduxFramework if not already included
+if ( ! class_exists( 'ReduxFramework' ) ) {
+    // require_once( dirname( __FILE__ ) . '/redux-core/framework.php' );
 }
 
-$plugin_path = plugin_dir_path(__FILE__); // This gives you the current plugin's directory
+// Include necessary files
+$plugin_path = plugin_dir_path( __FILE__ );
+include_once( $plugin_path . 'inc/template/override/header.php' );
+include_once( $plugin_path . 'assets/veriabl.php' );
+include_once( $plugin_path . 'inc/post/custom-post.php' );
+include_once( $plugin_path . 'inc/template/override/footer.php' );
+include_once( $plugin_path . 'inc/inc.php' );
+include_once( $plugin_path . 'inc/template/opstion/header.php' );
+include_once( $plugin_path . '/cmb2/init.php' );
 
-// Include the file
-include_once($plugin_path . 'assets/veriabl.php');
-include_once($plugin_path . 'inc/post/custom-post.php');
-include_once($plugin_path . 'inc/template/override/footer.php');
 
-
-
-
+// Adjust the load order of the 'elementor-frontend' style
 function adjust_styles_load_order() {
-    wp_dequeue_style('elementor-frontend');
-    wp_enqueue_style('elementor-frontend');
- }
- add_action('wp_enqueue_scripts', 'adjust_styles_load_order', 1);
-
-
-
-
-//  function get_footer_content() {
-//     echo "<div class='footer-width-fixer'>";
-//     echo self::$elementor_instance->frontend->get_builder_content_for_display( get_hfe_footer_id() ); 
-//     echo '</div>';
-// }
-
-
-function my_custom_admin_css() {
-    echo '
-    <style>
-        #adminmenu .menu-top.menu-icon-nine_theme .wp-menu-name, #adminmenu .toplevel_page_nine-options .wp-menu-name {
-            color: #FFB700; 
-        }
-    </style>
-    ';
+    wp_dequeue_style( 'elementor-frontend' );
+    wp_enqueue_style( 'elementor-frontend' );
 }
-add_action('admin_head', 'my_custom_admin_css');
+add_action( 'wp_enqueue_scripts', 'adjust_styles_load_order', 99 );
+
+
+
+function nine_core_activate() {
+}
+register_activation_hook( __FILE__, 'nine_core_activate' );
+
 
