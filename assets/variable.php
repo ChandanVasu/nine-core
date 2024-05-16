@@ -24,8 +24,8 @@ function generate_custom_css() {
     :root {
         --body-background-color: {$body_bg_color};
         --primary-color: {$primary_color};
+        --primary-text-color: {$primary_text_color};
         --secondary-color: #ffffff;
-        --primary-text: {$primary_text_color};
         --secondary-text: #232323;
         --link-color: {$link_color};
     }
