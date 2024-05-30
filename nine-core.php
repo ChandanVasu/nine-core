@@ -12,18 +12,18 @@ define( 'NINE_DIR', plugin_dir_path( __FILE__ ) );
 
 // Include ReduxFramework if not already included
 if ( ! class_exists( 'ReduxFramework' ) ) {
-    require_once( dirname( __FILE__ ) . '/redux-core/framework.php' );
+    require( dirname( __FILE__ ) . '/redux-core/framework.php' );
 }
 
 // Include necessary files
 $plugin_path = plugin_dir_path( __FILE__ );
-include_once( $plugin_path . 'inc/template/override/header.php' );
-include_once( $plugin_path . 'assets/variable.php' );
-include_once( $plugin_path . 'inc/post/custom-post.php' );
-include_once( $plugin_path . 'inc/template/override/footer.php' );
-include_once( $plugin_path . 'inc/inc.php' );
-include_once( $plugin_path . 'inc/template/opstion/header.php' );
-include_once( $plugin_path . '/cmb2/init.php' );
+require( $plugin_path . 'inc/template/override/header.php' );
+require( $plugin_path . 'assets/variable.php' );
+require( $plugin_path . 'inc/post/custom-post.php' );
+require( $plugin_path . 'inc/template/override/footer.php' );
+require( $plugin_path . 'inc/inc.php' );
+require( $plugin_path . 'inc/template/opstion/header.php' );
+require( $plugin_path . '/cmb2/init.php' );
 
 
 // Adjust the load order of the 'elementor-frontend' style
@@ -38,5 +38,3 @@ add_action( 'wp_enqueue_scripts', 'adjust_styles_load_order', 99 );
 function nine_core_activate() {
 }
 register_activation_hook( __FILE__, 'nine_core_activate' );
-
-
