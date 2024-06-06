@@ -42,7 +42,8 @@ class Elementor_Customizations {
 
     public function register_hello_world_widget( $widgets_manager ) {
         require_once( __DIR__ . '/widgets/post-grid.php' );
-        $widgets_manager->register( new \Grid_Post_1() );
+        require_once( __DIR__ . '/widgets/p-grid1.php' );
+        $widgets_manager->register( new \Grid_Post_1s() );
     }
 }
 

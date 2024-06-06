@@ -42,3 +42,5 @@ function nine_core_enqueue_styles() {
     wp_enqueue_style( 'nine-core-main-style', plugins_url( 'assets/main.css', __FILE__ ) );
 }
 add_action( 'wp_enqueue_scripts', 'nine_core_enqueue_styles' );
+
+
