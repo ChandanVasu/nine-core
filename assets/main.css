@@ -1,0 +1,29 @@
+.el-g-1-grid-container {
+    padding: 2px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 20px;                       
+}
+
+.el-g-1-thumbnail{
+    position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	transform: translateZ(0);
+	transition: all 0.4s ease;
+}
+
+.el-g-1-thumbnail img{
+    transition: all 0.4s ease;
+    width: 100%;
+    height: 400px;
+}
+
+.el-g-1-box{
+    background-color: aqua;
+    padding: 10px;
+}
+
+.el-g-1-thumbnail img:hover {
+	transform: scale(1.1);
+}

@@ -1,11 +1,11 @@
 <?php
 function generate_custom_css() {
-    // Retrieve theme options using nine_opt_check
-    $body_bg_color = esc_attr(nine_opt_check('body_bg_color'));
-    $primary_color = esc_attr(nine_opt_check('primary_colors'));
-    $primary_text_color = esc_attr(nine_opt_check('primary_text'));
-    $header_background_color = esc_attr(nine_opt_check('header_background_colors'));
-    $box_color = esc_attr(nine_opt_check('box_color'));
+    // Retrieve theme options using nine_get_opt
+    $body_bg_color = esc_attr(nine_get_opt('body_bg_color'));
+    $primary_color = esc_attr(nine_get_opt('primary_colors'));
+    $primary_text_color = esc_attr(nine_get_opt('primary_text'));
+    $header_background_color = esc_attr(nine_get_opt('header_background_colors'));
+    $box_color = esc_attr(nine_get_opt('box_color'));
 
     // Define CSS rules with PHP variables
     $custom_css = "
