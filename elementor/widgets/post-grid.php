@@ -452,6 +452,8 @@ $this->start_controls_section(
         ]
     );
 
+    
+
     $this->add_control(
         'border_radius',
         [
@@ -465,6 +467,19 @@ $this->start_controls_section(
         ]
     );
 
+    $this->add_control(
+        'border_padding',
+        [
+            'label' => __('Padding', 'nine-core'),
+            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+            'description' => __('Set the padding of post category.', 'nine-core'),
+            'size_units' => ['px', '%'],
+            'selectors' => [
+                '{{WRAPPER}} .el-g-1-category a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
     $this->add_responsive_control(
         'category_position',
         [
@@ -473,7 +488,7 @@ $this->start_controls_section(
             'description' => __('Set the position of post category.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-category a' => 'left: {{LEFT}}{{UNIT}}; bottom: {{BOTTOM}}{{UNIT}};',
+                '{{WRAPPER}} .el-g-1-category' => 'left: {{LEFT}}{{UNIT}}; top: {{TOP}}{{UNIT}};',
             ],
         ]
     );
