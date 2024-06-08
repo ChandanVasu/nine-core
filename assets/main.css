@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 10px
+    gap: 5px
 }
 
 .el-g-1-thumbnail{
@@ -50,11 +50,21 @@
 	transform: scale(1.1);
 }
 
-.el-g-1-title a, .el-g-1-title {
+.el-g-1-title a, .title, .el-g-1-title {
     color: var(--primary-text);
     font-size: 20px;
     line-height: 1.5;
     margin: 0;
+    background-image: linear-gradient(transparent calc(100% - 1px), currentColor 1px);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .3s;
+}
+
+
+.el-g-1-title a:hover {
+	color: currentColor;
+    background-size: 100% 100%;
 }
 
 .el-g-1-meta-box .author-avatar{
@@ -65,3 +75,25 @@
     object-position: center;
     border: dotted 1px var(--primary-color);
 }
+
+.el-g-1-name, .el-g-1-date{
+    color: #9D9D9D;
+    font-family: "Poppins", Sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.el-g-1-name::after{
+    content: '';
+    background: rgb(1, 1, 1);
+    border-radius: 50%;
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    margin-left: 5px;
+    margin-bottom: 1px;
+}
+
+

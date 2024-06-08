@@ -94,8 +94,8 @@ function grid_post_one($settings){
             <?php endwhile; ?>
         </div>
         <div class='pagination'>
-                <?php custom_pagination($posts_query); ?>
-            </div>
+        <?php custom_pagination($posts_query) ?>
+        </div>
         <?php
         wp_reset_postdata(); // Reset post data
     else :
@@ -103,26 +103,7 @@ function grid_post_one($settings){
     endif;
 }
 
-if (!function_exists('custom_pagination')) {
-    function custom_pagination($query = null) {
-        if (!$query) {
-            global $wp_query;
-            $query = $wp_query;
-        }
 
-        if ($query->max_num_pages <= 1) return;
-
-        $paginate_args = array(
-            'current'   => max(1, get_query_var('paged')),
-            'total'     => $query->max_num_pages,
-            'prev_next' => true,
-            'prev_text' => __('&#9664;', 'nine-theme'),
-            'next_text' => __('&#9654;', 'nine-theme'),
-        );
-
-        echo paginate_links($paginate_args);
-    }
-}
 
 
 
