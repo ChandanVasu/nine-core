@@ -1,15 +1,15 @@
 <?php
 
-class Grid_Post_1s extends \Elementor\Widget_Base {
+class Grid_Post_One extends \Elementor\Widget_Base {
     
     public function get_name()
     {
-        return 'Grid_Post_1s';
+        return 'Grid_Post_One';
     }
 
     public function get_title()
     {
-        return __('Grid Style 1 - nine', 'nine-core');
+        return esc_html__('Grid Style 1 - nine', 'nine-core');
     }
 
     public function get_icon() {
@@ -39,16 +39,16 @@ protected function _register_controls(){
     $this->start_controls_section(
         'section_content',
         [
-            'label' => __('Content', 'nine-core'),
+            'label' => esc_html__('Content', 'nine-core'),
         ]
     );
 
     $this->add_control(
         'dynamic_filtering',
         [
-            'label' => __('Current Query', 'nine-core'),
+            'label' => esc_html__('Current Query', 'nine-core'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'description' => __('Toggle to Archive Posts based on current query.', 'nine-core'),
+            'description' => esc_html__('Toggle to Archive Posts based on current query.', 'nine-core'),
             'default' => 'no',
         ]
     );
@@ -57,9 +57,9 @@ protected function _register_controls(){
     $this->add_control(
         'category',
         [
-            'label' => __('Select Category', 'nine-core'),
+            'label' => esc_html__('Select Category', 'nine-core'),
             'type' => \Elementor\Controls_Manager::SELECT2,
-            'description' => __('Select the categories you want to display.', 'nine-core'),
+            'description' => esc_html__('Select the categories you want to display.', 'nine-core'),
             'options' => $this->get_all_categories_options(),
             'multiple' => true,
             'condition' => [
@@ -71,9 +71,9 @@ protected function _register_controls(){
     $this->add_control(
         'posts_per_page',
         [
-            'label'   => __('Posts Per Page', 'nine-core'),
+            'label'   => esc_html__('Posts Per Page', 'nine-core'),
             'type'    => \Elementor\Controls_Manager::NUMBER,
-            'description' => __('Set the number of posts to display per page.', 'nine-core'),
+            'description' => esc_html__('Set the number of posts to display per page.', 'nine-core'),
             'default' => 4, 
         ]
     );
@@ -81,9 +81,9 @@ protected function _register_controls(){
     $this->add_control(
         'offset',
         [
-            'label'   => __('Post Offset', 'nine-core'),
+            'label'   => esc_html__('Post Offset', 'nine-core'),
             'type'    => \Elementor\Controls_Manager::NUMBER,
-            'description' => __('Set the number of posts to offset.', 'nine-core'),
+            'description' => esc_html__('Set the number of posts to offset.', 'nine-core'),
             'default' => 0, // Default offset value
         ]
     );
@@ -91,9 +91,9 @@ protected function _register_controls(){
     $this->add_control(
         'title_length',
         [
-            'label'   => __('Title Length', 'nine-core'),
+            'label'   => esc_html__('Title Length', 'nine-core'),
             'type'    => \Elementor\Controls_Manager::NUMBER,
-            'description' => __('Set the maximum length of the title.', 'nine-core'),
+            'description' => esc_html__('Set the maximum length of the title.', 'nine-core'),
             'default' => 10, // Default number of words to display in title
         ]
     );
@@ -101,9 +101,9 @@ protected function _register_controls(){
     $this->add_control(
         'content_length',
         [
-            'label'   => __('Content Length', 'nine-core'),
+            'label'   => esc_html__('Content Length', 'nine-core'),
             'type'    => \Elementor\Controls_Manager::NUMBER,
-            'description' => __('Set the maximum length of the content.', 'nine-core'),
+            'description' => esc_html__('Set the maximum length of the content.', 'nine-core'),
             'default' => 20, // Default number of words to display in content
         ]
     );
@@ -111,9 +111,9 @@ protected function _register_controls(){
     $this->add_responsive_control(
         'items_per_row_desktop',
         [
-            'label'     => __('Items Per Row ', 'nine-core'),
+            'label'     => esc_html__('Items Per Row ', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::NUMBER,
-            'description' => __('Set the number of items to display per row on desktop.', 'nine-core'),
+            'description' => esc_html__('Set the number of items to display per row on desktop.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-grid-container' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
             ],
@@ -123,20 +123,20 @@ protected function _register_controls(){
     $this->add_control(
         'text_align',
         [
-            'label' => __('Text Align', 'nine-core'),
+            'label' => esc_html__('Text Align', 'nine-core'),
             'type' => \Elementor\Controls_Manager::CHOOSE,
-            'description' => __('Set the alignment of the text.', 'nine-core'),
+            'description' => esc_html__('Set the alignment of the text.', 'nine-core'),
             'options' => [
                 'left' => [
-                    'title' => __('Left', 'nine-core'),
+                    'title' => esc_html__('Left', 'nine-core'),
                     'icon' => 'eicon-text-align-left',
                 ],
                 'center' => [
-                    'title' => __('Center', 'nine-core'),
+                    'title' => esc_html__('Center', 'nine-core'),
                     'icon' => 'eicon-text-align-center',
                 ],
                 'right' => [
-                    'title' => __('Right', 'nine-core'),
+                    'title' => esc_html__('Right', 'nine-core'),
                     'icon' => 'eicon-text-align-right',
                 ],
             ],
@@ -150,11 +150,11 @@ protected function _register_controls(){
     $this->add_control(
         'order',
         [
-            'label' => __('Order', 'nine-core'),
+            'label' => esc_html__('Order', 'nine-core'),
             'type' => \Elementor\Controls_Manager::SELECT,
             'options' => [
-                'ASC' => __('Ascending', 'nine-core'),
-                'DESC' => __('Descending', 'nine-core'),
+                'ASC' => esc_html__('Ascending', 'nine-core'),
+                'DESC' => esc_html__('Descending', 'nine-core'),
             ],
             'default' => 'DESC', // Default ordering
         ]
@@ -166,11 +166,11 @@ protected function _register_controls(){
     $this->add_responsive_control(
 	'show_image',
 	[
-		'label' => __( 'Show Image', 'nine-core' ),
+		'label' => esc_html__( 'Show Image', 'nine-core' ),
         'type'    => \Elementor\Controls_Manager::SWITCHER,
-		'label_on' => __( 'On', 'nine-core' ),
-		'label_off' => __( 'Off', 'nine-core' ),
-        'description' => __('Toggle to display or hide post image.', 'nine-core'),
+		'label_on' => esc_html__( 'On', 'nine-core' ),
+		'label_off' => esc_html__( 'Off', 'nine-core' ),
+        'description' => esc_html__('Toggle to display or hide post image.', 'nine-core'),
 		'return_value'	=> 'none',
 		'default'	=> 'block',
 		'selectors' => [
@@ -182,11 +182,11 @@ protected function _register_controls(){
     $this->add_responsive_control(
         'show_post_meta',
         [
-            'label' => __( 'Show Meta', 'nine-core' ),
+            'label' => esc_html__( 'Show Meta', 'nine-core' ),
             'type'    => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'nine-core' ),
-            'label_off' => __( 'Off', 'nine-core' ),
-            'description' => __('Toggle to display or hide post meta.', 'nine-core'),
+            'label_on' => esc_html__( 'On', 'nine-core' ),
+            'label_off' => esc_html__( 'Off', 'nine-core' ),
+            'description' => esc_html__('Toggle to display or hide post meta.', 'nine-core'),
             'return_value'	=> 'none',
             'default'	=> 'flex',
             'selectors' => [
@@ -198,11 +198,11 @@ protected function _register_controls(){
     $this->add_responsive_control(
         'show_category',
         [
-            'label' => __( 'Show Category', 'nine-core' ),
+            'label' => esc_html__( 'Show Category', 'nine-core' ),
             'type'    => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'nine-core' ),
-            'label_off' => __( 'Off', 'nine-core' ),
-            'description' => __('Toggle to display or hide post categories.', 'nine-core'),
+            'label_on' => esc_html__( 'On', 'nine-core' ),
+            'label_off' => esc_html__( 'Off', 'nine-core' ),
+            'description' => esc_html__('Toggle to display or hide post categories.', 'nine-core'),
             'return_value'	=> 'none',
             'default'	=> 'block',
             'selectors' => [
@@ -215,11 +215,11 @@ protected function _register_controls(){
     $this->add_responsive_control(
         'show_post_title',
         [
-            'label' => __( 'Show Post Title', 'nine-core' ),
+            'label' => esc_html__( 'Show Post Title', 'nine-core' ),
             'type'    => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'nine-core' ),
-            'label_off' => __( 'Off', 'nine-core' ),
-            'description' => __('Toggle to display or hide post title.', 'nine-core'),
+            'label_on' => esc_html__( 'On', 'nine-core' ),
+            'label_off' => esc_html__( 'Off', 'nine-core' ),
+            'description' => esc_html__('Toggle to display or hide post title.', 'nine-core'),
             'return_value'	=> 'none',
             'default'	=> 'block',
             'selectors' => [
@@ -231,11 +231,11 @@ protected function _register_controls(){
     $this->add_responsive_control(
         'show_post_content',
         [
-            'label' => __( 'Show Post Content', 'nine-core' ),
+            'label' => esc_html__( 'Show Post Content', 'nine-core' ),
             'type'    => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'nine-core' ),
-            'label_off' => __( 'Off', 'nine-core' ),
-            'description' => __('Toggle to display or hide post content.', 'nine-core'),
+            'label_on' => esc_html__( 'On', 'nine-core' ),
+            'label_off' => esc_html__( 'Off', 'nine-core' ),
+            'description' => esc_html__('Toggle to display or hide post content.', 'nine-core'),
             'return_value'	=> 'none',
             'default'	=> 'block',
             'selectors' => [
@@ -248,11 +248,11 @@ protected function _register_controls(){
     $this->add_responsive_control(
         'show_author_image',
         [
-            'label' => __( 'Show Author Image', 'nine-core' ),
+            'label' => esc_html__( 'Show Author Image', 'nine-core' ),
             'type'    => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'nine-core' ),
-            'label_off' => __( 'Off', 'nine-core' ),
-            'description' => __('Toggle to display or hide author image.', 'nine-core'),
+            'label_on' => esc_html__( 'On', 'nine-core' ),
+            'label_off' => esc_html__( 'Off', 'nine-core' ),
+            'description' => esc_html__('Toggle to display or hide author image.', 'nine-core'),
             'return_value'	=> 'none',
             'default'	=> 'block',
             'selectors' => [
@@ -265,11 +265,11 @@ protected function _register_controls(){
     $this->add_responsive_control(
         'show_date',
         [
-            'label' => __( 'Show Post Date', 'nine-core' ),
+            'label' => esc_html__( 'Show Post Date', 'nine-core' ),
             'type'    => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'nine-core' ),
-            'label_off' => __( 'Off', 'nine-core' ),
-            'description' => __('Toggle to display or hide post date.', 'nine-core'),
+            'label_on' => esc_html__( 'On', 'nine-core' ),
+            'label_off' => esc_html__( 'Off', 'nine-core' ),
+            'description' => esc_html__('Toggle to display or hide post date.', 'nine-core'),
             'return_value'	=> 'none',
             'default'	=> 'block',
             'selectors' => [
@@ -286,7 +286,7 @@ $this->end_controls_section();
 $this->start_controls_section(  
     'section_post_style',
     [
-        'label' => __('Post Style', 'nine-core'),
+        'label' => esc_html__('Post Style', 'nine-core'),
         'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
     ]
 );
@@ -294,9 +294,9 @@ $this->start_controls_section(
     $this->add_control(
         'image_border_radius',
         [
-            'label'     => __('  Radius', 'nine-core'),
+            'label'     => esc_html__('  Radius', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::DIMENSIONS,
-            'description' => __('Set border radius for post images.', 'nine-core'),
+            'description' => esc_html__('Set border radius for post images.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -307,9 +307,9 @@ $this->start_controls_section(
     $this->add_control(
         'transform_hover',
         [
-            'label' => __('Hover Transform', 'nine-core'),
+            'label' => esc_html__('Hover Transform', 'nine-core'),
             'type' => \Elementor\Controls_Manager::SLIDER,
-            'description' => __('Set the scale factor for post items on hover.', 'nine-core'),
+            'description' => esc_html__('Set the scale factor for post items on hover.', 'nine-core'),
             'size_units' => [''],
             'range' => [
                 'px' => [
@@ -359,7 +359,7 @@ $this->start_controls_section(
     $this->start_controls_section(
         'section_title_style',
         [
-            'label' => __('Title', 'nine-core'),
+            'label' => esc_html__('Title', 'nine-core'),
             'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
         ]
     );
@@ -367,9 +367,9 @@ $this->start_controls_section(
     $this->add_control(
         'title_color',
         [
-            'label'     => __('Title Color', 'nine-core'),
+            'label'     => esc_html__('Title Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the color of post titles.', 'nine-core'),
+            'description' => esc_html__('Set the color of post titles.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-title a' => 'color: {{VALUE}};',
             ],
@@ -379,15 +379,15 @@ $this->start_controls_section(
     $this->add_control(
         'title_hover_text_decoration',
         [
-            'label' => __('Title Text Decoration (Hover)', 'nine-core'),
+            'label' => esc_html__('Title Text Decoration (Hover)', 'nine-core'),
             'type' => \Elementor\Controls_Manager::SELECT,
-            'description' => __('Set the text decoration for post titles on hover.', 'nine-core'),
+            'description' => esc_html__('Set the text decoration for post titles on hover.', 'nine-core'),
             'default' => 'none',
             'options' => [
-                'none' => __('None', 'nine-core'),
-                'underline' => __('Underline', 'nine-core'),
-                'overline' => __('Overline', 'nine-core'),
-                'line-through' => __('Line Through', 'nine-core'),
+                'none' => esc_html__('None', 'nine-core'),
+                'underline' => esc_html__('Underline', 'nine-core'),
+                'overline' => esc_html__('Overline', 'nine-core'),
+                'line-through' => esc_html__('Line Through', 'nine-core'),
             ],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-title:hover ' => 'text-decoration: {{VALUE}};',
@@ -398,9 +398,9 @@ $this->start_controls_section(
     $this->add_control(
         'title_hover_text_color',
         [
-            'label' => __('Title Text Color (Hover)', 'nine-core'),
+            'label' => esc_html__('Title Text Color (Hover)', 'nine-core'),
             'type' => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the color of post titles on hover.', 'nine-core'),
+            'description' => esc_html__('Set the color of post titles on hover.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-title:hover' => 'color: {{VALUE}};',
             ],
@@ -411,8 +411,8 @@ $this->start_controls_section(
         \Elementor\Group_Control_Typography::get_type(),
         [
             'name'     => 'title_typography',
-            'label'    => __('Title Typography', 'nine-core'),
-            'description' => __('Set the typography for post titles.', 'nine-core'),
+            'label'    => esc_html__('Title Typography', 'nine-core'),
+            'description' => esc_html__('Set the typography for post titles.', 'nine-core'),
             'selector' => '{{WRAPPER}} .el-g-1-title a',
         ]
     );
@@ -423,7 +423,7 @@ $this->end_controls_section();
 $this->start_controls_section(
     'section_category_style',
     [
-        'label' => __('Category', 'nine-core'),
+        'label' => esc_html__('Category', 'nine-core'),
         'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
     ]
 );
@@ -431,9 +431,9 @@ $this->start_controls_section(
     $this->add_control(
         'category_text_color',
         [
-            'label'     => __('Category Text Color', 'nine-core'),
+            'label'     => esc_html__('Category Text Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the color of post category text.', 'nine-core'),
+            'description' => esc_html__('Set the color of post category text.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-category a' => 'color: {{VALUE}};',
             ],
@@ -443,9 +443,9 @@ $this->start_controls_section(
     $this->add_control(
         'category_bg_color',
         [
-            'label'     => __('Category Background Color', 'nine-core'),
+            'label'     => esc_html__('Category Background Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the background color of post category.', 'nine-core'),
+            'description' => esc_html__('Set the background color of post category.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-category a' => 'background-color: {{VALUE}};',
             ],
@@ -457,9 +457,9 @@ $this->start_controls_section(
     $this->add_control(
         'border_radius',
         [
-            'label' => __('Border Radius', 'nine-core'),
+            'label' => esc_html__('Border Radius', 'nine-core'),
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
-            'description' => __('Set the border radius of post category.', 'nine-core'),
+            'description' => esc_html__('Set the border radius of post category.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-category a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -470,9 +470,9 @@ $this->start_controls_section(
     $this->add_control(
         'border_padding',
         [
-            'label' => __('Padding', 'nine-core'),
+            'label' => esc_html__('Padding', 'nine-core'),
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
-            'description' => __('Set the padding of post category.', 'nine-core'),
+            'description' => esc_html__('Set the padding of post category.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-category a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -483,9 +483,9 @@ $this->start_controls_section(
     $this->add_responsive_control(
         'category_position',
         [
-            'label' => __('Category Position', 'nine-core'),
+            'label' => esc_html__('Category Position', 'nine-core'),
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
-            'description' => __('Set the position of post category.', 'nine-core'),
+            'description' => esc_html__('Set the position of post category.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-category' => 'left: {{LEFT}}{{UNIT}}; top: {{TOP}}{{UNIT}};',
@@ -497,8 +497,8 @@ $this->start_controls_section(
         \Elementor\Group_Control_Typography::get_type(),
         [
             'name'     => 'category_typography',
-            'label'    => __('Category Typography', 'nine-core'),
-            'description' => __('Set the typography for post category.', 'nine-core'),
+            'label'    => esc_html__('Category Typography', 'nine-core'),
+            'description' => esc_html__('Set the typography for post category.', 'nine-core'),
             'selector' => '{{WRAPPER}} .el-g-1-category',
         ]
     );
@@ -508,7 +508,7 @@ $this->start_controls_section(
     $this->start_controls_section(
         'section_author_style',
         [
-            'label' => __('Author', 'nine-core'),
+            'label' => esc_html__('Author', 'nine-core'),
             'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
         ]
     );
@@ -516,9 +516,9 @@ $this->start_controls_section(
     $this->add_control(
         'author_color',
         [
-            'label'     => __('Author Color', 'nine-core'),
+            'label'     => esc_html__('Author Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the color of post author.', 'nine-core'),
+            'description' => esc_html__('Set the color of post author.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-meta-box a' => 'color: {{VALUE}};',
             ],
@@ -529,8 +529,8 @@ $this->start_controls_section(
         \Elementor\Group_Control_Typography::get_type(),
         [
             'name'     => 'author_typography',
-            'label'    => __('Author Typography', 'nine-core'),
-            'description' => __('Set the typography for post author.', 'nine-core'),
+            'label'    => esc_html__('Author Typography', 'nine-core'),
+            'description' => esc_html__('Set the typography for post author.', 'nine-core'),
             'selector' => '{{WRAPPER}} .el-g-1-meta-box a',
         ]
     );
@@ -540,7 +540,7 @@ $this->start_controls_section(
     $this->start_controls_section(
         'section_date_style',
         [
-            'label' => __('Date', 'nine-core'),
+            'label' => esc_html__('Date', 'nine-core'),
             'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
         ]
     );
@@ -549,8 +549,8 @@ $this->start_controls_section(
         \Elementor\Group_Control_Typography::get_type(),
         [
             'name'     => 'date_typography',
-            'label'    => __('Date Typography', 'nine-core'),
-            'description' => __('Set the typography for post date.', 'nine-core'),
+            'label'    => esc_html__('Date Typography', 'nine-core'),
+            'description' => esc_html__('Set the typography for post date.', 'nine-core'),
             'selector' => '{{WRAPPER}} .el-g-1-date',
         ]
     );
@@ -561,7 +561,7 @@ $this->end_controls_section();
 $this->start_controls_section(
     'section_content_style',
     [
-        'label' => __('Content', 'nine-core'),
+        'label' => esc_html__('Content', 'nine-core'),
         'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
     ]
 );
@@ -569,9 +569,9 @@ $this->start_controls_section(
     $this->add_control(
         'content_color',
         [
-            'label'     => __('Content Color', 'nine-core'),
+            'label'     => esc_html__('Content Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the color of post content.', 'nine-core'),
+            'description' => esc_html__('Set the color of post content.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-excerpt' => 'color: {{VALUE}};',
             ],
@@ -582,8 +582,8 @@ $this->start_controls_section(
         \Elementor\Group_Control_Typography::get_type(),
         [
             'name'     => 'content_typography',
-            'label'    => __('Content Typography', 'nine-core'),
-            'description' => __('Set the typography for post content.', 'nine-core'),
+            'label'    => esc_html__('Content Typography', 'nine-core'),
+            'description' => esc_html__('Set the typography for post content.', 'nine-core'),
             'selector' => '{{WRAPPER}} .el-g-1-excerpt',
         ]
     );
@@ -594,7 +594,7 @@ $this->start_controls_section(
     $this->start_controls_section(
         'section_container_style',
         [
-            'label' => __('Container', 'nine-core'),
+            'label' => esc_html__('Container', 'nine-core'),
             'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
         ]
     );
@@ -602,9 +602,9 @@ $this->start_controls_section(
     $this->add_control(
         'border_color',
         [
-            'label' => __('Border Color', 'nine-core'),
+            'label' => esc_html__('Border Color', 'nine-core'),
             'type' => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the color of the container border.', 'nine-core'),
+            'description' => esc_html__('Set the color of the container border.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-box' => 'border-color: {{VALUE}};',
             ],
@@ -614,9 +614,9 @@ $this->start_controls_section(
     $this->add_control(
         'border_width',
         [
-            'label' => __('Border Width', 'nine-core'),
+            'label' => esc_html__('Border Width', 'nine-core'),
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
-            'description' => __('Set the width of the container border.', 'nine-core'),
+            'description' => esc_html__('Set the width of the container border.', 'nine-core'),
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-box' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -627,21 +627,21 @@ $this->start_controls_section(
     $this->add_control(
         'border_style',
         [
-            'label' => __('Border Style', 'nine-core'),
+            'label' => esc_html__('Border Style', 'nine-core'),
             'type' => \Elementor\Controls_Manager::SELECT,
-            'description' => __('Set the style of the container border.', 'nine-core'),
+            'description' => esc_html__('Set the style of the container border.', 'nine-core'),
             'default' => 'none',
             'options' => [
-                'solid' => __('Solid', 'nine-core'),
-                'dotted' => __('Dotted', 'nine-core'),
-                'dashed' => __('Dashed', 'nine-core'),
-                'double' => __('Double', 'nine-core'),
-                'groove' => __('Groove', 'nine-core'),
-                'ridge' => __('Ridge', 'nine-core'),
-                'inset' => __('Inset', 'nine-core'),
-                'outset' => __('Outset', 'nine-core'),
-                'none' => __('None', 'nine-core'),
-                'hidden' => __('Hidden', 'nine-core'),
+                'solid' => esc_html__('Solid', 'nine-core'),
+                'dotted' => esc_html__('Dotted', 'nine-core'),
+                'dashed' => esc_html__('Dashed', 'nine-core'),
+                'double' => esc_html__('Double', 'nine-core'),
+                'groove' => esc_html__('Groove', 'nine-core'),
+                'ridge' => esc_html__('Ridge', 'nine-core'),
+                'inset' => esc_html__('Inset', 'nine-core'),
+                'outset' => esc_html__('Outset', 'nine-core'),
+                'none' => esc_html__('None', 'nine-core'),
+                'hidden' => esc_html__('Hidden', 'nine-core'),
             ],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-box' => 'border-style: {{VALUE}};',
@@ -652,9 +652,9 @@ $this->start_controls_section(
     $this->add_control(
         'background_border_radius',
         [
-            'label' => __('Background Border Radius', 'nine-core'),
+            'label' => esc_html__('Background Border Radius', 'nine-core'),
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
-            'description' => __('Set the border radius of the container background.', 'nine-core'),
+            'description' => esc_html__('Set the border radius of the container background.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-box' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -665,9 +665,9 @@ $this->start_controls_section(
     $this->add_control(
         'background_color',
         [
-            'label'     => __('Background Color', 'nine-core'),
+            'label'     => esc_html__('Background Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
-            'description' => __('Set the background color of the container.', 'nine-core'),
+            'description' => esc_html__('Set the background color of the container.', 'nine-core'),
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-box' => 'background-color: {{VALUE}};',
             ],
@@ -678,7 +678,7 @@ $this->start_controls_section(
         \Elementor\Group_Control_Box_Shadow::get_type(),
         [
             'name' => 'box_shadow',
-            'description' => __('Add box shadow to the container.', 'nine-core'),
+            'description' => esc_html__('Add box shadow to the container.', 'nine-core'),
             'selector' => '{{WRAPPER}} .el-g-1-box',
         ]
     );

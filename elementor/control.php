@@ -42,10 +42,9 @@ class Elementor_Customizations {
 
     public function register_hello_world_widget( $widgets_manager ) {
         require_once( __DIR__ . '/widgets/post-grid.php' );
-        require_once( __DIR__ . '/widgets/p-grid1.php' );
-        $widgets_manager->register( new \Grid_Post_1s() );
+        require_once( __DIR__ . '/widgets/block-grid-one.php' );
+        $widgets_manager->register( new \Grid_Post_One() );
     }
 }
 
-// Instantiate the class to hook into WordPress
 new Elementor_Customizations();
