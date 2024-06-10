@@ -109,16 +109,21 @@ protected function _register_controls(){
     );
 
     $this->add_responsive_control(
-        'items_per_row_desktop',
+        'items_per_row',
         [
-            'label'     => esc_html__('Items Per Row ', 'nine-core'),
-            'type'      => \Elementor\Controls_Manager::NUMBER,
-            'description' => esc_html__('Set the number of items to display per row on desktop.', 'nine-core'),
+            'label' => esc_html__('Items Per Row', 'nine-core'),
+            'type' => \Elementor\Controls_Manager::NUMBER,
+            'description' => esc_html__('Set the number of items to display per row.', 'nine-core'),
+            'devices' => ['desktop', 'tablet', 'mobile'],
+            'desktop_default' => 4,
+            'tablet_default' => 2,
+            'mobile_default' => 1,
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-grid-container' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
             ],
         ]
     );
+    
 
     $this->add_control(
         'text_align',
