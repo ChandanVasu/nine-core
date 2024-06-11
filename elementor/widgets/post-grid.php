@@ -25,12 +25,117 @@ class Grid_Post_One extends \Elementor\Widget_Base {
     
     protected function render() {
         $settings = $this->get_settings_for_display();
-        $settings['uuid'] = 'uid_' . $this->get_id();
-
-        if (function_exists('grid_post_one')) {
-            echo grid_post_one($settings);
-        } 
+        
+        // Set default values for settings
+        $defaults = [
+            'posts_per_page' => !empty($settings['posts_per_page']) ? $settings['posts_per_page'] : 4,
+            'category' => !empty($settings['category']) ? $settings['category'] : [],
+            'offset' => !empty($settings['offset']) ? $settings['offset'] : 0,
+            'order' => !empty($settings['order']) ? $settings['order'] : 'DESC',
+            'title_length' => !empty($settings['title_length']) ? $settings['title_length'] : 10,
+            'content_length' => !empty($settings['content_length']) ? $settings['content_length'] : 20,
+            'dynamic_filtering' => !empty($settings['dynamic_filtering']) ? $settings['dynamic_filtering'] : 'no'
+        ];
+    
+        $query_args = [
+            'post_type' => 'post',
+            'posts_per_page' => $defaults['posts_per_page'],
+            'offset' => $defaults['offset'],
+            'order' => $defaults['order'],
+            'ignore_sticky_posts' => true,
+        ];
+    
+        if ($defaults['dynamic_filtering'] === 'yes') {
+            $categories = get_the_category();
+            $category_ids = wp_list_pluck($categories, 'term_id');
+    
+            if (is_single()) {
+                $query_args['category__in'] = $category_ids;
+            }
+        } else {
+            $query_args['category__in'] = $defaults['category'];
+        }
+    
+        $posts_query = new WP_Query($query_args);
+    
+        if ($posts_query->have_posts()) :
+            ?>
+            <div class="el-g-1-grid-container">
+                <?php while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
+                    <div class="el-g-1-box">
+                        <div class="el-g-1-thumbnail">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(); ?>
+                            </a>
+                            <span class="el-g-1-category">
+                                <?php the_category(', '); ?>
+                            </span>
+                        </div>
+                        <h2 class="el-g-1-title">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php echo wp_trim_words(get_the_title(), $defaults['title_length'], '...'); ?>
+                            </a>
+                        </h2>
+                        <div class="el-g-1-excerpt excerpt">
+                            <?php echo wp_trim_words(get_the_content(), $defaults['content_length'], '...'); ?>
+                        </div>
+                        <div class="el-g-1-meta-box">
+                            <?php
+                            $author_id = get_the_author_meta('ID');
+                            $author_avatar = get_avatar_url($author_id, ['size' => 32]);
+                            ?>
+                            <img class="el-g-1-avatar author-avatar" src="<?php echo esc_url($author_avatar); ?>" alt="<?php echo esc_attr(get_the_author()); ?>">
+                            <a class="el-g-1-name" href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">
+                                <?php the_author(); ?>
+                            </a>
+                            <span class="el-g-1-date">
+                                <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?>
+                            </span>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+           
+            <button id="load-more" class="el-g-1-load-more-button" data-page="2">Load More</button>
+    
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    $('#load-more').on('click', function() {
+                        var button = $(this);
+                        var data = {
+                            'action': 'load_more_posts',
+                            'page': button.data('page'),
+                            'settings': <?php echo json_encode($defaults); ?>
+                        };
+    
+                        $.ajax({
+                            url: '<?php echo esc_url(admin_url('admin-ajax.php')); ?>',
+                            type: 'POST',
+                            data: data,
+                            beforeSend: function() {
+                                button.text('Loading...');
+                            },
+                            success: function(response) {
+                                if (response) {
+                                    $('.el-g-1-grid-container').append(response);
+                                    button.data('page', button.data('page') + 1);
+                                    button.text('Load More');
+                                } else {
+                                    button.text('No More Posts').prop('disabled', true);
+                                }
+                            }
+                        });
+                    });
+                });
+            </script>
+            <?php
+            wp_reset_postdata();
+        else :
+            echo '<div class="el-g-1-no-posts-found">' . __('No posts found', 'nine-core') . '</div>';
+        endif;
     }
+    
+
 
 
 
@@ -108,22 +213,22 @@ protected function _register_controls(){
         ]
     );
 
-    $this->add_responsive_control(
-        'items_per_row',
-        [
-            'label' => esc_html__('Items Per Row', 'nine-core'),
-            'type' => \Elementor\Controls_Manager::NUMBER,
-            'description' => esc_html__('Set the number of items to display per row.', 'nine-core'),
-            'devices' => ['desktop', 'tablet', 'mobile'],
-            'desktop_default' => 4,
-            'tablet_default' => 2,
-            'mobile_default' => 1,
-            'selectors' => [
-                '{{WRAPPER}} .el-g-1-grid-container' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
-            ],
-        ]
-    );
-    
+$this->add_responsive_control(
+    'items_per_row',
+    [
+        'label' => esc_html__('Items Per Row', 'nine-core'),
+        'type' => \Elementor\Controls_Manager::NUMBER,
+        'description' => esc_html__('Set the number of items to display per row.', 'nine-core'),
+        'devices' => ['desktop', 'tablet', 'mobile'],
+        'desktop_default' => 4,
+        'tablet_default' => 2,
+        'mobile_default' => 1,
+        'selectors' => [
+            '{{WRAPPER}} .el-g-1-grid-container' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+        ],
+    ]
+);
+
 
     $this->add_control(
         'text_align',
@@ -705,3 +810,6 @@ $this->end_controls_section();
 
     
 }
+
+
+
