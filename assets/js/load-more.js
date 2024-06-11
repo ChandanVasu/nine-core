@@ -1,26 +1,28 @@
 jQuery(document).ready(function($) {
-    var page = 2; // Start at page 2
-    $('#load-more').on('click', function() {
-        var data = {
-            action: 'load_more',
-            page: page,
-            nonce: loadMoreParams.nonce
-        };
+    $(document).on('click', '.el-g-1-load-more-button', function() {
+        var button = $(this);
+        var page = button.data('page');
+        var settings = button.data('settings');
+        var container = $('#' + settings.uuid + ' .el-g-1-grid-container');
 
         $.ajax({
-            url: loadMoreParams.ajax_url,
-            method: 'POST',
-            data: data,
+            url: ajaxurl,  // This is a variable automatically defined by WordPress
+            type: 'POST',
+            data: {
+                action: 'load_more_posts',
+                page: page,
+                settings: settings
+            },
             beforeSend: function() {
-                $('#load-more').text('Loading...'); // Change button text to "Loading..."
+                button.text('Loading...');
             },
             success: function(response) {
-                if(response) {
-                    $('.el-g-1-grid-container').append(response); // Append new posts
-                    page++;
-                    $('#load-more').text('Load More'); // Reset button text
+                if (response) {
+                    container.append(response);
+                    button.data('page', page + 1);
+                    button.text('Load More');
                 } else {
-                    $('#load-more').hide(); // Hide button if no more posts
+                    button.text('No More Posts').prop('disabled', true);
                 }
             }
         });

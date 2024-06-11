@@ -48,12 +48,17 @@ add_action('wp_enqueue_scripts', 'nine_core_enqueue_styles');
 // Enqueue load more script
 function enqueue_load_more_script() {
     wp_enqueue_script('load-more-script', plugins_url('assets/js/load-more.js', __FILE__), array('jquery'), null, true);
+
+    wp_localize_script('load-more-script', 'ajaxurl', admin_url('admin-ajax.php'));
+
+    // Enqueue the script
+    wp_enqueue_script('load-more-script');
 }
 add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 
 
-function load_more_posts_ajax_handler() {
+function load_more_posts_ajax_handler($settings) {
     $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
     $settings = isset($_POST['settings']) ? $_POST['settings'] : [];
     $posts_per_page = !empty($settings['posts_per_page']) ? intval($settings['posts_per_page']) : 4;
@@ -124,3 +129,4 @@ function load_more_posts_ajax_handler() {
 }
 add_action('wp_ajax_load_more_posts', 'load_more_posts_ajax_handler');
 add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts_ajax_handler');
+
