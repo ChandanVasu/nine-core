@@ -106,3 +106,9 @@
 }
 
 
+.el-g-1-load-more-button{
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

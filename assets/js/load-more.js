@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
         var button = $(this);
         var page = button.data('page');
         var settings = button.data('settings');
+        var nonce = button.data('nonce');
         var container = $('#' + settings.uuid + ' .el-g-1-grid-container');
 
         $.ajax({
@@ -11,7 +12,8 @@ jQuery(document).ready(function($) {
             data: {
                 action: 'load_more_posts',
                 page: page,
-                settings: settings
+                settings: settings,
+                nonce: nonce
             },
             beforeSend: function() {
                 button.text('Loading...');
