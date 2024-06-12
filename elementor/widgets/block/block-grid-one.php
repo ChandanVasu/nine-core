@@ -25,13 +25,10 @@ function grid_post_one($settings) {
         'ignore_sticky_posts' => true,
     ];
 
-    if ($settings['dynamic_filtering'] === 'yes') {
+    if ($settings['dynamic_filtering'] === 'yes' && is_single()) {
         $categories = get_the_category();
         $category_ids = wp_list_pluck($categories, 'term_id');
-
-        if (is_single()) {
-            $query_args['category__in'] = $category_ids;
-        }
+        $query_args['category__in'] = $category_ids;
     } else {
         $query_args['category__in'] = $settings['category'];
     }
@@ -40,22 +37,30 @@ function grid_post_one($settings) {
 
     ob_start();
 
-    if ($posts_query->have_posts()) :
-        ?>
-        <div class="el-g-1-grid-container">
-            <?php while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
-
-                <?php get_template_part('template/elementor/g-1'); ?>
-
-            <?php endwhile; ?>
-        </div>
+    ?>
+    <div id="<?php echo esc_attr($settings['uuid']); ?>" class="posts-container">
         <?php
-    else :
-        echo '<div class="el-g-1-no-posts-found">' . __('No posts found', 'nine-core') . '</div>';
-    endif;
+        if ($posts_query->have_posts()) :
+            ?>
+            <div class="el-g-1-grid-container">
+                <?php while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
+                    <?php get_template_part('template/elementor/g-1'); ?>
+                <?php endwhile; ?>
+            </div>
+            <?php if ($posts_query->found_posts > $settings['posts_per_page']) : ?>
+                <button id="load-more-<?php echo esc_attr($settings['uuid']); ?>" class="el-g-1-load-more-button" data-page="2" data-settings="<?php echo esc_attr(json_encode($settings)); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('load_more_posts_nonce')); ?>">
+                    <?php _e('Load More', 'nine-core'); ?>
+                </button>
+            <?php endif; ?>
+            <?php
+        else :
+            echo '<div class="el-g-1-no-posts-found">' . __('No posts found', 'nine-core') . '</div>';
+        endif;
 
-    wp_reset_postdata();
+        wp_reset_postdata();
+        ?>
+    </div>
+    <?php
 
-    $output = ob_get_clean();
-    return $output;
+    return ob_get_clean();
 }

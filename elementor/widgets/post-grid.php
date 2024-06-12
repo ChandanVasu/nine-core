@@ -27,13 +27,12 @@ class Grid_Post_One extends \Elementor\Widget_Base {
         $settings['uuid'] = 'uid_' . $this->get_id();
     
         if (function_exists('grid_post_one')) {
-            $nonce = wp_create_nonce('load_more_posts_nonce');
-            echo '<div id="' . esc_attr($settings['uuid']) . '" class="posts-container">';
+            // echo '<div id="' . esc_attr($settings['uuid']) . '" class="posts-container">';
             echo grid_post_one($settings);
-            echo '<button id="load-more-' . esc_attr($settings['uuid']) . '" class="el-g-1-load-more-button" data-page="2" data-settings="' . esc_attr(json_encode($settings)) . '" data-nonce="' . esc_attr($nonce) . '">Load More</button>';
-            echo '</div>';
+            // echo '</div>';
         }
     }
+    
     
 
 
