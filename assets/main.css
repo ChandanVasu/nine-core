@@ -109,9 +109,21 @@
 }
 
 
-.el-g-1-load-more-button{
+.load-more-button{
     margin: 20px auto;
     align-items: center;
     justify-content: center;
     display: flex;
+}
+
+.load-more-button::after{
+    content: "\f061";
+    font-family: 'Font Awesome 6 Solid';
+    padding-left: 5px;
+
+}
+
+.load-more-button::after:hover{
+  padding-left: 10px;
+  transition: all 0.5s ease;
 }

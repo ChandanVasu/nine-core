@@ -13,7 +13,7 @@ class Grid_Post_One extends \Elementor\Widget_Base {
     }
 
     public function get_icon() {
-          return 'eicon-post-list';
+          return 'eicon-post-list ne-icon';
     }
     
 
@@ -286,6 +286,62 @@ $this->add_responsive_control(
         ]
     );
 
+    
+
+$this->end_controls_section();
+
+
+$this->start_controls_section(  
+    'pagination',
+    [
+        'label' => esc_html__('Pagination', 'nine-core'),
+        // 'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
+    ]
+);
+
+    $this->add_responsive_control(
+        'load_more',
+        [
+            'label' => esc_html__( 'Active Load More Buttom', 'nine-core' ),
+            'type'    => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'On', 'nine-core' ),
+            'label_off' => esc_html__( 'Off', 'nine-core' ),
+            'description' => esc_html__('Toggle to display or hide Load More.', 'nine-core'),
+            'return_value'	=> 'none',
+            'default'	=> 'block',
+            'selectors' => [
+                '{{WRAPPER}} .load-more-button' => 'display: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        \Elementor\Group_Control_Background::get_type(),
+        [
+            'name' => 'load_more_background',
+            'types' => ['classic', 'gradient'],
+            'selector' => '{{WRAPPER}} .load-more-button',
+            'label' => esc_html__('Background', 'nine-core'),
+            'exclude' => ['image'],
+            'description' => esc_html__('Set the background of the load more button, including gradient options.', ),
+            'fields_options' => [
+            'background' => [
+                'label' => esc_html__('Custom Background', 'nine-core'),
+                'default' => 'classic',
+            ],
+            'color' => [
+                'default' => 'blue',
+            ],
+        ],
+    
+        ]
+    );
+    
+    
+    
+    
+
+
 $this->end_controls_section();
 
 
@@ -385,21 +441,17 @@ $this->start_controls_section(
     );
 
     $this->add_control(
-        'title_hover_text_decoration',
+        'title_color_toggle',
         [
-            'label' => esc_html__('Title Text Decoration (Hover)', 'nine-core'),
-            'type' => \Elementor\Controls_Manager::SELECT,
-            'description' => esc_html__('Set the text decoration for post titles on hover.', 'nine-core'),
-            'default' => 'none',
-            'options' => [
-                'none' => esc_html__('None', 'nine-core'),
-                'underline' => esc_html__('Underline', 'nine-core'),
-                'overline' => esc_html__('Overline', 'nine-core'),
-                'line-through' => esc_html__('Line Through', 'nine-core'),
-            ],
+            'label' => esc_html__('Title Hover Line', 'nine-core'),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => esc_html__('On', 'nine-core'),
+            'label_off' => esc_html__('Off', 'nine-core'),
+            'default' => 'no',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-title:hover ' => 'text-decoration: {{VALUE}};',
+                '{{WRAPPER}} .el-g-1-title a' => 'background-size: {{VALUE}};',
             ],
+            'return_value' => '0 100%',
         ]
     );
 
@@ -442,21 +494,33 @@ $this->start_controls_section(
             'label'     => esc_html__('Category Text Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the color of post category text.', 'nine-core'),
+            'default' => 'white',
             'selectors' => [
                 '{{WRAPPER}} .el-g-1-category a' => 'color: {{VALUE}};',
             ],
         ]
     );
 
-    $this->add_control(
-        'category_bg_color',
+
+    $this->add_group_control(
+        \Elementor\Group_Control_Background::get_type(),
         [
-            'label'     => esc_html__('Category Background Color', 'nine-core'),
-            'type'      => \Elementor\Controls_Manager::COLOR,
-            'description' => esc_html__('Set the background color of post category.', 'nine-core'),
-            'selectors' => [
-                '{{WRAPPER}} .el-g-1-category a' => 'background-color: {{VALUE}};',
+            'name' => 'category_bg_color',
+            'types' => ['classic', 'gradient'],
+            'selector' => '{{WRAPPER}} .el-g-1-category a',
+            'label' => esc_html__('Background', 'nine-core'),
+            'exclude' => ['image'],
+            'description' => esc_html__('Set the background color of post category.', ),
+            'fields_options' => [
+            'background' => [
+                'label' => esc_html__('Category Background Color', 'nine-core'),
+                'default' => 'classic',
             ],
+            'color' => [
+                'default' => 'blue',
+            ],
+        ],
+    
         ]
     );
 

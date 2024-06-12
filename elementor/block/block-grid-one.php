@@ -48,7 +48,7 @@ function grid_post_one($settings) {
                 <?php endwhile; ?>
             </div>
             <?php if ($posts_query->found_posts > $settings['posts_per_page']) : ?>
-                <button id="load-more-<?php echo esc_attr($settings['uuid']); ?>" class="el-g-1-load-more-button" data-page="2" data-settings="<?php echo esc_attr(json_encode($settings)); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('load_more_posts_nonce')); ?>">
+                <button id="load-more-<?php echo esc_attr($settings['uuid']); ?>" class="load-more-button" data-page="2" data-settings="<?php echo esc_attr(json_encode($settings)); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('load_more_posts_nonce')); ?>">
                     <?php _e('Load More', 'nine-core'); ?>
                 </button>
             <?php endif; ?>

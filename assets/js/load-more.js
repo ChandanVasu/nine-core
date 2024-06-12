@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    $(document).on('click', '.el-g-1-load-more-button', function() {
+    $(document).on('click', '.load-more-button', function() {
         var button = $(this);
         var page = button.data('page');
         var settings = button.data('settings');
