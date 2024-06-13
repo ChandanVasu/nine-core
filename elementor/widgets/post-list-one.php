@@ -9,7 +9,7 @@ class post_list_one extends \Elementor\Widget_Base {
 
     public function get_title()
     {
-        return esc_html__('LIST POST', 'nine-core');
+        return esc_html__('SMALL LIST POST', 'nine-core');
     }
 
     public function get_icon() {
@@ -71,7 +71,7 @@ protected function _register_controls(){
             'label'   => esc_html__('Posts Per Page', 'nine-core'),
             'type'    => \Elementor\Controls_Manager::NUMBER,
             'description' => esc_html__('Set the number of posts to display per page.', 'nine-core'),
-            'default' => 4, 
+            'default' => 9, 
         ]
     );
 
@@ -112,11 +112,11 @@ $this->add_responsive_control(
         'type' => \Elementor\Controls_Manager::NUMBER,
         'description' => esc_html__('Set the number of items to display per row.', 'nine-core'),
         'devices' => ['desktop', 'tablet', 'mobile'],
-        'desktop_default' => 4,
+        'desktop_default' => 3,
         'tablet_default' => 2,
         'mobile_default' => 1,
         'selectors' => [
-            '{{WRAPPER}} .el-g-1-grid-container' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+            '{{WRAPPER}} .el-list-1-list-container' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
         ],
     ]
 );
@@ -144,7 +144,7 @@ $this->add_responsive_control(
             ],
             'default' => 'Left',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-box' => 'align-items: {{VALUE}}; text-align: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-box' => 'align-items: {{VALUE}}; text-align: {{VALUE}};',
             ],
         ]
     );
@@ -176,7 +176,7 @@ $this->add_responsive_control(
 		'return_value'	=> 'none',
 		'default'	=> 'block',
 		'selectors' => [
-			'{{WRAPPER}} .el-g-1-thumbnail' => 'display: {{VALUE}}',
+			'{{WRAPPER}} .el-list-1-thumbnail' => 'display: {{VALUE}}',
 		],
 	]
     );
@@ -192,7 +192,7 @@ $this->add_responsive_control(
             'return_value'	=> 'none',
             'default'	=> 'flex',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-meta-box' => 'display: {{VALUE}}',
+                '{{WRAPPER}} .el-list-1-meta-box' => 'display: {{VALUE}}',
             ],
         ]
     );
@@ -206,9 +206,9 @@ $this->add_responsive_control(
             'label_off' => esc_html__( 'Off', 'nine-core' ),
             'description' => esc_html__('Toggle to display or hide post categories.', 'nine-core'),
             'return_value'	=> 'none',
-            'default'	=> 'block',
+            'default'	=> 'none',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-category' => 'display: {{VALUE}}',
+                '{{WRAPPER}} .el-list-1-category' => 'display: {{VALUE}}',
             ],
         ]
     );
@@ -225,7 +225,7 @@ $this->add_responsive_control(
             'return_value'	=> 'none',
             'default'	=> 'block',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-title' => 'display: {{VALUE}}',
+                '{{WRAPPER}} .el-list-1-title, .el-list-1-title' => 'display: {{VALUE}}',
             ],
         ]
     );
@@ -239,9 +239,9 @@ $this->add_responsive_control(
             'label_off' => esc_html__( 'Off', 'nine-core' ),
             'description' => esc_html__('Toggle to display or hide post content.', 'nine-core'),
             'return_value'	=> 'none',
-            'default'	=> 'block',
+            'default'	=> 'none',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-excerpt' => 'display: {{VALUE}}',
+                '{{WRAPPER}} .el-list-1-excerpt' => 'display: {{VALUE}}',
             ],
         ]
     );
@@ -256,9 +256,9 @@ $this->add_responsive_control(
             'label_off' => esc_html__( 'Off', 'nine-core' ),
             'description' => esc_html__('Toggle to display or hide author image.', 'nine-core'),
             'return_value'	=> 'none',
-            'default'	=> 'block',
+            'default'	=> 'none',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-avatar' => 'display: {{VALUE}}',
+                '{{WRAPPER}} .el-list-1-avatar' => 'display: {{VALUE}}',
             ],
         ]
     );
@@ -285,60 +285,6 @@ $this->add_responsive_control(
 $this->end_controls_section();
 
 
-$this->start_controls_section(  
-    'pagination',
-    [
-        'label' => esc_html__('Pagination', 'nine-core'),
-        // 'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
-    ]
-);
-
-    $this->add_responsive_control(
-        'load_more',
-        [
-            'label' => esc_html__( 'Active Load More Buttom', 'nine-core' ),
-            'type'    => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => esc_html__( 'On', 'nine-core' ),
-            'label_off' => esc_html__( 'Off', 'nine-core' ),
-            'description' => esc_html__('Toggle to display or hide Load More.', 'nine-core'),
-            'return_value'	=> 'none',
-            'default'	=> 'block',
-            'selectors' => [
-                '{{WRAPPER}} .load-more-button' => 'display: {{VALUE}}',
-            ],
-        ]
-    );
-
-    $this->add_group_control(
-        \Elementor\Group_Control_Background::get_type(),
-        [
-            'name' => 'load_more_background',
-            'types' => ['classic', 'gradient'],
-            'selector' => '{{WRAPPER}} .load-more-button',
-            'label' => esc_html__('Background', 'nine-core'),
-            'exclude' => ['image'],
-            'description' => esc_html__('Set the background of the load more button, including gradient options.', ),
-            'fields_options' => [
-            'background' => [
-                'label' => esc_html__('Custom Background', 'nine-core'),
-                'default' => 'classic',
-            ],
-            'color' => [
-                'default' => 'blue',
-            ],
-        ],
-    
-        ]
-    );
-    
-    
-    
-    
-
-
-$this->end_controls_section();
-
-
 
 // Post Style Subsection
 $this->start_controls_section(  
@@ -357,7 +303,7 @@ $this->start_controls_section(
             'description' => esc_html__('Set border radius for post images.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .el-list-1-thumbnail' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -381,7 +327,7 @@ $this->start_controls_section(
                 'size' => 1.1,
             ],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-thumbnail img:hover' => 'transform: scale({{SIZE}});',
+                '{{WRAPPER}} .el-list-1-thumbnail img:hover' => 'transform: scale({{SIZE}});',
             ],
         ]
     );
@@ -403,14 +349,37 @@ $this->start_controls_section(
                     ],
                     'default' => [
                         'unit' => 'px',
-                        'size' => 150,
+                        'size' => 100,
             ],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-thumbnail img' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .el-list-1-thumbnail' => 'height: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
 
+    $this->add_responsive_control(
+        'image_width',
+        [
+            'label' => esc_html__( 'Image Width', 'textdomain' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 400,
+                    'step' => 5,
+                ],
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 100,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .el-list-1-thumbnail' => 'width: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+    
     $this->end_controls_section();
 
     // Title Style Section
@@ -429,7 +398,7 @@ $this->start_controls_section(
             'type'      => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the color of post titles.', 'nine-core'),
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-title a' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-title a, .el-list-1-title' => 'color: {{VALUE}};',
             ],
         ]
     );
@@ -443,7 +412,7 @@ $this->start_controls_section(
             'label_off' => esc_html__('Off', 'nine-core'),
             'default' => 'no',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-title a' => 'background-size: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-title a, .el-list-1-title' => 'background-size: {{VALUE}};',
             ],
             'return_value' => '0 100%',
         ]
@@ -456,7 +425,7 @@ $this->start_controls_section(
             'type' => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the color of post titles on hover.', 'nine-core'),
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-title:hover' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-title:hover' => 'color: {{VALUE}};',
             ],
         ]
     );
@@ -467,7 +436,7 @@ $this->start_controls_section(
             'name'     => 'title_typography',
             'label'    => esc_html__('Title Typography', 'nine-core'),
             'description' => esc_html__('Set the typography for post titles.', 'nine-core'),
-            'selector' => '{{WRAPPER}} .el-g-1-title a',
+            'selector' => '{{WRAPPER}} .el-list-1-title a, .el-list-1-title',
         ]
     );
 
@@ -488,9 +457,9 @@ $this->start_controls_section(
             'label'     => esc_html__('Category Text Color', 'nine-core'),
             'type'      => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the color of post category text.', 'nine-core'),
-            'default' => 'white',
+            'default' => 'black',
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-category a' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-category a' => 'color: {{VALUE}};',
             ],
         ]
     );
@@ -501,7 +470,7 @@ $this->start_controls_section(
         [
             'name' => 'category_bg_color',
             'types' => ['classic', 'gradient'],
-            'selector' => '{{WRAPPER}} .el-g-1-category a',
+            'selector' => '{{WRAPPER}} .el-list-1-category a',
             'label' => esc_html__('Background', 'nine-core'),
             'exclude' => ['image'],
             'description' => esc_html__('Set the background color of post category.', ),
@@ -511,7 +480,7 @@ $this->start_controls_section(
                 'default' => 'classic',
             ],
             'color' => [
-                'default' => 'blue',
+                'default' => 'transparent',
             ],
         ],
     
@@ -528,7 +497,7 @@ $this->start_controls_section(
             'description' => esc_html__('Set the border radius of post category.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-category a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .el-list-1-category a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -541,7 +510,7 @@ $this->start_controls_section(
             'description' => esc_html__('Set the padding of post category.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-category a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .el-list-1-category a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -554,7 +523,7 @@ $this->start_controls_section(
             'description' => esc_html__('Set the position of post category.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-category' => 'left: {{LEFT}}{{UNIT}}; top: {{TOP}}{{UNIT}};',
+                '{{WRAPPER}} .el-list-1-category' => 'left: {{LEFT}}{{UNIT}}; top: {{TOP}}{{UNIT}};',
             ],
         ]
     );
@@ -565,7 +534,7 @@ $this->start_controls_section(
             'name'     => 'category_typography',
             'label'    => esc_html__('Category Typography', 'nine-core'),
             'description' => esc_html__('Set the typography for post category.', 'nine-core'),
-            'selector' => '{{WRAPPER}} .el-g-1-category',
+            'selector' => '{{WRAPPER}} .el-list-1-category',
         ]
     );
 
@@ -586,7 +555,7 @@ $this->start_controls_section(
             'type'      => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the color of post author.', 'nine-core'),
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-meta-box a' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-meta-box a' => 'color: {{VALUE}};',
             ],
         ]
     );
@@ -597,7 +566,7 @@ $this->start_controls_section(
             'name'     => 'author_typography',
             'label'    => esc_html__('Author Typography', 'nine-core'),
             'description' => esc_html__('Set the typography for post author.', 'nine-core'),
-            'selector' => '{{WRAPPER}} .el-g-1-meta-box a',
+            'selector' => '{{WRAPPER}} .el-list-1-meta-box a',
         ]
     );
 
@@ -617,7 +586,7 @@ $this->start_controls_section(
             'name'     => 'date_typography',
             'label'    => esc_html__('Date Typography', 'nine-core'),
             'description' => esc_html__('Set the typography for post date.', 'nine-core'),
-            'selector' => '{{WRAPPER}} .el-g-1-date',
+            'selector' => '{{WRAPPER}} .el-list-1-date',
         ]
     );
 
@@ -639,7 +608,7 @@ $this->start_controls_section(
             'type'      => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the color of post content.', 'nine-core'),
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-excerpt' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-excerpt' => 'color: {{VALUE}};',
             ],
         ]
     );
@@ -650,7 +619,7 @@ $this->start_controls_section(
             'name'     => 'content_typography',
             'label'    => esc_html__('Content Typography', 'nine-core'),
             'description' => esc_html__('Set the typography for post content.', 'nine-core'),
-            'selector' => '{{WRAPPER}} .el-g-1-excerpt',
+            'selector' => '{{WRAPPER}} .el-list-1-excerpt',
         ]
     );
 
@@ -672,7 +641,7 @@ $this->start_controls_section(
             'type' => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the color of the container border.', 'nine-core'),
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-box' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-box' => 'border-color: {{VALUE}};',
             ],
         ]
     );
@@ -685,7 +654,7 @@ $this->start_controls_section(
             'description' => esc_html__('Set the width of the container border.', 'nine-core'),
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-box' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .el-list-1-box' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -710,7 +679,7 @@ $this->start_controls_section(
                 'hidden' => esc_html__('Hidden', 'nine-core'),
             ],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-box' => 'border-style: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-box' => 'border-style: {{VALUE}};',
             ],
         ]
     );
@@ -723,7 +692,20 @@ $this->start_controls_section(
             'description' => esc_html__('Set the border radius of the container background.', 'nine-core'),
             'size_units' => ['px', '%'],
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-box' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .el-list-1-box' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'list_padding',
+        [
+            'label' => esc_html__('Padding', 'nine-core'),
+            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+            'description' => esc_html__('Set the padding of post box.', 'nine-core'),
+            'size_units' => ['px', '%'],
+            'selectors' => [
+                '{{WRAPPER}} .el-list-1-box' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -735,7 +717,7 @@ $this->start_controls_section(
             'type'      => \Elementor\Controls_Manager::COLOR,
             'description' => esc_html__('Set the background color of the container.', 'nine-core'),
             'selectors' => [
-                '{{WRAPPER}} .el-g-1-box' => 'background-color: {{VALUE}};',
+                '{{WRAPPER}} .el-list-1-box' => 'background-color: {{VALUE}};',
             ],
         ]
     );
@@ -745,7 +727,7 @@ $this->start_controls_section(
         [
             'name' => 'box_shadow',
             'description' => esc_html__('Add box shadow to the container.', 'nine-core'),
-            'selector' => '{{WRAPPER}} .el-g-1-box',
+            'selector' => '{{WRAPPER}} .el-list-1-box',
         ]
     );
 

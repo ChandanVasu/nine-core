@@ -304,7 +304,7 @@ $this->start_controls_section(
             'label_off' => esc_html__( 'Off', 'nine-core' ),
             'description' => esc_html__('Toggle to display or hide Load More.', 'nine-core'),
             'return_value'	=> 'none',
-            'default'	=> 'block',
+            'default'	=> 'none',
             'selectors' => [
                 '{{WRAPPER}} .load-more-button' => 'display: {{VALUE}}',
             ],
