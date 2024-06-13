@@ -379,6 +379,25 @@ $this->start_controls_section(
             ],
         ]
     );
+
+    $this->add_responsive_control(
+        'list_item_gap',
+        [
+            'label' => esc_html__( 'Content Gap', 'nine-core' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 400,
+                            'step' => 5,
+                        ],
+                    ],
+            'selectors' => [
+                '{{WRAPPER}} .el-list-1-box' => 'gap: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
     
     $this->end_controls_section();
 

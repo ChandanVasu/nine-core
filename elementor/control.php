@@ -3,13 +3,10 @@
 class Elementor_Customizations {
 
     public function __construct() {
-        // Hook to add custom widget categories
         add_action( 'elementor/elements/categories_registered', [ $this, 'add_elementor_widget_categories' ] );
 
-        // Hook to register and enqueue editor styles
         add_action( 'elementor/editor/after_enqueue_styles', [ $this, 'register_editor_styles' ] );
 
-        // Hook to register custom widget
         add_action( 'elementor/widgets/register', [ $this, 'nine_all_widget' ] );
     }
 
@@ -43,6 +40,7 @@ class Elementor_Customizations {
     public function nine_all_widget( $widgets_manager ) {
         require_once( __DIR__ . '/widgets/post-grid-one.php' );
         require_once( __DIR__ . '/widgets/post-list-one.php' );
+        require_once( __DIR__ . '/widgets/content.php' );
         require_once( __DIR__ . '/widgets/post-list-big.php' );
         require_once( __DIR__ . '/block/block-grid-one.php' );
         require_once( __DIR__ . '/block/block-list-one.php' );
@@ -51,6 +49,7 @@ class Elementor_Customizations {
         $widgets_manager->register( new \post_grid_one() );
         $widgets_manager->register( new \post_list_one() );
         $widgets_manager->register( new \post_list_big() );
+        $widgets_manager->register( new \single_post_content() );
     }
 }
 

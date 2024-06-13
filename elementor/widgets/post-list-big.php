@@ -101,7 +101,7 @@ protected function _register_controls(){
             'label'   => esc_html__('Content Length', 'nine-core'),
             'type'    => \Elementor\Controls_Manager::NUMBER,
             'description' => esc_html__('Set the maximum length of the content.', 'nine-core'),
-            'default' => 20, // Default number of words to display in content
+            'default' => 10, // Default number of words to display in content
         ]
     );
 
@@ -337,7 +337,7 @@ $this->start_controls_section(
     $this->add_responsive_control(
         'image_height',
         [
-            'label' => esc_html__( 'Image Height', 'textdomain' ),
+            'label' => esc_html__( 'Image Height', 'nine-core' ),
             'type' => \Elementor\Controls_Manager::SLIDER,
             'size_units' => [ 'px' ],
                     'range' => [
@@ -347,20 +347,18 @@ $this->start_controls_section(
                             'step' => 5,
                         ],
                     ],
-            //         'default' => [
-            //             'unit' => 'px',
-            //             'size' => 100,
-            // ],
             'selectors' => [
                 '{{WRAPPER}} .el-list-big-thumbnail' => 'height: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
 
+
+
     $this->add_responsive_control(
         'image_width',
         [
-            'label' => esc_html__( 'Image Width', 'textdomain' ),
+            'label' => esc_html__( 'Image Width', 'nine-core' ),
             'type' => \Elementor\Controls_Manager::SLIDER,
             'size_units' => [ 'px' ],
             'range' => [
@@ -370,12 +368,27 @@ $this->start_controls_section(
                     'step' => 5,
                 ],
             ],
-            // 'default' => [
-            //     'unit' => 'px',
-            //     'size' => 100,
-            // ],
             'selectors' => [
                 '{{WRAPPER}} .el-list-big-thumbnail' => 'width: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_responsive_control(
+        'list_item_gap',
+        [
+            'label' => esc_html__( 'Content Gap', 'nine-core' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 400,
+                            'step' => 5,
+                        ],
+                    ],
+            'selectors' => [
+                '{{WRAPPER}} .el-list-big-box' => 'gap: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
