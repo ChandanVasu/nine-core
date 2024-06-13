@@ -43,11 +43,14 @@ class Elementor_Customizations {
     public function nine_all_widget( $widgets_manager ) {
         require_once( __DIR__ . '/widgets/post-grid-one.php' );
         require_once( __DIR__ . '/widgets/post-list-one.php' );
+        require_once( __DIR__ . '/widgets/post-list-big.php' );
         require_once( __DIR__ . '/block/block-grid-one.php' );
         require_once( __DIR__ . '/block/block-list-one.php' );
+        require_once( __DIR__ . '/block/block-list-big.php' );
 
         $widgets_manager->register( new \post_grid_one() );
         $widgets_manager->register( new \post_list_one() );
+        $widgets_manager->register( new \post_list_big() );
     }
 }
 
