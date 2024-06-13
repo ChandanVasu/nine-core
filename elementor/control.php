@@ -10,7 +10,7 @@ class Elementor_Customizations {
         add_action( 'elementor/editor/after_enqueue_styles', [ $this, 'register_editor_styles' ] );
 
         // Hook to register custom widget
-        add_action( 'elementor/widgets/register', [ $this, 'register_hello_world_widget' ] );
+        add_action( 'elementor/widgets/register', [ $this, 'nine_all_widget' ] );
     }
 
     public function add_elementor_widget_categories( $elements_manager ) {
@@ -36,14 +36,18 @@ class Elementor_Customizations {
     }
 
     public function register_editor_styles() {
-        wp_register_style( 'th90-elementor-editor', plugins_url( 'main.css', __FILE__ ) );
-        wp_enqueue_style( 'th90-elementor-editor' );
+        wp_register_style( 'nine-elementor-editor', plugins_url( 'main.css', __FILE__ ) );
+        wp_enqueue_style( 'nine-elementor-editor' );
     }
 
-    public function register_hello_world_widget( $widgets_manager ) {
-        require_once( __DIR__ . '/widgets/post-grid.php' );
+    public function nine_all_widget( $widgets_manager ) {
+        require_once( __DIR__ . '/widgets/post-grid-one.php' );
+        require_once( __DIR__ . '/widgets/post-list-one.php' );
         require_once( __DIR__ . '/block/block-grid-one.php' );
-        $widgets_manager->register( new \Grid_Post_One() );
+        require_once( __DIR__ . '/block/block-list-one.php' );
+
+        $widgets_manager->register( new \post_grid_one() );
+        $widgets_manager->register( new \post_list_one() );
     }
 }
 

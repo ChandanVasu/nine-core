@@ -3,7 +3,7 @@
 Plugin Name: Nine Core
 Description: A simple plugin for demonstration.
 Version: 1.0
-Author: Your Name
+Author: Vasu Theme
 Author URI: https://yourwebsite.com
 */
 
@@ -15,17 +15,21 @@ if (!class_exists('ReduxFramework')) {
     require_once dirname(__FILE__) . '/redux-core/framework.php';
 }
 
-// Include necessary files
-$plugin_path = plugin_dir_path(__FILE__);
-require_once $plugin_path . 'inc/template/override/header.php';
-require_once $plugin_path . 'assets/variable.php';
-require_once $plugin_path . 'inc/post/custom-post.php';
-require_once $plugin_path . 'inc/template/override/footer.php';
-require_once $plugin_path . 'inc/inc.php';
-require_once $plugin_path . 'inc/template/opstion/header.php';
-require_once $plugin_path . '/cmb2/init.php';
-require_once $plugin_path . '/elementor/control.php';
-require_once $plugin_path . '/elementor/inc/grid-one-load.php';
+// Check if the active theme is 'Nine'
+$current_theme = wp_get_theme();
+if ($current_theme->get('Name') == 'Nine') {
+    $plugin_path = plugin_dir_path(__FILE__);
+    require_once $plugin_path . 'inc/template/override/header.php';
+    require_once $plugin_path . 'assets/variable.php';
+    require_once $plugin_path . 'inc/post/custom-post.php';
+    require_once $plugin_path . 'inc/template/override/footer.php';
+    require_once $plugin_path . 'inc/inc.php';
+    require_once $plugin_path . 'inc/template/opstion/header.php';
+    require_once $plugin_path . '/cmb2/init.php';
+    require_once $plugin_path . '/elementor/control.php';
+    require_once $plugin_path . '/elementor/inc/grid-one-load.php';
+}
+
 
 // Enqueue main.css file
 function adjust_styles_load_order() {

@@ -1,15 +1,15 @@
 <?php
 
-class Grid_Post_One extends \Elementor\Widget_Base {
+class post_list_one extends \Elementor\Widget_Base {
     
     public function get_name()
     {
-        return 'Grid_Post_One';
+        return 'post_list_one';
     }
 
     public function get_title()
     {
-        return esc_html__('Grid Style 1 - nine', 'nine-core');
+        return esc_html__('LIST POST', 'nine-core');
     }
 
     public function get_icon() {
@@ -26,17 +26,11 @@ class Grid_Post_One extends \Elementor\Widget_Base {
         $settings = $this->get_settings_for_display();
         $settings['uuid'] = 'uid_' . $this->get_id();
     
-        if (function_exists('grid_post_one')) {
-            // echo '<div id="' . esc_attr($settings['uuid']) . '" class="posts-container">';
-            echo grid_post_one($settings);
-            // echo '</div>';
+        if (function_exists('post_list_one')) {
+            echo post_list_one($settings);
         }
     }
     
-    
-
-
-
 
 protected function _register_controls(){
     $this->start_controls_section(

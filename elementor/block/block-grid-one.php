@@ -44,7 +44,7 @@ function grid_post_one($settings) {
             ?>
             <div class="el-g-1-grid-container">
                 <?php while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
-                    <?php get_template_part('template/elementor/g-1'); ?>
+                    <?php get_template_part('template/block/elementor/g-1'); ?>
                 <?php endwhile; ?>
             </div>
             <?php if ($posts_query->found_posts > $settings['posts_per_page']) : ?>

@@ -37,7 +37,7 @@ function g_1_load_more() {
     if ($posts_query->have_posts()) :
         while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
 
-            <?php get_template_part('template/elementor/g-1'); ?>
+            <?php get_template_part('template/block/elementor/g-1'); ?>
 
         <?php endwhile;
     else :
