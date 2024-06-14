@@ -9,7 +9,7 @@ class single_post_content extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'Single Post', 'nine-core' );
+        return __( 'SINGLE POST', 'nine-core' );
     }
 
     // Widget Icon
@@ -29,32 +29,37 @@ class single_post_content extends \Elementor\Widget_Base {
         // Check if it's a single post
         if ( is_singular( 'post' ) ) {
             setup_postdata( $post );
-            echo '<div class="el-single-post-content-nine">' . the_content() . '</div>';
+            echo '<div class="el-single-post-content-nine">' . get_the_content() . '</div>';
             wp_reset_postdata();
         } else {
-            echo '<h1>This Is Demo Heading</h1>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Vivamus in massa nunc. Morbi bibendum purus sit amet quam venenatis, sit amet faucibus quam fermentum. Fusce ac aliquet metus, sit amet consectetur arcu. Vestibulum sit amet condimentum ligula. In hac habitasse platea dictumst. Nulla suscipit, ex eu aliquam tincidunt, justo libero feugiat lectus, non dapibus risus sapien sit amet est. Vestibulum non ante in odio aliquam ultricies a in lorem. Fusce lobortis lectus quis interdum consectetur. Vestibulum sagittis tristique lorem vitae vehicula. Vestibulum eget felis eros. Fusce ut nisi at eros commodo euismod. Sed hendrerit lacinia eros, vel commodo arcu efficitur in. Ut auctor magna quis nibh cursus, vel finibus lorem consectetur.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Vivamus in massa nunc. Morbi bibendum purus sit amet quam venenatis, sit amet faucibus quam fermentum. Fusce ac aliquet metus, sit amet consectetur arcu. Vestibulum sit amet condimentum ligula. In hac habitasse platea dictumst. Nulla suscipit, ex eu aliquam tincidunt, justo libero feugiat lectus, non dapibus risus sapien sit amet est. Vestibulum non ante in odio aliquam ultricies a in lorem. Fusce lobortis lectus quis interdum consectetur. Vestibulum sagittis tristique lorem vitae vehicula. Vestibulum eget felis eros. Fusce ut nisi at eros commodo euismod. Sed hendrerit lacinia eros, vel commodo arcu efficitur in. Ut auctor magna quis nibh cursus, vel finibus lorem consectetur.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Vivamus in massa nunc. Morbi bibendum purus sit amet quam venenatis, sit amet faucibus quam fermentum. Fusce ac aliquet metus, sit amet consectetur arcu. Vestibulum sit amet condimentum ligula. In hac habitasse platea dictumst. Nulla suscipit, ex eu aliquam tincidunt, justo libero feugiat lectus, non dapibus risus sapien sit amet est. Vestibulum non ante in odio aliquam ultricies a in lorem. Fusce lobortis lectus quis interdum consectetur. Vestibulum sagittis tristique lorem vitae vehicula. Vestibulum eget felis eros. Fusce ut nisi at eros commodo euismod. Sed hendrerit lacinia eros, vel commodo arcu efficitur in. Ut auctor magna quis nibh cursus, vel finibus lorem consectetur.
-            </p>
-            
-            <h2>Demo Heading</h2>
-            <p>
-            Sed consectetur lobortis orci, non vehicula sem tristique eget. Duis feugiat, ex vitae cursus bibendum, risus est sodales velit, at vestibulum eros metus et justo. Sed eget eros et quam ultricies rhoncus at a ex. Sed euismod, nisi id rhoncus efficitur, odio ligula feugiat dui, a iaculis justo sem ac ex. Integer vitae congue sapien. Ut faucibus, risus nec efficitur consequat, odio lorem commodo ipsum, nec iaculis est velit nec dolor. Maecenas commodo magna ac quam rutrum, quis finibus risus tincidunt. Integer posuere vel mi ac pharetra. Phasellus id tristique leo. Duis maximus est et quam consequat, in tincidunt elit pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Vivamus in massa nunc. Morbi bibendum purus sit amet quam venenatis, sit amet faucibus quam fermentum. Fusce ac aliquet metus, sit amet consectetur arcu. Vestibulum sit amet condimentum ligula. In hac habitasse platea dictumst. Nulla suscipit, ex eu aliquam tincidunt, justo libero feugiat lectus, non dapibus risus sapien sit amet est. Vestibulum non ante in odio aliquam ultricies a in lorem. Fusce lobortis lectus quis interdum consectetur. Vestibulum sagittis tristique lorem vitae vehicula. Vestibulum eget felis eros. Fusce ut nisi at eros commodo euismod. Sed hendrerit lacinia eros, vel commodo arcu efficitur in. Ut auctor magna quis nibh cursus, vel finibus lorem consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Vivamus in massa nunc. Morbi bibendum purus sit amet quam venenatis, sit amet faucibus quam fermentum. Fusce ac aliquet metus, sit amet consectetur arcu. Vestibulum sit amet condimentum ligula. In hac habitasse platea dictumst. Nulla suscipit, ex eu aliquam tincidunt, justo libero feugiat lectus, non dapibus risus sapien sit amet est. Vestibulum non ante in odio aliquam ultricies a in lorem. Fusce lobortis lectus quis interdum consectetur. Vestibulum sagittis tristique lorem vitae vehicula. Vestibulum eget felis eros. Fusce ut nisi at eros commodo euismod. Sed hendrerit lacinia eros, vel commodo arcu efficitur in. Ut auctor magna quis nibh cursus, vel finibus lorem consectetur.
-            </p>';
+            echo '
+                <h1>Main Title: Welcome to Our Blog</h1>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections .Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections .</p>
+
+
+                <h2>Subheading: Conclusion</h2>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections.</p>
+
+                <h3>Sub-subheading: Final Thoughts</h3>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections .</p>
+
+                <h4>Smaller Subheading: Future Outlook</h4>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections .</p>
+
+                <h5>Even Smaller Subheading: Additional Resources</h5>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections.</p>
+            ';
         }
     }
 
     // Register Widget Controls
     protected function _register_controls() {
 
-         // Typography Style Section
-         $this->start_controls_section(
+        // Typography Style Section
+        $this->start_controls_section(
             'typography_style_section',
             [
                 'label' => __( 'Typography Style', 'nine-core' ),
-                // 'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
 
@@ -139,7 +144,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        // Heading Color Control
+        // Heading Color Controls
         $this->add_control(
             'heading_color_h1',
             [
@@ -232,7 +237,6 @@ class single_post_content extends \Elementor\Widget_Base {
 
         $this->end_controls_section();
 
-       
         // Margin Style Section
         $this->start_controls_section(
             'margin_style_section',
@@ -242,7 +246,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        // Heading 1 Margin Control
+        // Heading Margin Controls
         $this->add_control(
             'h1_margin',
             [
@@ -255,7 +259,6 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        // Heading 2 Margin Control
         $this->add_control(
             'h2_margin',
             [
@@ -268,7 +271,6 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        // Heading 3 Margin Control
         $this->add_control(
             'h3_margin',
             [
@@ -296,6 +298,7 @@ class single_post_content extends \Elementor\Widget_Base {
 
         $this->end_controls_section();
 
+        // Image Style Section
         $this->start_controls_section(
             'image_style_section',
             [
@@ -317,6 +320,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
+        // Image Width Control
         $this->add_responsive_control(
             'image_width',
             [
@@ -326,17 +330,18 @@ class single_post_content extends \Elementor\Widget_Base {
                 'selectors' => [
                     '{{WRAPPER}} img' => 'width: {{SIZE}}{{UNIT}};',
                 ],
-                'devices' => [ 'desktop', 'tablet', 'mobile' ], // Add devices option
+                'devices' => [ 'desktop', 'tablet', 'mobile' ],
                 'range' => [
                     'px' => [
                         'min' => 0,
                         'max' => 500,
                     ],
                 ],
-                'separator' => 'before', // Add separator option
+                'separator' => 'before',
             ]
         );
-        
+
+        // Image Height Control
         $this->add_responsive_control(
             'image_height',
             [
@@ -346,32 +351,32 @@ class single_post_content extends \Elementor\Widget_Base {
                 'selectors' => [
                     '{{WRAPPER}} img' => 'height: {{SIZE}}{{UNIT}};',
                 ],
-                'devices' => [ 'desktop', 'tablet', 'mobile' ], // Add devices option
+                'devices' => [ 'desktop', 'tablet', 'mobile' ],
                 'range' => [
                     'px' => [
                         'min' => 0,
                         'max' => 500,
                     ],
                 ],
-                'separator' => 'before', // Add separator option
+                'separator' => 'before',
             ]
         );
-        
-    // Image Border Radius Control
-    $this->add_control(
-        'image_border_radius',
-        [
-            'label' => __( 'Image Border Radius', 'nine-core' ),
-            'type' => \Elementor\Controls_Manager::SLIDER,
-            'size_units' => [ 'px', '%' ],
-            'selectors' => [
-                '{{WRAPPER}} img' => 'border-radius: {{SIZE}}{{UNIT}};',
-            ],
-        ]
-    );
 
+        // Image Border Radius Control
+        $this->add_control(
+            'image_border_radius',
+            [
+                'label' => __( 'Image Border Radius', 'nine-core' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} img' => 'border-radius: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
 
         $this->end_controls_section();
     }
 
 }
+?>
