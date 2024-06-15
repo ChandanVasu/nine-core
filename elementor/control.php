@@ -41,6 +41,8 @@ class Elementor_Customizations {
         require_once( __DIR__ . '/widgets/post-grid-one.php' );
         require_once( __DIR__ . '/widgets/post-list-one.php' );
         require_once( __DIR__ . '/widgets/content.php' );
+        require_once( __DIR__ . '/widgets/title.php' );
+        require_once( __DIR__ . '/widgets/featured-img.php' );
         require_once( __DIR__ . '/widgets/post-list-big.php' );
         require_once( __DIR__ . '/block/block-grid-one.php' );
         require_once( __DIR__ . '/block/block-list-one.php' );
@@ -50,6 +52,7 @@ class Elementor_Customizations {
         $widgets_manager->register( new \post_list_one() );
         $widgets_manager->register( new \post_list_big() );
         $widgets_manager->register( new \single_post_content() );
+        $widgets_manager->register( new \Single_Title() );
     }
 }
 

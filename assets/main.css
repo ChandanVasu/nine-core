@@ -124,7 +124,7 @@
 	/* box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px; */
 	display: flex;
 	gap: 10px;
-	padding: 10px
+	/* padding: 10px */
 }
 
 .el-list-1-box .el-list-1-thumbnail img {
@@ -395,3 +395,8 @@
 	transition: background-size .3s
 }
 
+
+.el-thum img{
+	height: 450px;
+	border-radius: 20px;
+}
