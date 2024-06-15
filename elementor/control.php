@@ -41,6 +41,7 @@ class Elementor_Customizations {
         require_once( __DIR__ . '/widgets/post-grid-one.php' );
         require_once( __DIR__ . '/widgets/post-list-one.php' );
         require_once( __DIR__ . '/widgets/content.php' );
+        require_once( __DIR__ . '/widgets/comment.php' );
         require_once( __DIR__ . '/widgets/title.php' );
         require_once( __DIR__ . '/widgets/featured-img.php' );
         require_once( __DIR__ . '/widgets/post-list-big.php' );
