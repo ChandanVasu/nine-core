@@ -11,7 +11,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'Single Post Meta', 'nine-core' );
+        return __( 'POST META', 'nine-core' );
     }
 
     // Widget Icon
@@ -33,7 +33,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
-
+    
         $this->add_control(
             'display_author',
             [
@@ -45,7 +45,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => 'yes',
             ]
         );
-
+    
         $this->add_control(
             'display_author_avatar',
             [
@@ -60,7 +60,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_control(
             'display_date',
             [
@@ -72,7 +72,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => 'yes',
             ]
         );
-
+    
         $this->add_control(
             'display_categories',
             [
@@ -84,7 +84,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => 'yes',
             ]
         );
-
+    
         $this->add_control(
             'display_tags',
             [
@@ -96,7 +96,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => 'yes',
             ]
         );
-
+    
         $this->add_control(
             'before_author_text',
             [
@@ -105,7 +105,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => '',
             ]
         );
-        
+    
         $this->add_control(
             'before_categories_text',
             [
@@ -114,7 +114,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => '',
             ]
         );
-        
+    
         $this->add_control(
             'before_date_text',
             [
@@ -123,7 +123,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => '',
             ]
         );
-        
+    
         $this->add_control(
             'before_tags_text',
             [
@@ -132,16 +132,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => '',
             ]
         );
-        
-        $this->add_control(
-            'before_author_text',
-            [
-                'label' => __( 'Before Author Text', 'nine-core' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => '',
-            ]
-        );
-        
+    
         $this->add_control(
             'before_author_text_color',
             [
@@ -150,90 +141,88 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'selectors' => [
                     '{{WRAPPER}} .single-post-meta .before-author-text' => 'color: {{VALUE}};',
                 ],
-                'condition' => [
-                    'before_author_text!' => '',
-                ],
+
             ]
         );
-        
+    
+        $this->add_control(
+            'before_categories_text_color',
+            [
+                'label' => __( 'Before Categories Text Color', 'nine-core' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .single-post-meta .before-categories-text' => 'color: {{VALUE}};',
+                ],
+
+            ]
+        );
+    
+        $this->add_control(
+            'before_date_text_color',
+            [
+                'label' => __( 'Before Date Text Color', 'nine-core' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .single-post-meta .before-date-text' => 'color: {{VALUE}};',
+                ],
+
+            ]
+        );
+    
+        $this->add_control(
+            'before_tags_text_color',
+            [
+                'label' => __( 'Before Tags Text Color', 'nine-core' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .single-post-meta .before-tags-text' => 'color: {{VALUE}};',
+                ],
+
+            ]
+        );
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'before_author_typography',
                 'label' => __( 'Before Author Text Typography', 'nine-core' ),
                 'selector' => '{{WRAPPER}} .single-post-meta .before-author-text',
-                'condition' => [
-                    'before_author_text!' => '',
-                ],
-            ]
-        );
 
-        $this->add_control(
-            'before_author_text_color',
-            [
-                'label' => __( 'Before Author Text Color', 'nine-core' ),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .single-post-meta .before_categories_text' => 'color: {{VALUE}};',
-                ],
-                'condition' => [
-                    'before_author_text!' => '',
-                ],
             ]
         );
-        
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'before_author_typography',
-                'label' => __( 'Before Author Text Typography', 'nine-core' ),
-                'selector' => '{{WRAPPER}} .single-post-meta .before_date_text',
-                'condition' => [
-                    'before_author_text!' => '',
-                ],
+                'name' => 'before_categories_typography',
+                'label' => __( 'Before Categories Text Typography', 'nine-core' ),
+                'selector' => '{{WRAPPER}} .single-post-meta .before-categories-text',
+
             ]
         );
-
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'before_author_typography',
-                'label' => __( 'Before Author Text Typography', 'nine-core' ),
-                'selector' => '{{WRAPPER}} .single-post-meta .before_date_text',
-                'condition' => [
-                    'before_author_text!' => '',
-                ],
+                'name' => 'before_date_typography',
+                'label' => __( 'Before Date Text Typography', 'nine-core' ),
+                'selector' => '{{WRAPPER}} .single-post-meta .before-date-text',
+ 
             ]
         );
-
-        $this->add_control(
-            'before_author_text_color',
-            [
-                'label' => __( 'Before Author Text Color', 'nine-core' ),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .single-post-meta .before_tags_text' => 'color: {{VALUE}};',
-                ],
-                'condition' => [
-                    'before_author_text!' => '',
-                ],
-            ]
-        );
-        
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'before_author_typography',
-                'label' => __( 'Before Author Text Typography', 'nine-core' ),
-                'selector' => '{{WRAPPER}} .single-post-meta .before_tags_text',
-                'condition' => [
-                    'before_author_text!' => '',
-                ],
+                'name' => 'before_tags_typography',
+                'label' => __( 'Before Tags Text Typography', 'nine-core' ),
+                'selector' => '{{WRAPPER}} .single-post-meta .before-tags-text',
+
             ]
         );
-                
+    
         $this->end_controls_section();
-
+    
         $this->start_controls_section(
             'style_section',
             [
@@ -241,17 +230,16 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
-
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'meta_typography',
-                'label' => __( 'Typography', 'nine-core' ),
+                'label' => __( 'Meta Typography', 'nine-core' ),
                 'selector' => '{{WRAPPER}} .single-post-meta',
             ]
         );
-
-
+    
         $this->add_control(
             'meta_bg_color',
             [
@@ -262,7 +250,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_control(
             'meta_padding',
             [
@@ -274,7 +262,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_control(
             'meta_border_radius',
             [
@@ -286,7 +274,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_control(
             'avatar_size',
             [
@@ -310,7 +298,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_control(
             'avatar_border_radius',
             [
@@ -334,8 +322,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
-
+    
         $this->add_control(
             'author_name_color',
             [
@@ -349,7 +336,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_control(
             'date_color',
             [
@@ -363,7 +350,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_control(
             'categories_color',
             [
@@ -377,8 +364,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-        
-
+    
         $this->add_control(
             'tags_color',
             [
@@ -392,10 +378,9 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-        
-
+    
         $this->end_controls_section();
-
+    
         $this->start_controls_section(
             'author_typography',
             [
@@ -406,7 +391,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
@@ -415,9 +400,9 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'selector' => '{{WRAPPER}} .post-author .author-name',
             ]
         );
-
+    
         $this->end_controls_section();
-
+    
         $this->start_controls_section(
             'date_typography',
             [
@@ -428,7 +413,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
@@ -437,9 +422,9 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'selector' => '{{WRAPPER}} .post-date',
             ]
         );
-
+    
         $this->end_controls_section();
-
+    
         $this->start_controls_section(
             'categories_typography',
             [
@@ -450,7 +435,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
@@ -459,9 +444,9 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'selector' => '{{WRAPPER}} .post-categories',
             ]
         );
-
+    
         $this->end_controls_section();
-
+    
         $this->start_controls_section(
             'tags_typography',
             [
@@ -472,7 +457,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 ],
             ]
         );
-
+    
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
@@ -481,9 +466,10 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
                 'selector' => '{{WRAPPER}} .post-tags',
             ]
         );
-
+    
         $this->end_controls_section();
     }
+    
 
 
     protected function render() {

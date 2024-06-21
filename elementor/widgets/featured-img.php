@@ -161,7 +161,7 @@ class Single_Featured_Image extends Widget_Base {
         echo '<div class="el-thum">';
         if (Plugin::$instance->editor->is_edit_mode()) {
             echo '<div class="post-format-image-thumbnail">';
-            echo '<img src="' . esc_url('https://via.placeholder.com/800x450.png?text=Post+Featured+Image') . '" alt="' . esc_attr__('Placeholder Image', 'nine-core') . '">';
+            echo '<img src="' . esc_url(get_template_directory_uri() . '/Assets/images/preview.png') . '" alt="' . esc_attr__('Placeholder Image', 'nine-core') . '">';
             echo '</div>';
         } else {
             if (function_exists('display_post_thumbnail')) {

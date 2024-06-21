@@ -63,7 +63,7 @@ class single_post_comment extends \Elementor\Widget_Base {
             if ( comments_open( $post->ID ) ) {
                 comments_template();
             } else {
-                echo '<p>' . __( 'Comments are closed.', 'nine-core' ) . '</p>';
+                echo '<p>' . __( 'Comments will be displayed here.', 'nine-core' ) . '</p>';
             }
             ?>
         </div>
@@ -71,19 +71,6 @@ class single_post_comment extends \Elementor\Widget_Base {
         <?php
     }
 
-    // Render widget output in the editor
-    protected function _content_template() {
-        ?>
-        <#
-        var title = settings.title ? settings.title : '<?php echo __( 'Comments', 'nine-core' ); ?>';
-        #>
-        <div class="single-post-comments">
-            <h3>{{{ title }}}</h3>
-            <# // Note: We cannot render PHP functions like comments_template() in the editor preview #>
-            <p><?php echo __( 'Comments will be displayed here.', 'nine-core' ); ?></p>
-        </div>
-        <?php
-    }
 }
 
 // Register the widget
