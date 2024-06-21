@@ -400,3 +400,9 @@
 	height: 450px;
 	border-radius: 20px;
 }
+
+.block-heading{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

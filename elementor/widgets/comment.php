@@ -16,7 +16,7 @@ class single_post_comment extends \Elementor\Widget_Base {
 
     // Widget Icon
     public function get_icon() {
-        return 'eicon-post-content';
+        return 'eicon-comments';
     }
 
     // Widget Category

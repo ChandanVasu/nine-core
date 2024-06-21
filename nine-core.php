@@ -2,7 +2,7 @@
 /*
 Plugin Name: Nine Core
 Description: A simple plugin for demonstration.
-Version: 1.0
+Version: 1.0.0
 Author: Vasu Theme
 Author URI: https://yourwebsite.com
 */

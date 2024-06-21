@@ -13,7 +13,7 @@ class post_grid_one extends \Elementor\Widget_Base {
     }
 
     public function get_icon() {
-          return 'eicon-post-list ne-icon';
+          return 'eicon-posts-grid ne-icon';
     }
     
 
