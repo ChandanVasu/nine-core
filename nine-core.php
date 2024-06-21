@@ -25,7 +25,7 @@ if ($current_theme->get('Name') == 'Nine') {
     require_once $plugin_path . 'inc/template/override/footer.php';
     require_once $plugin_path . 'inc/inc.php';
     require_once $plugin_path . 'inc/template/opstion/header.php';
-    require_once $plugin_path . '/cmb2/init.php';
+    require_once $plugin_path . '/meta-box/init.php';
     require_once $plugin_path . '/elementor/control.php';
     require_once $plugin_path . '/elementor/inc/grid-one-load.php';
 }

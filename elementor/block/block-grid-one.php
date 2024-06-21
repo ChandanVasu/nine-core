@@ -12,26 +12,44 @@ function grid_post_one($settings) {
     ];
     $settings = wp_parse_args($settings, $defaults);
 
-    // Make settings available globally within the scope of the template part
     global $title_length, $content_length;
     $title_length = $settings['title_length'];
     $content_length = $settings['content_length'];
 
     $query_args = [
-        'post_type' => 'post',
+        'post_type'      => 'post',
         'posts_per_page' => $settings['posts_per_page'],
-        'offset' => $settings['offset'],
-        'order' => $settings['order'],
+        'offset'         => $settings['offset'],
+        'order'          => $settings['order'],
         'ignore_sticky_posts' => true,
     ];
 
-    if ($settings['dynamic_filtering'] === 'yes' && is_single()) {
-        $categories = get_the_category();
-        $category_ids = wp_list_pluck($categories, 'term_id');
-        $query_args['category__in'] = $category_ids;
+    if ($settings['dynamic_filtering'] === 'yes') {
+        // If on a single post page, filter by categories of the current post
+        if (is_single()) {
+            $categories = get_the_category();
+            $category_ids = wp_list_pluck($categories, 'term_id');
+            $query_args['category__in'] = $category_ids;
+        } else {
+            // If on an archive page, use the current query's categories
+            $current_query = $GLOBALS['wp_query'];
+            $query_args = $current_query->query;
+
+            $categories = get_the_category();
+            $category_ids = wp_list_pluck($categories, 'term_id');
+            if (!empty($category_ids)) {
+                $query_args['category__in'] = $category_ids;
+            }
+        }
     } else {
+        // Use the settings' category if dynamic filtering is off
         $query_args['category__in'] = $settings['category'];
     }
+
+    // Ensure posts_per_page, offset, and order are set correctly
+    $query_args['posts_per_page'] = $settings['posts_per_page'];
+    $query_args['offset'] = $settings['offset'];
+    $query_args['order'] = $settings['order'];
 
     $posts_query = new WP_Query($query_args);
 
