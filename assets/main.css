@@ -573,3 +573,74 @@
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 }
+
+.admin-bar .el-nav-menu-wrapper {
+	top: 32px;
+}
+
+.el-nav-menu-wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: white;
+	z-index: 999999;
+	height: 100%;
+	width: 350px;
+	text-align: start;
+	padding-left: 30px;
+	padding-top: 30px;
+	list-style: none;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: opacity 0.3s ease-in, transform 0.5s ease-in;
+	display: block;
+	/* Keep display as block, and use opacity to hide/show */
+}
+
+
+
+/* Add a class for the visible state */
+.el-nav-menu-wrapper.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+
+.el-nav-menu {
+	list-style: none;
+	margin-top: 20px !important;
+}
+
+.el-nav-menu li a {
+	color: black;
+}
+
+.el-menu-icon-wrapper svg,
+.el-close-icon-wrapper svg {
+	width: 20px;
+	cursor: pointer;
+	fill: rgb(255, 0, 0);
+}
+
+.el-nine-menu-logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 10px;
+}
+
+.ovely-box {
+	background-color: rgb(236 240 243);
+	height: 100%;
+	left: 0;
+	opacity: 0.99;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+}
+
+.admin-bar .ovely-box {
+	top: 32px;
+}
