@@ -49,6 +49,7 @@ class Elementor_Customizations {
             'widgets/post-meta.php',
             'widgets/social-share.php',
             'widgets/heading.php',
+            'widgets/archive-title.php',
             'widgets/copyright.php',
             'widgets/featured-img.php',
             'widgets/post-list-big.php',
@@ -76,7 +77,8 @@ class Elementor_Customizations {
             'Site_Logo',
             'Nav_Menu',
             'Nav_Menu_two',
-            'Single_Featured_Image'
+            'Single_Featured_Image',
+            'Archive_Post_Title_Widget'
         ];
 
         foreach ($widget_classes as $widget_class) {
