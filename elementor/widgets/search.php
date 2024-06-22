@@ -106,7 +106,7 @@ class Search_Overlay_Widget extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-        <div class="search-icon" style="width: <?php echo $settings['icon_width']['size'] . $settings['icon_width']['unit']; ?>; height: <?php echo $settings['icon_height']['size'] . $settings['icon_height']['unit']; ?>;">
+        <div class="search-icon">
             <a href="#" class="search-icon-link">
                 <?php \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
             </a>
