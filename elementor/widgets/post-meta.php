@@ -12,7 +12,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'POST META', 'nine-core' );
+        return __( 'Post Meta', 'nine-core' );
     }
 
     // Widget Icon

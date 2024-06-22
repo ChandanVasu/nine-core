@@ -9,7 +9,7 @@ class post_list_big extends \Elementor\Widget_Base {
 
     public function get_title()
     {
-        return esc_html__('BIG LIST POST', 'nine-core');
+        return esc_html__('Big List Post', 'nine-core');
     }
 
     public function get_icon() {

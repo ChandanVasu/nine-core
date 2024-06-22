@@ -11,7 +11,7 @@ class single_post_comment extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'COMMENT', 'nine-core' );
+        return __( 'Comment', 'nine-core' );
     }
 
     // Widget Icon

@@ -9,7 +9,7 @@ class single_post_content extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'SINGLE POST', 'nine-core' );
+        return __( 'Single Post', 'nine-core' );
     }
 
     // Widget Icon

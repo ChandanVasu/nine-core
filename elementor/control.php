@@ -45,6 +45,8 @@ class Elementor_Customizations {
         require_once( __DIR__ . '/widgets/search.php' );
         require_once( __DIR__ . '/widgets/title.php' );
         require_once( __DIR__ . '/widgets/menu.php' );
+        require_once( __DIR__ . '/widgets/menu-nav.php' );
+        require_once( __DIR__ . '/widgets/logo.php' );
         require_once( __DIR__ . '/widgets/post-meta.php' );
         require_once( __DIR__ . '/widgets/social-share.php' );
         require_once( __DIR__ . '/widgets/heading.php' );

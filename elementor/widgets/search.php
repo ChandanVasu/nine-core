@@ -11,7 +11,7 @@ class Search_Overlay_Widget extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'SEARCH', 'nine-core' );
+        return __( 'Search', 'nine-core' );
     }
 
     // Widget Icon

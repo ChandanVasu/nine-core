@@ -15,7 +15,7 @@ class post_list_one extends \Elementor\Widget_Base {
 
     public function get_title()
     {
-        return esc_html__('SMALL LIST POST', 'nine-core');
+        return esc_html__('Small List Post', 'nine-core');
     }
 
     public function get_icon() {

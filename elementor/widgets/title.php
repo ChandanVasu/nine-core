@@ -20,7 +20,7 @@ class Single_Title extends Widget_Base {
     }
 
     public function get_title() {
-        return esc_html__('POST TITLE', 'nine-core');
+        return esc_html__('Post Title', 'nine-core');
     }
 
     public function get_icon() {

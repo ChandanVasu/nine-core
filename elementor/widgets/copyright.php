@@ -11,7 +11,7 @@ class Copyright_Widget extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'COPYRIGHT', 'nine-core' );
+        return __( 'Copyright', 'nine-core' );
     }
 
     // Widget Icon

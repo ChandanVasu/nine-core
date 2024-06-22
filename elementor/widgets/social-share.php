@@ -14,7 +14,7 @@ class nine_SocialShare extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'SOCIAL SHARE', 'nine-core' );
+		return __( 'Post Share', 'nine-core' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.

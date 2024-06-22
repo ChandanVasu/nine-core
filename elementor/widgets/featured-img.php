@@ -22,7 +22,7 @@ class Single_Featured_Image extends Widget_Base {
     }
 
     public function get_title() {
-        return esc_html__('FEATURED IMAGE', 'nine-core');
+        return esc_html__('Featured Image', 'nine-core');
     }
 
     public function get_icon() {

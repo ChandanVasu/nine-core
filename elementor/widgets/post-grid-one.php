@@ -9,7 +9,7 @@ class post_grid_one extends \Elementor\Widget_Base {
 
     public function get_title()
     {
-        return esc_html__('GRID POST', 'nine-core');
+        return esc_html__('Grid Post', 'nine-core');
     }
 
     public function get_icon() {
