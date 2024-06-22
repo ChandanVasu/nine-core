@@ -11,9 +11,10 @@
  * Text Domain:       nine-core
  * Domain Path:       /languages
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
-
-// Define constant for plugin directory path
 define('NINE_DIR', plugin_dir_path(__FILE__));
 
 // Include ReduxFramework if not already included
@@ -68,6 +69,3 @@ function enqueue_load_more_script() {
     wp_enqueue_script('load-more-script');
 }
 add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
-
-
-
