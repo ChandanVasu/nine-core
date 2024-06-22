@@ -1,13 +1,19 @@
 <?php
 /*
-Plugin Name: Nine Core
-Description: A simple plugin for demonstration.
-Version: 1.0.0
-Author: Vasu Theme
-Author URI: https://yourwebsite.com
-*/
+ * Plugin Name:       Nine Core
+ * Plugin URI:        https://themeforest.net/user/vasutheme/
+ * Description:       This is core plugin for Nine theme
+ * Version:           1.0
+ * Author:            VasuTHeme
+ * Author URI:        https://themeforest.net/user/vasutheme
+ * License:           GPL-2.0+
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       nine-core
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
-// Define constant for plugin directory path
 define('NINE_DIR', plugin_dir_path(__FILE__));
 
 // Include ReduxFramework if not already included
@@ -15,16 +21,19 @@ if (!class_exists('ReduxFramework')) {
     require_once dirname(__FILE__) . '/redux-core/framework.php';
 }
 
-$plugin_path = plugin_dir_path(__FILE__);
-require_once $plugin_path . 'inc/template/override/header.php';
-require_once $plugin_path . 'assets/variable.php';
-require_once $plugin_path . 'inc/post/custom-post.php';
-require_once $plugin_path . 'inc/template/override/footer.php';
-require_once $plugin_path . 'inc/inc.php';
-require_once $plugin_path . 'inc/template/opstion/header.php';
-require_once $plugin_path . '/meta-box/init.php';
-require_once $plugin_path . '/elementor/control.php';
-require_once $plugin_path . '/elementor/inc/grid-one-load.php';
+// Check if the active theme is 'Nine'
+$current_theme = wp_get_theme();
+if ($current_theme->get('Name') == 'Nine') {
+    $plugin_path = plugin_dir_path(__FILE__);
+    require_once $plugin_path . 'inc/template/override/header.php';
+    require_once $plugin_path . 'assets/variable.php';
+    require_once $plugin_path . 'inc/post/custom-post.php';
+    require_once $plugin_path . 'inc/inc.php';
+    require_once $plugin_path . 'inc/template/opstion/header.php';
+    require_once $plugin_path . '/meta-box/init.php';
+    require_once $plugin_path . '/elementor/control.php';
+    require_once $plugin_path . '/elementor/inc/grid-one-load.php';
+}
 
 
 // Enqueue main.css file
