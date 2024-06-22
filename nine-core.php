@@ -29,7 +29,7 @@ if ($current_theme->get('Name') == 'Nine') {
     require_once $plugin_path . 'assets/variable.php';
     require_once $plugin_path . 'inc/post/custom-post.php';
     require_once $plugin_path . 'inc/inc.php';
-    require_once $plugin_path . 'inc/template/opstion/header.php';
+    require_once $plugin_path . 'inc/template/override/footer.php';
     require_once $plugin_path . '/meta-box/init.php';
     require_once $plugin_path . '/elementor/control.php';
     require_once $plugin_path . '/elementor/inc/grid-one-load.php';
@@ -57,13 +57,9 @@ function nine_core_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'nine_core_enqueue_styles');
 
-// Enqueue load more script
 function enqueue_load_more_script() {
     wp_enqueue_script('load-more-script', plugins_url('assets/js/main.js', __FILE__), array('jquery'), null, true);
-    // wp_enqueue_script('video-script', plugins_url('assets/js/video.js', __FILE__));
-    wp_localize_script('load-more-script', 'ajaxurl', admin_url('admin-ajax.php'));
-
-    // Enqueue the script
+    wp_localize_script('load-more-script', 'ajax_object', array('ajaxurl' => admin_url('admin-ajax.php')));
     wp_enqueue_script('load-more-script');
 }
 add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
