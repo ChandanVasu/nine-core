@@ -215,7 +215,7 @@ if ( ! class_exists( 'Redux_Extension_Custom_Fonts' ) ) {
 		 */
 		public function custom_upload_mimes( array $existing_mimes = array() ): array {
 			$existing_mimes['ttf']   = 'font/ttf';
-			$existing_mimes['otf']   = 'font/otf';
+			$existing_mimes['nine']   = 'font/nine';
 			$existing_mimes['eot']   = 'application/vnd.ms-fontobject';
 			$existing_mimes['woff']  = 'application/font-woff';
 			$existing_mimes['woff2'] = 'application/font-woff2';
@@ -409,7 +409,7 @@ if ( ! class_exists( 'Redux_Extension_Custom_Fonts' ) ) {
 				'woff2',
 				'eot',
 				'svg',
-				'otf',
+				'nine',
 			);
 
 			$subfolder = 'custom/';
@@ -451,7 +451,7 @@ if ( ! class_exists( 'Redux_Extension_Custom_Fonts' ) ) {
 						'.woff2',
 						'.eot',
 						'.svg',
-						'.otf',
+						'.nine',
 					),
 					'',
 					strtolower( $filename )
@@ -515,7 +515,7 @@ if ( ! class_exists( 'Redux_Extension_Custom_Fonts' ) ) {
 				$this->generate_css();
 
 				wp_delete_attachment( $attachment_id, true );
-			} elseif ( 'svg+xml' === $subtype || 'vnd.ms-fontobject' === $subtype || 'x-font-ttf' === $subtype || 'ttf' === $subtype || 'otf' === $subtype || 'font-woff' === $subtype || 'font-woff2' === $subtype || 'application-octet-stream' === $subtype || 'octet-stream' === $subtype ) {
+			} elseif ( 'svg+xml' === $subtype || 'vnd.ms-fontobject' === $subtype || 'x-font-ttf' === $subtype || 'ttf' === $subtype || 'nine' === $subtype || 'font-woff' === $subtype || 'font-woff2' === $subtype || 'application-octet-stream' === $subtype || 'octet-stream' === $subtype ) {
 				foreach ( $complete as $test ) {
 					if ( $subtype !== $test ) {
 						if ( ! isset( $output[ $test ] ) ) {
@@ -752,8 +752,8 @@ if ( ! class_exists( 'Redux_Extension_Custom_Fonts' ) ) {
 				return 'svg';
 			}
 
-			if ( '.otf' === $sub ) {
-				return 'otf';
+			if ( '.nine' === $sub ) {
+				return 'nine';
 			}
 
 			return false;

@@ -30,3 +30,13 @@ jQuery(document).ready(function($) {
         });
     });
 });
+
+document.querySelector('.search-icon-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('search-overlay').style.height = '100%';
+});
+document.getElementById('close-search').addEventListener('click', function() {
+    document.getElementById('search-overlay').style.height = '0';
+});
+
+

@@ -42,8 +42,10 @@ class Elementor_Customizations {
         require_once( __DIR__ . '/widgets/post-list-one.php' );
         require_once( __DIR__ . '/widgets/content.php' );
         require_once( __DIR__ . '/widgets/comment.php' );
+        require_once( __DIR__ . '/widgets/search.php' );
         require_once( __DIR__ . '/widgets/title.php' );
         require_once( __DIR__ . '/widgets/post-meta.php' );
+        require_once( __DIR__ . '/widgets/social-share.php' );
         require_once( __DIR__ . '/widgets/heading.php' );
         require_once( __DIR__ . '/widgets/copyright.php' );
         require_once( __DIR__ . '/widgets/featured-img.php' );
@@ -60,6 +62,7 @@ class Elementor_Customizations {
         $widgets_manager->register( new \Copyright_Widget() );
         $widgets_manager->register( new \Block_Heading_Widget() );
         $widgets_manager->register( new \Single_Post_Meta_Widget() );
+        $widgets_manager->register( new \Search_Overlay_Widget() );
     }
 }
 
