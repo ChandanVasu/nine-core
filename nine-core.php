@@ -4,7 +4,7 @@
  * Plugin URI:        https://themeforest.net/user/vasutheme/
  * Description:       This is core plugin for Nine theme
  * Version:           1.0
- * Author:            VasuTHeme
+ * Author:            VasuTheme
  * Author URI:        https://themeforest.net/user/vasutheme
  * License:           GPL-2.0+
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +18,7 @@ define('NINE_DIR', plugin_dir_path(__FILE__));
 
 // Include ReduxFramework if not already included
 if (!class_exists('ReduxFramework')) {
-    require_once dirname(__FILE__) . '/redux-core/framework.php';
+    require_once dirname(__FILE__) . '/framework/redux-core/framework.php';
 }
 
 // Check if the active theme is 'Nine'
@@ -30,9 +30,9 @@ if ($current_theme->get('Name') == 'Nine') {
     require_once $plugin_path . 'inc/post/custom-post.php';
     require_once $plugin_path . 'inc/inc.php';
     require_once $plugin_path . 'inc/template/override/footer.php';
-    require_once $plugin_path . '/meta-box/init.php';
-    require_once $plugin_path . '/elementor/control.php';
-    require_once $plugin_path . '/elementor/inc/grid-one-load.php';
+    require_once $plugin_path . 'framework/meta-box/init.php';
+    require_once $plugin_path . 'elementor/control.php';
+    require_once $plugin_path . 'elementor/inc/grid-one-load.php';
 }
 
 
