@@ -1,0 +1,1243 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nine Core\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-22 17:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.10; wp-6.5.4\n"
+"X-Domain: nine-core"
+
+#: elementor/widgets/post-grid-one.php:357
+#: elementor/widgets/post-list-big.php:301
+#: elementor/widgets/post-list-one.php:302
+msgid "  Radius"
+msgstr ""
+
+#: elementor/widgets/heading.php:120
+msgid " Radius"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:301
+msgid "Active Load More Buttom"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:749
+#: elementor/widgets/post-list-big.php:742
+#: elementor/widgets/post-list-one.php:749
+msgid "Add box shadow to the container."
+msgstr ""
+
+#: elementor/widgets/copyright.php:69 elementor/widgets/social-share.php:83
+#: elementor/widgets/title.php:61
+msgid "Alignment"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:160
+#: elementor/widgets/post-list-big.php:158
+#: elementor/widgets/post-list-one.php:159
+msgid "Ascending"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:579
+#: elementor/widgets/post-list-big.php:559
+#: elementor/widgets/post-list-one.php:566
+msgid "Author"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:193
+msgid "Author Avatar Border Radius"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:172
+msgid "Author Avatar Size"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:587
+#: elementor/widgets/post-list-big.php:567
+#: elementor/widgets/post-list-one.php:574
+msgid "Author Color"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:42
+msgid "Author Image"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:57
+msgid "Author Name"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:214
+msgid "Author Name Color"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:260
+msgid "Author Name Typography"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:600
+#: elementor/widgets/post-list-big.php:580
+#: elementor/widgets/post-list-one.php:587
+msgid "Author Typography"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:320
+#: elementor/widgets/post-grid-one.php:507
+#: elementor/widgets/post-list-big.php:487
+#: elementor/widgets/post-list-one.php:494
+msgid "Background"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:723
+#: elementor/widgets/post-list-big.php:703
+#: elementor/widgets/post-list-one.php:710
+msgid "Background Border Radius"
+msgstr ""
+
+#: elementor/widgets/heading.php:88 elementor/widgets/post-grid-one.php:736
+#: elementor/widgets/post-list-big.php:729
+#: elementor/widgets/post-list-one.php:736 elementor/widgets/post-meta.php:137
+msgid "Background Color"
+msgstr ""
+
+#: elementor/widgets/post-list-big.php:12
+msgid "Big List Post"
+msgstr ""
+
+#: elementor/widgets/heading.php:14 elementor/widgets/heading.php:42
+msgid "Block Heading"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:135
+msgid "Border"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:673
+#: elementor/widgets/post-list-big.php:653
+#: elementor/widgets/post-list-one.php:660
+msgid "Border Color"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:122
+#: elementor/widgets/post-grid-one.php:528
+#: elementor/widgets/post-list-big.php:508
+#: elementor/widgets/post-list-one.php:515 elementor/widgets/post-meta.php:160
+#: elementor/widgets/social-share.php:222
+msgid "Border Radius"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:698
+#: elementor/widgets/post-list-big.php:678
+#: elementor/widgets/post-list-one.php:685
+msgid "Border Style"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:685
+#: elementor/widgets/post-list-big.php:665
+#: elementor/widgets/post-list-one.php:672
+msgid "Border Width"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:144
+msgid "Box Shadow"
+msgstr ""
+
+#: elementor/widgets/social-share.php:53
+msgid "Buffer"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:236
+msgid "Categories Color"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:298
+msgid "Categories Typography"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:482
+#: elementor/widgets/post-list-big.php:462
+#: elementor/widgets/post-list-one.php:469 elementor/widgets/post-meta.php:87
+msgid "Category"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:512
+#: elementor/widgets/post-list-big.php:492
+#: elementor/widgets/post-list-one.php:499
+msgid "Category Background Color"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:554
+#: elementor/widgets/post-list-big.php:534
+#: elementor/widgets/post-list-one.php:541
+msgid "Category Position"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:490
+#: elementor/widgets/post-list-big.php:470
+#: elementor/widgets/post-list-one.php:477
+msgid "Category Text Color"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:568
+#: elementor/widgets/post-list-big.php:548
+#: elementor/widgets/post-list-one.php:555
+msgid "Category Typography"
+msgstr ""
+
+#: elementor/widgets/copyright.php:77 elementor/widgets/post-grid-one.php:139
+#: elementor/widgets/post-list-big.php:137
+#: elementor/widgets/post-list-one.php:138
+#: elementor/widgets/social-share.php:91 elementor/widgets/title.php:69
+msgid "Center"
+msgstr ""
+
+#: elementor/widgets/logo.php:42
+msgid "Choose Logo Image"
+msgstr ""
+
+#: elementor/widgets/social-share.php:75
+msgid "Circle"
+msgstr ""
+
+#: elementor/widgets/social-share.php:121
+msgid "Color"
+msgstr ""
+
+#: elementor/widgets/comment.php:14
+msgid "Comment"
+msgstr ""
+
+#: elementor/widgets/comment.php:42
+msgid "Comments"
+msgstr ""
+
+#: elementor/widgets/comment.php:66
+msgid "Comments will be displayed here."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:665
+#: elementor/widgets/post-list-big.php:645
+#: elementor/widgets/post-list-one.php:652
+msgid "Container"
+msgstr ""
+
+#: elementor/widgets/comment.php:32 elementor/widgets/copyright.php:32
+#: elementor/widgets/heading.php:32 elementor/widgets/logo.php:34
+#: elementor/widgets/menu-nav.php:38 elementor/widgets/menu.php:38
+#: elementor/widgets/post-grid-one.php:41
+#: elementor/widgets/post-grid-one.php:632
+#: elementor/widgets/post-list-big.php:39
+#: elementor/widgets/post-list-big.php:612
+#: elementor/widgets/post-list-one.php:40
+#: elementor/widgets/post-list-one.php:619 elementor/widgets/post-meta.php:33
+#: elementor/widgets/search.php:32 elementor/widgets/social-share.php:36
+msgid "Content"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:640
+#: elementor/widgets/post-list-big.php:620
+#: elementor/widgets/post-list-one.php:627
+msgid "Content Color"
+msgstr ""
+
+#: elementor/widgets/post-list-big.php:380
+#: elementor/widgets/post-list-one.php:387
+msgid "Content Gap"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:103
+#: elementor/widgets/post-list-big.php:101
+#: elementor/widgets/post-list-one.php:102
+msgid "Content Length"
+msgstr ""
+
+#: elementor/widgets/content.php:142
+msgid "Content Style"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:653
+#: elementor/widgets/post-list-big.php:633
+#: elementor/widgets/post-list-one.php:640
+msgid "Content Typography"
+msgstr ""
+
+#: elementor/widgets/copyright.php:14
+msgid "Copyright"
+msgstr ""
+
+#: elementor/widgets/copyright.php:40
+msgid "Copyright Text"
+msgstr ""
+
+#: elementor/widgets/copyright.php:42
+msgid "Copyright © 2024 Vasu Theme | Powered by WordPress."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:48
+#: elementor/widgets/post-list-big.php:46
+#: elementor/widgets/post-list-one.php:47
+msgid "Current Query"
+msgstr ""
+
+#: elementor/widgets/social-share.php:126
+msgid "Custom"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:325
+msgid "Custom Background"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:705
+#: elementor/widgets/post-list-big.php:685
+#: elementor/widgets/post-list-one.php:692
+msgid "Dashed"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:611
+#: elementor/widgets/post-list-big.php:591
+#: elementor/widgets/post-list-one.php:598 elementor/widgets/post-meta.php:72
+msgid "Date"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:225
+msgid "Date Color"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:620
+#: elementor/widgets/post-list-big.php:600
+#: elementor/widgets/post-list-one.php:607 elementor/widgets/post-meta.php:279
+msgid "Date Typography"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:161
+#: elementor/widgets/post-list-big.php:159
+#: elementor/widgets/post-list-one.php:160
+msgid "Descending"
+msgstr ""
+
+#: elementor/widgets/social-share.php:54
+msgid "Digg"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:704
+#: elementor/widgets/post-list-big.php:684
+#: elementor/widgets/post-list-one.php:691
+msgid "Dotted"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:706
+#: elementor/widgets/post-list-big.php:686
+#: elementor/widgets/post-list-one.php:693
+msgid "Double"
+msgstr ""
+
+#: elementor/widgets/title.php:111
+msgid ""
+"Dynamic post title will be replaced with the real title after you assign "
+"this template"
+msgstr ""
+
+#: elementor/widgets/social-share.php:59
+msgid "Email"
+msgstr ""
+
+#: elementor/widgets/logo.php:70
+msgid "Enter alt text for the logo"
+msgstr ""
+
+#: elementor/widgets/logo.php:60
+msgid "Enter the URL where clicking the logo will navigate."
+msgstr ""
+
+#: elementor/widgets/social-share.php:48
+msgid "Facebook"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:17
+msgid "Featured Image"
+msgstr ""
+
+#: elementor/widgets/social-share.php:50
+msgid "Google Plus"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:12
+msgid "Grid Post"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:707
+#: elementor/widgets/post-list-big.php:687
+#: elementor/widgets/post-list-one.php:694
+msgid "Groove"
+msgstr ""
+
+#: elementor/widgets/content.php:151
+msgid "H1 Color"
+msgstr ""
+
+#: elementor/widgets/content.php:162
+msgid "H2 Color"
+msgstr ""
+
+#: elementor/widgets/content.php:173
+msgid "H3 Color"
+msgstr ""
+
+#: elementor/widgets/content.php:184
+msgid "H4 Color"
+msgstr ""
+
+#: elementor/widgets/content.php:195
+msgid "H5 Color"
+msgstr ""
+
+#: elementor/widgets/content.php:206
+msgid "H6 Color"
+msgstr ""
+
+#: elementor/widgets/content.php:253
+msgid "Heading 1 Margin"
+msgstr ""
+
+#: elementor/widgets/content.php:265
+msgid "Heading 2 Margin"
+msgstr ""
+
+#: elementor/widgets/content.php:81
+msgid "Heading 2 Typography"
+msgstr ""
+
+#: elementor/widgets/content.php:277
+msgid "Heading 3 Margin"
+msgstr ""
+
+#: elementor/widgets/content.php:91
+msgid "Heading 3 Typography"
+msgstr ""
+
+#: elementor/widgets/content.php:101
+msgid "Heading 4 Typography"
+msgstr ""
+
+#: elementor/widgets/content.php:111
+msgid "Heading 5 Typography"
+msgstr ""
+
+#: elementor/widgets/heading.php:69
+msgid "Heading Style"
+msgstr ""
+
+#: elementor/widgets/heading.php:40
+msgid "Heading Text"
+msgstr ""
+
+#: elementor/widgets/content.php:71
+msgid "Heading Typography"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:71
+msgid "Height"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:712
+#: elementor/widgets/post-list-big.php:692
+#: elementor/widgets/post-list-one.php:699
+msgid "Hidden"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:370
+#: elementor/widgets/post-list-big.php:314
+#: elementor/widgets/post-list-one.php:315
+msgid "Hover Transform"
+msgstr ""
+
+#: elementor/widgets/logo.php:55
+msgid "https://example.com"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://themeforest.net/user/vasutheme"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://themeforest.net/user/vasutheme/"
+msgstr ""
+
+#: elementor/widgets/heading.php:60
+msgid "https://your-link.com"
+msgstr ""
+
+#: elementor/widgets/search.php:40 elementor/widgets/social-share.php:113
+msgid "Icon"
+msgstr ""
+
+#: elementor/widgets/menu.php:114 elementor/widgets/search.php:71
+msgid "Icon Color"
+msgstr ""
+
+#: elementor/widgets/menu.php:126 elementor/widgets/search.php:84
+msgid "Icon Size"
+msgstr ""
+
+#: elementor/widgets/menu.php:106
+msgid "Icon Style"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:37
+msgid "Image"
+msgstr ""
+
+#: elementor/widgets/content.php:369
+msgid "Image Border Radius"
+msgstr ""
+
+#: elementor/widgets/content.php:348 elementor/widgets/post-list-big.php:340
+msgid "Image Height"
+msgstr ""
+
+#: elementor/widgets/content.php:314
+msgid "Image Margin"
+msgstr ""
+
+#: elementor/widgets/content.php:305
+msgid "Image Style"
+msgstr ""
+
+#: elementor/widgets/content.php:327 elementor/widgets/post-list-big.php:361
+msgid "Image Width"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:709
+#: elementor/widgets/post-list-big.php:689
+#: elementor/widgets/post-list-one.php:696
+msgid "Inset"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:113
+#: elementor/widgets/post-list-big.php:111
+#: elementor/widgets/post-list-one.php:112
+msgid "Items Per Row"
+msgstr ""
+
+#: elementor/widgets/title.php:77
+msgid "Justified"
+msgstr ""
+
+#: elementor/widgets/copyright.php:73 elementor/widgets/post-grid-one.php:135
+#: elementor/widgets/post-list-big.php:133
+#: elementor/widgets/post-list-one.php:134
+#: elementor/widgets/social-share.php:87 elementor/widgets/title.php:65
+msgid "Left"
+msgstr ""
+
+#: elementor/widgets/content.php:230
+msgid "Link Color"
+msgstr ""
+
+#: elementor/widgets/content.php:131
+msgid "Link Typography"
+msgstr ""
+
+#: elementor/widgets/social-share.php:52
+msgid "Linkedin"
+msgstr ""
+
+#: elementor/block/block-grid-one.php:70
+msgid "Load More"
+msgstr ""
+
+#: elementor/widgets/logo.php:67
+msgid "Logo Alt Text"
+msgstr ""
+
+#: elementor/widgets/logo.php:87
+msgid "Logo Height"
+msgstr ""
+
+#: elementor/widgets/logo.php:53
+msgid "Logo Link URL"
+msgstr ""
+
+#: elementor/widgets/logo.php:77
+msgid "Logo Width"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:98
+msgid "Margin"
+msgstr ""
+
+#: elementor/widgets/content.php:244
+msgid "Margin Style"
+msgstr ""
+
+#: elementor/widgets/menu-nav.php:19 elementor/widgets/menu-nav.php:45
+#: elementor/widgets/menu.php:45
+msgid "Menu"
+msgstr ""
+
+#: elementor/widgets/menu-nav.php:66 elementor/widgets/menu.php:157
+msgid "Menu Color"
+msgstr ""
+
+#: elementor/widgets/menu-nav.php:58 elementor/widgets/menu.php:149
+msgid "Menu Style"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:129
+msgid "Meta Typography"
+msgstr ""
+
+#: elementor/widgets/menu.php:19
+msgid "Nav Menu"
+msgstr ""
+
+#. Name of the plugin
+msgid "Nine Core"
+msgstr ""
+
+#: elementor/block/block-grid-one.php:75 elementor/block/block-list-big.php:97
+#: elementor/block/block-list-one.php:97
+msgid "No posts found"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:711
+#: elementor/widgets/post-list-big.php:691
+#: elementor/widgets/post-list-one.php:698
+msgid "None"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:176
+#: elementor/widgets/post-grid-one.php:192
+#: elementor/widgets/post-grid-one.php:208
+#: elementor/widgets/post-grid-one.php:225
+#: elementor/widgets/post-grid-one.php:241
+#: elementor/widgets/post-grid-one.php:258
+#: elementor/widgets/post-grid-one.php:275
+#: elementor/widgets/post-grid-one.php:304
+#: elementor/widgets/post-grid-one.php:445
+#: elementor/widgets/post-list-big.php:174
+#: elementor/widgets/post-list-big.php:190
+#: elementor/widgets/post-list-big.php:206
+#: elementor/widgets/post-list-big.php:223
+#: elementor/widgets/post-list-big.php:239
+#: elementor/widgets/post-list-big.php:256
+#: elementor/widgets/post-list-big.php:273
+#: elementor/widgets/post-list-big.php:425
+#: elementor/widgets/post-list-one.php:175
+#: elementor/widgets/post-list-one.php:191
+#: elementor/widgets/post-list-one.php:207
+#: elementor/widgets/post-list-one.php:224
+#: elementor/widgets/post-list-one.php:240
+#: elementor/widgets/post-list-one.php:257
+#: elementor/widgets/post-list-one.php:274
+#: elementor/widgets/post-list-one.php:432 elementor/widgets/post-meta.php:45
+#: elementor/widgets/post-meta.php:60 elementor/widgets/post-meta.php:75
+#: elementor/widgets/post-meta.php:90 elementor/widgets/post-meta.php:105
+msgid "Off"
+msgstr ""
+
+#: elementor/widgets/social-share.php:125
+msgid "Official Color"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:175
+#: elementor/widgets/post-grid-one.php:191
+#: elementor/widgets/post-grid-one.php:207
+#: elementor/widgets/post-grid-one.php:224
+#: elementor/widgets/post-grid-one.php:240
+#: elementor/widgets/post-grid-one.php:257
+#: elementor/widgets/post-grid-one.php:274
+#: elementor/widgets/post-grid-one.php:303
+#: elementor/widgets/post-grid-one.php:444
+#: elementor/widgets/post-list-big.php:173
+#: elementor/widgets/post-list-big.php:189
+#: elementor/widgets/post-list-big.php:205
+#: elementor/widgets/post-list-big.php:222
+#: elementor/widgets/post-list-big.php:238
+#: elementor/widgets/post-list-big.php:255
+#: elementor/widgets/post-list-big.php:272
+#: elementor/widgets/post-list-big.php:424
+#: elementor/widgets/post-list-one.php:174
+#: elementor/widgets/post-list-one.php:190
+#: elementor/widgets/post-list-one.php:206
+#: elementor/widgets/post-list-one.php:223
+#: elementor/widgets/post-list-one.php:239
+#: elementor/widgets/post-list-one.php:256
+#: elementor/widgets/post-list-one.php:273
+#: elementor/widgets/post-list-one.php:431 elementor/widgets/post-meta.php:44
+#: elementor/widgets/post-meta.php:59 elementor/widgets/post-meta.php:74
+#: elementor/widgets/post-meta.php:89 elementor/widgets/post-meta.php:104
+msgid "On"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:157
+#: elementor/widgets/post-list-big.php:155
+#: elementor/widgets/post-list-one.php:156
+msgid "Order"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:710
+#: elementor/widgets/post-list-big.php:690
+#: elementor/widgets/post-list-one.php:697
+msgid "Outset"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:110 elementor/widgets/heading.php:108
+#: elementor/widgets/post-grid-one.php:541
+#: elementor/widgets/post-list-big.php:521
+#: elementor/widgets/post-list-big.php:716
+#: elementor/widgets/post-list-one.php:528
+#: elementor/widgets/post-list-one.php:723 elementor/widgets/post-meta.php:148
+#: elementor/widgets/social-share.php:181
+msgid "Padding"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:293
+msgid "Pagination"
+msgstr ""
+
+#: elementor/widgets/content.php:218
+msgid "Paragraph Color"
+msgstr ""
+
+#: elementor/widgets/content.php:290
+msgid "Paragraph Margin"
+msgstr ""
+
+#: elementor/widgets/content.php:121
+msgid "Paragraph Typography"
+msgstr ""
+
+#: elementor/widgets/social-share.php:51
+msgid "Pinterest"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:156
+msgid "Placeholder Image"
+msgstr ""
+
+#: elementor/widgets/search.php:52
+msgid "Placeholder Text"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:15
+msgid "Post Meta"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:83
+#: elementor/widgets/post-list-big.php:81
+#: elementor/widgets/post-list-one.php:82
+msgid "Post Offset"
+msgstr ""
+
+#: elementor/widgets/social-share.php:19
+msgid "Post Share"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:349
+#: elementor/widgets/post-list-big.php:293
+#: elementor/widgets/post-list-one.php:294
+msgid "Post Style"
+msgstr ""
+
+#: elementor/widgets/title.php:22
+msgid "Post Title"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:73
+#: elementor/widgets/post-list-big.php:71
+#: elementor/widgets/post-list-one.php:72
+msgid "Posts Per Page"
+msgstr ""
+
+#: elementor/widgets/social-share.php:134
+msgid "Primary Color"
+msgstr ""
+
+#: elementor/widgets/social-share.php:60
+msgid "Print"
+msgstr ""
+
+#: elementor/widgets/social-share.php:55
+msgid "Reddit"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:708
+#: elementor/widgets/post-list-big.php:688
+#: elementor/widgets/post-list-one.php:695
+msgid "Ridge"
+msgstr ""
+
+#: elementor/widgets/copyright.php:81 elementor/widgets/post-grid-one.php:143
+#: elementor/widgets/post-list-big.php:141
+#: elementor/widgets/post-list-one.php:142
+#: elementor/widgets/social-share.php:95 elementor/widgets/title.php:73
+msgid "Right"
+msgstr ""
+
+#: elementor/widgets/social-share.php:73
+msgid "Rounded"
+msgstr ""
+
+#: elementor/widgets/search.php:14 elementor/widgets/search.php:119
+msgid "Search"
+msgstr ""
+
+#: elementor/widgets/search.php:54
+msgid "Search..."
+msgstr ""
+
+#: elementor/widgets/social-share.php:149
+msgid "Secondary Color"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:59
+#: elementor/widgets/post-list-big.php:57
+#: elementor/widgets/post-list-one.php:58
+msgid "Select Category"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:61
+#: elementor/widgets/post-list-big.php:59
+#: elementor/widgets/post-list-one.php:60
+msgid "Select the categories you want to display."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:359
+#: elementor/widgets/post-list-big.php:303
+#: elementor/widgets/post-list-one.php:304
+msgid "Set border radius for post images."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:132
+#: elementor/widgets/post-list-big.php:130
+#: elementor/widgets/post-list-one.php:131
+msgid "Set the alignment of the text."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:738
+#: elementor/widgets/post-list-big.php:731
+#: elementor/widgets/post-list-one.php:738
+msgid "Set the background color of the container."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:530
+#: elementor/widgets/post-list-big.php:510
+#: elementor/widgets/post-list-one.php:517
+msgid "Set the border radius of post category."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:725
+#: elementor/widgets/post-list-big.php:705
+#: elementor/widgets/post-list-one.php:712
+msgid "Set the border radius of the container background."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:589
+#: elementor/widgets/post-list-big.php:569
+#: elementor/widgets/post-list-one.php:576
+msgid "Set the color of post author."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:492
+#: elementor/widgets/post-list-big.php:472
+#: elementor/widgets/post-list-one.php:479
+msgid "Set the color of post category text."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:642
+#: elementor/widgets/post-list-big.php:622
+#: elementor/widgets/post-list-one.php:629
+msgid "Set the color of post content."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:459
+#: elementor/widgets/post-list-big.php:439
+#: elementor/widgets/post-list-one.php:446
+msgid "Set the color of post titles on hover."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:432
+#: elementor/widgets/post-list-big.php:412
+#: elementor/widgets/post-list-one.php:419 elementor/widgets/title.php:50
+msgid "Set the color of post titles."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:675
+#: elementor/widgets/post-list-big.php:655
+#: elementor/widgets/post-list-one.php:662
+msgid "Set the color of the container border."
+msgstr ""
+
+#: elementor/widgets/logo.php:90
+msgid "Set the height of the logo in pixels (px). Leave empty for default."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:105
+#: elementor/widgets/post-list-big.php:103
+#: elementor/widgets/post-list-one.php:104
+msgid "Set the maximum length of the content."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:95
+#: elementor/widgets/post-list-big.php:93
+#: elementor/widgets/post-list-one.php:94
+msgid "Set the maximum length of the title."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:115
+#: elementor/widgets/post-list-big.php:113
+#: elementor/widgets/post-list-one.php:114
+msgid "Set the number of items to display per row."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:75
+#: elementor/widgets/post-list-big.php:73
+#: elementor/widgets/post-list-one.php:74
+msgid "Set the number of posts to display per page."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:85
+#: elementor/widgets/post-list-big.php:83
+#: elementor/widgets/post-list-one.php:84
+msgid "Set the number of posts to offset."
+msgstr ""
+
+#: elementor/widgets/post-list-big.php:718
+#: elementor/widgets/post-list-one.php:725
+msgid "Set the padding of post box."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:543
+#: elementor/widgets/post-list-big.php:523
+#: elementor/widgets/post-list-one.php:530
+msgid "Set the padding of post category."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:556
+#: elementor/widgets/post-list-big.php:536
+#: elementor/widgets/post-list-one.php:543
+msgid "Set the position of post category."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:372
+#: elementor/widgets/post-list-big.php:316
+#: elementor/widgets/post-list-one.php:317
+msgid "Set the scale factor for post items on hover."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:700
+#: elementor/widgets/post-list-big.php:680
+#: elementor/widgets/post-list-one.php:687
+msgid "Set the style of the container border."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:601
+#: elementor/widgets/post-list-big.php:581
+#: elementor/widgets/post-list-one.php:588
+msgid "Set the typography for post author."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:569
+#: elementor/widgets/post-list-big.php:549
+#: elementor/widgets/post-list-one.php:556
+msgid "Set the typography for post category."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:654
+#: elementor/widgets/post-list-big.php:634
+#: elementor/widgets/post-list-one.php:641
+msgid "Set the typography for post content."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:621
+#: elementor/widgets/post-list-big.php:601
+#: elementor/widgets/post-list-one.php:608
+msgid "Set the typography for post date."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:471
+#: elementor/widgets/post-list-big.php:451
+#: elementor/widgets/post-list-one.php:458
+msgid "Set the typography for post titles."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:687
+#: elementor/widgets/post-list-big.php:667
+#: elementor/widgets/post-list-one.php:674
+msgid "Set the width of the container border."
+msgstr ""
+
+#: elementor/widgets/logo.php:80
+msgid "Set the width of the logo in pixels (px). Leave empty for default."
+msgstr ""
+
+#: elementor/widgets/social-share.php:69
+msgid "Shape"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:255
+#: elementor/widgets/post-list-big.php:253
+#: elementor/widgets/post-list-one.php:254
+msgid "Show Author Image"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:205
+#: elementor/widgets/post-list-big.php:203
+#: elementor/widgets/post-list-one.php:204
+msgid "Show Category"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:173
+#: elementor/widgets/post-list-big.php:171
+#: elementor/widgets/post-list-one.php:172
+msgid "Show Image"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:189
+#: elementor/widgets/post-list-big.php:187
+#: elementor/widgets/post-list-one.php:188
+msgid "Show Meta"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:238
+#: elementor/widgets/post-list-big.php:236
+#: elementor/widgets/post-list-one.php:237
+msgid "Show Post Content"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:272
+#: elementor/widgets/post-list-big.php:270
+#: elementor/widgets/post-list-one.php:271
+msgid "Show Post Date"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:222
+#: elementor/widgets/post-list-big.php:220
+#: elementor/widgets/post-list-one.php:221
+msgid "Show Post Title"
+msgstr ""
+
+#: elementor/widgets/content.php:12
+msgid "Single Post"
+msgstr ""
+
+#: elementor/widgets/logo.php:19 elementor/widgets/logo.php:69
+msgid "Site Logo"
+msgstr ""
+
+#: elementor/widgets/social-share.php:164
+msgid "Size"
+msgstr ""
+
+#: elementor/widgets/post-list-one.php:13
+msgid "Small List Post"
+msgstr ""
+
+#: elementor/widgets/social-share.php:44
+msgid "Social Share Buttons"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:703
+#: elementor/widgets/post-list-big.php:683
+#: elementor/widgets/post-list-one.php:690
+msgid "Solid"
+msgstr ""
+
+#: elementor/widgets/social-share.php:198
+msgid "Spacing"
+msgstr ""
+
+#: elementor/widgets/social-share.php:74
+msgid "Square"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:120 elementor/widgets/search.php:63
+#: elementor/widgets/title.php:40
+msgid "Style"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:102
+msgid "Tag"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:247
+msgid "Tags Color"
+msgstr ""
+
+#: elementor/widgets/post-meta.php:317
+msgid "Tags Typography"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:130
+#: elementor/widgets/post-list-big.php:128
+#: elementor/widgets/post-list-one.php:129
+msgid "Text Align"
+msgstr ""
+
+#: elementor/widgets/copyright.php:49 elementor/widgets/heading.php:77
+msgid "Text Color"
+msgstr ""
+
+#: elementor/widgets/title.php:101
+msgid "Text Shadow"
+msgstr ""
+
+#. Description of the plugin
+msgid "This is core plugin for Nine theme"
+msgstr ""
+
+#: elementor/widgets/comment.php:40 elementor/widgets/post-grid-one.php:422
+#: elementor/widgets/post-list-big.php:402
+#: elementor/widgets/post-list-one.php:409
+msgid "Title"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:430
+#: elementor/widgets/post-list-big.php:410
+#: elementor/widgets/post-list-one.php:417 elementor/widgets/title.php:48
+msgid "Title Color"
+msgstr ""
+
+#: elementor/widgets/title.php:92
+msgid "Title Font"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:442
+#: elementor/widgets/post-list-big.php:422
+#: elementor/widgets/post-list-one.php:429
+msgid "Title Hover Line"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:93
+#: elementor/widgets/post-list-big.php:91
+#: elementor/widgets/post-list-one.php:92
+msgid "Title Length"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:457
+#: elementor/widgets/post-list-big.php:437
+#: elementor/widgets/post-list-one.php:444
+msgid "Title Text Color (Hover)"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:470
+#: elementor/widgets/post-list-big.php:450
+#: elementor/widgets/post-list-one.php:457
+msgid "Title Typography"
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:50
+#: elementor/widgets/post-list-big.php:48
+#: elementor/widgets/post-list-one.php:49
+msgid "Toggle to Archive Posts based on current query."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:259
+#: elementor/widgets/post-list-big.php:257
+#: elementor/widgets/post-list-one.php:258
+msgid "Toggle to display or hide author image."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:305
+msgid "Toggle to display or hide Load More."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:209
+#: elementor/widgets/post-list-big.php:207
+#: elementor/widgets/post-list-one.php:208
+msgid "Toggle to display or hide post categories."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:242
+#: elementor/widgets/post-list-big.php:240
+#: elementor/widgets/post-list-one.php:241
+msgid "Toggle to display or hide post content."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:276
+#: elementor/widgets/post-list-big.php:274
+#: elementor/widgets/post-list-one.php:275
+msgid "Toggle to display or hide post date."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:177
+#: elementor/widgets/post-list-big.php:175
+#: elementor/widgets/post-list-one.php:176
+msgid "Toggle to display or hide post image."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:193
+#: elementor/widgets/post-list-big.php:191
+#: elementor/widgets/post-list-one.php:192
+msgid "Toggle to display or hide post meta."
+msgstr ""
+
+#: elementor/widgets/post-grid-one.php:226
+#: elementor/widgets/post-list-big.php:224
+#: elementor/widgets/post-list-one.php:225
+msgid "Toggle to display or hide post title."
+msgstr ""
+
+#: elementor/widgets/social-share.php:56
+msgid "Tumbleupon"
+msgstr ""
+
+#: elementor/widgets/social-share.php:57
+msgid "Tumblr"
+msgstr ""
+
+#: elementor/widgets/social-share.php:49
+msgid "Twitter"
+msgstr ""
+
+#: elementor/widgets/copyright.php:61 elementor/widgets/heading.php:100
+#: elementor/widgets/menu-nav.php:79 elementor/widgets/menu.php:170
+#: elementor/widgets/post-meta.php:269 elementor/widgets/post-meta.php:288
+#: elementor/widgets/post-meta.php:307 elementor/widgets/post-meta.php:326
+msgid "Typography"
+msgstr ""
+
+#: elementor/widgets/content.php:62
+msgid "Typography Style"
+msgstr ""
+
+#. Author of the plugin
+msgid "VasuTheme"
+msgstr ""
+
+#: elementor/widgets/heading.php:134
+msgid "View All Style"
+msgstr ""
+
+#: elementor/widgets/heading.php:49
+msgid "View All Text"
+msgstr ""
+
+#: elementor/widgets/heading.php:142
+msgid "View All Text Color"
+msgstr ""
+
+#: elementor/widgets/heading.php:154
+msgid "View All Typography"
+msgstr ""
+
+#: elementor/widgets/heading.php:58
+msgid "View All URL"
+msgstr ""
+
+#: elementor/widgets/social-share.php:58
+msgid "Vk"
+msgstr ""
+
+#: elementor/widgets/featured-img.php:44
+msgid "Width"
+msgstr ""
