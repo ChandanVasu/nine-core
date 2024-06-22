@@ -1,20 +1,12 @@
 <?php
 
-namespace nineElementor\Widgets;
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-defined('ABSPATH') || exit;
-
-use Elementor\Controls_Manager;
-use Elementor\Group_Control_Border;
-use Elementor\Group_Control_Box_Shadow;
 use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
 use Elementor\Plugin;
 
-/**
- * Class Single_Featured_Image
- *
- * @package nineElementor\Widgets
- */
+// Register the custom Elementor widget
 class Single_Featured_Image extends Widget_Base {
 
     public function get_name() {
@@ -137,7 +129,7 @@ class Single_Featured_Image extends Widget_Base {
         );
 
         $this->add_group_control(
-            Group_Control_Border::get_type(),
+            \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'image_border',
                 'label' => esc_html__('Border', 'nine-core'),
@@ -146,7 +138,7 @@ class Single_Featured_Image extends Widget_Base {
         );
 
         $this->add_group_control(
-            Group_Control_Box_Shadow::get_type(),
+            \Elementor\Group_Control_Box_Shadow::get_type(),
             [
                 'name' => 'image_box_shadow',
                 'label' => esc_html__('Box Shadow', 'nine-core'),
@@ -172,5 +164,3 @@ class Single_Featured_Image extends Widget_Base {
     }
 }
 
-// Register widget
-Plugin::instance()->widgets_manager->register_widget_type(new Single_Featured_Image());

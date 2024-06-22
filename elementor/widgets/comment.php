@@ -73,5 +73,3 @@ class single_post_comment extends \Elementor\Widget_Base {
 
 }
 
-// Register the widget
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \single_post_comment() );

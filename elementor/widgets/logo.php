@@ -1,7 +1,10 @@
 <?php
-namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Utils;
 
 /**
  * Widget Name: Site Logo
@@ -32,7 +35,7 @@ class Site_Logo extends Widget_Base {
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
-    
+
         $this->add_control(
             'logo_image',
             [
@@ -43,7 +46,7 @@ class Site_Logo extends Widget_Base {
                 ],
             ]
         );
-    
+
         $this->add_control(
             'logo_url',
             [
@@ -57,7 +60,7 @@ class Site_Logo extends Widget_Base {
                 'description' => __( 'Enter the URL where clicking the logo will navigate.', 'nine-core' ),
             ]
         );
-    
+
         $this->add_control(
             'logo_alt',
             [
@@ -67,7 +70,7 @@ class Site_Logo extends Widget_Base {
                 'placeholder' => __( 'Enter alt text for the logo', 'nine-core' ),
             ]
         );
-    
+
         $this->add_control(
             'logo_width',
             [
@@ -77,7 +80,7 @@ class Site_Logo extends Widget_Base {
                 'description' => __( 'Set the width of the logo in pixels (px). Leave empty for default.', 'nine-core' ),
             ]
         );
-    
+
         $this->add_control(
             'logo_height',
             [
@@ -87,41 +90,35 @@ class Site_Logo extends Widget_Base {
                 'description' => __( 'Set the height of the logo in pixels (px). Leave empty for default.', 'nine-core' ),
             ]
         );
-    
+
         $this->end_controls_section();
     }
-    
 
     protected function render() {
         $settings = $this->get_settings_for_display();
-    
-        if ( has_custom_logo() && empty( $settings['logo_image']['url'] ) ) {
+
+        $logo_image_url = ! empty( $settings['logo_image']['url'] ) ? $settings['logo_image']['url'] : '';
+        $logo_alt = ! empty( $settings['logo_alt'] ) ? $settings['logo_alt'] : get_bloginfo( 'name' );
+        $logo_width = ! empty( $settings['logo_width'] ) ? 'width="' . esc_attr( $settings['logo_width'] ) . '"' : '';
+        $logo_height = ! empty( $settings['logo_height'] ) ? 'height="' . esc_attr( $settings['logo_height'] ) . '"' : '';
+        $logo_link_url = ! empty( $settings['logo_url']['url'] ) ? $settings['logo_url']['url'] : home_url( '/' );
+
+        if ( has_custom_logo() && empty( $logo_image_url ) ) {
             the_custom_logo();
         } else {
-            $logo_image_url = ! empty( $settings['logo_image']['url'] ) ? $settings['logo_image']['url'] : '';
-            $logo_alt = ! empty( $settings['logo_alt'] ) ? $settings['logo_alt'] : get_bloginfo( 'name' );
-            $logo_width = ! empty( $settings['logo_width'] ) ? 'width="' . esc_attr( $settings['logo_width'] ) . '"' : '';
-            $logo_height = ! empty( $settings['logo_height'] ) ? 'height="' . esc_attr( $settings['logo_height'] ) . '"' : '';
-            $logo_link_url = ! empty( $settings['logo_url']['url'] ) ? $settings['logo_url']['url'] : home_url( '/' );
-    
             if ( ! empty( $logo_image_url ) ) {
                 echo '<a href="' . esc_url( $logo_link_url ) . '">';
                 echo '<img src="' . esc_url( $logo_image_url ) . '" alt="' . esc_attr( $logo_alt ) . '" ' . $logo_width . ' ' . $logo_height . '>';
                 echo '</a>';
             } else {
-                ?>
-                <h1 class="nine-menu-text-logo logo-text">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <?php bloginfo( 'name' ); ?>
-                    </a>
-                </h1>
-                <?php
+                echo '<h1 class="nine-menu-text-logo logo-text">';
+                echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
+                bloginfo( 'name' );
+                echo '</a>';
+                echo '</h1>';
             }
         }
     }
-    
-
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new Site_Logo() );

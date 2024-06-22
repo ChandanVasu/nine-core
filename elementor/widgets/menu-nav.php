@@ -1,12 +1,13 @@
 <?php
-namespace Elementor;
-
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-/**
- * Widget Name: Nav Menu
- */
-class Nav_Menu_two extends Widget_Base {
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Utils;
+
+
+// Register the custom Elementor widget
+class Nav_Menu_two extends \Elementor\Widget_Base {
 
     // The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
     public function get_name() {
@@ -118,6 +119,3 @@ class Nav_Menu_two extends Widget_Base {
     }
 }
 
-// Register the widget
-Plugin::instance()->widgets_manager->register_widget_type( new Nav_Menu_two() );
-?>

@@ -11,7 +11,6 @@ use Elementor\Widget_Base;
 /**
  * Class Single_Title
  *
- * @package foxizElementor\Widgets
  */
 class Single_Title extends Widget_Base {
 

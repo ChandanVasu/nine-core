@@ -1,19 +1,18 @@
 .el-g-1-box {
 	background-color: white;
 	border-radius: 5px;
-	/* box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px; */
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 	justify-content: space-between;
 	padding: 10px;
-	transition: all 0.5s ease-in
+	transition: all 0.5s ease-in;
 }
 
 .el-g-1-category {
 	left: 10px;
 	position: absolute;
-	top: 10px
+	top: 10px;
 }
 
 .el-g-1-category a {
@@ -21,7 +20,7 @@
 	border-radius: 10px;
 	color: white;
 	padding: 5px 10px;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-g-1-date {
@@ -29,22 +28,22 @@
 	font-family: "Poppins", Sans-serif;
 	font-size: 10px;
 	font-weight: 400;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-g-1-grid-container {
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4,1fr);
 	padding: 2px;
-	transition: all 0.5s ease-in
+	transition: all 0.5s ease-in;
 }
 
 .el-g-1-meta-box {
 	align-items: center;
 	display: flex;
 	gap: 5px;
-	justify-content: start
+	justify-content: start;
 }
 
 .el-g-1-meta-box .author-avatar {
@@ -53,7 +52,7 @@
 	height: 30px;
 	object-fit: cover;
 	object-position: center;
-	width: 30px
+	width: 30px;
 }
 
 .el-g-1-name {
@@ -61,18 +60,18 @@
 	font-family: "Poppins", Sans-serif;
 	font-size: 10px;
 	font-weight: 400;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-g-1-name::after {
-	background: rgb(126, 126, 126);
+	background: rgb(126,126,126);
 	border-radius: 50%;
 	content: '';
 	display: inline-block;
 	height: 5px;
 	margin-bottom: 1px;
 	margin-left: 5px;
-	width: 5px
+	width: 5px;
 }
 
 .el-g-1-thumbnail {
@@ -80,17 +79,17 @@
 	overflow: hidden;
 	position: relative;
 	transform: translateZ(0);
-	transition: all 0.4s ease
+	transition: all 0.4s ease;
 }
 
 .el-g-1-thumbnail img {
 	height: 400px;
 	transition: all 0.4s ease;
-	width: 100%
+	width: 100%;
 }
 
 .el-g-1-thumbnail img:hover {
-	transform: scale(1.1)
+	transform: scale(1.1);
 }
 
 .el-g-1-title {
@@ -111,32 +110,30 @@
 	color: var(--primary-text);
 	line-height: 1;
 	margin: 0;
-	transition: background-size .3s
+	transition: background-size .3s;
 }
 
 .el-g-1-title a:hover {
 	background-size: 100% 100%;
-	color: currentColor
+	color: currentColor;
 }
 
 .el-list-1-box {
 	border-radius: 5px;
-	/* box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px; */
 	display: flex;
 	gap: 10px;
-	/* padding: 10px */
 }
 
 .el-list-1-box .el-list-1-thumbnail img {
 	height: 100%;
 	transition: all 0.4s ease;
-	width: 100%
+	width: 100%;
 }
 
 .el-list-1-category a {
-	color: rgb(0, 8, 255);
+	color: rgb(0,8,255);
 	font-size: 12px;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-list-1-content {
@@ -144,7 +141,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	width: 80%
+	width: 80%;
 }
 
 .el-list-1-date {
@@ -152,21 +149,21 @@
 	font-family: "Poppins", Sans-serif;
 	font-size: 10px;
 	font-weight: 400;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-list-1-list-container {
 	display: grid;
 	gap: 10px;
-	grid-template-columns: repeat(3, 1fr);
-	transition: all 0.5s ease-in
+	grid-template-columns: repeat(3,1fr);
+	transition: all 0.5s ease-in;
 }
 
 .el-list-1-meta-box {
 	align-items: center;
 	display: flex;
 	gap: 5px;
-	justify-content: start
+	justify-content: start;
 }
 
 .el-list-1-meta-box .author-avatar {
@@ -175,7 +172,7 @@
 	height: 30px;
 	object-fit: cover;
 	object-position: center;
-	width: 30px
+	width: 30px;
 }
 
 .el-list-1-name {
@@ -183,18 +180,18 @@
 	font-family: "Poppins", Sans-serif;
 	font-size: 10px;
 	font-weight: 400;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-list-1-name::after {
-	background: rgb(126, 126, 126);
+	background: rgb(126,126,126);
 	border-radius: 50%;
 	content: '';
 	display: inline-block;
 	height: 5px;
 	margin-bottom: 1px;
 	margin-left: 5px;
-	width: 5px
+	width: 5px;
 }
 
 .el-list-1-thumbnail {
@@ -204,17 +201,17 @@
 	position: relative;
 	transform: translateZ(0);
 	transition: all 0.4s ease;
-	width: 100px
+	width: 100px;
 }
 
 .el-list-1-thumbnail img {
 	object-fit: fill;
-	object-position: center
+	object-position: center;
 }
 
 .el-list-1-thumbnail img:hover {
 	transform: scale(1.1);
-	transition: all 0.4s ease
+	transition: all 0.4s ease;
 }
 
 .el-list-1-title {
@@ -224,7 +221,7 @@
 	color: var(--primary-text);
 	line-height: 1;
 	margin: 0;
-	transition: background-size .3s
+	transition: background-size .3s;
 }
 
 .el-list-1-title a {
@@ -235,32 +232,31 @@
 	font-size: 15px;
 	line-height: 1;
 	margin: 0;
-	transition: background-size .3s
+	transition: background-size .3s;
 }
 
 .el-list-1-title a:hover {
 	background-size: 100% 100%;
-	color: currentColor
+	color: currentColor;
 }
 
 .el-list-big-box {
 	border-radius: 5px;
-	/* box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px; */
 	display: flex;
 	gap: 10px;
-	padding: 10px
+	padding: 10px;
 }
 
 .el-list-big-box .el-list-big-thumbnail img {
 	height: 100%;
 	transition: all 0.4s ease;
-	width: 100%
+	width: 100%;
 }
 
 .el-list-big-category a {
-	color: rgb(0, 8, 255);
+	color: rgb(0,8,255);
 	font-size: 12px;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-list-big-content {
@@ -268,7 +264,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	width: 80%
+	width: 80%;
 }
 
 .el-list-big-date {
@@ -276,21 +272,21 @@
 	font-family: "Poppins", Sans-serif;
 	font-size: 10px;
 	font-weight: 400;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-list-big-list-container {
 	display: grid;
 	gap: 10px;
-	grid-template-columns: repeat(3, 1fr);
-	transition: all 0.5s ease-in
+	grid-template-columns: repeat(3,1fr);
+	transition: all 0.5s ease-in;
 }
 
 .el-list-big-meta-box {
 	align-items: center;
 	display: flex;
 	gap: 5px;
-	justify-content: start
+	justify-content: start;
 }
 
 .el-list-big-meta-box .author-avatar {
@@ -299,7 +295,7 @@
 	height: 30px;
 	object-fit: cover;
 	object-position: center;
-	width: 30px
+	width: 30px;
 }
 
 .el-list-big-name {
@@ -307,18 +303,18 @@
 	font-family: "Poppins", Sans-serif;
 	font-size: 10px;
 	font-weight: 400;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 .el-list-big-name::after {
-	background: rgb(126, 126, 126);
+	background: rgb(126,126,126);
 	border-radius: 50%;
 	content: '';
 	display: inline-block;
 	height: 5px;
 	margin-bottom: 1px;
 	margin-left: 5px;
-	width: 5px
+	width: 5px;
 }
 
 .el-list-big-thumbnail {
@@ -328,17 +324,17 @@
 	position: relative;
 	transform: translateZ(0);
 	transition: all 0.4s ease;
-	width: 300px
+	width: 300px;
 }
 
 .el-list-big-thumbnail img {
 	object-fit: fill;
-	object-position: center
+	object-position: center;
 }
 
 .el-list-big-thumbnail img:hover {
 	transform: scale(1.1);
-	transition: all 0.4s ease
+	transition: all 0.4s ease;
 }
 
 .el-list-big-title {
@@ -348,7 +344,7 @@
 	color: var(--primary-text);
 	line-height: 1;
 	margin: 0;
-	transition: background-size .3s
+	transition: background-size .3s;
 }
 
 .el-list-big-title a {
@@ -359,30 +355,30 @@
 	font-size: 15px;
 	line-height: 1;
 	margin: 0;
-	transition: background-size .3s
+	transition: background-size .3s;
 }
 
 .el-list-big-title a:hover {
 	background-size: 100% 100%;
-	color: currentColor
+	color: currentColor;
 }
 
 .load-more-button {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	margin: 20px auto
+	margin: 20px auto;
 }
 
 .load-more-button::after {
 	content: "\f061";
 	font-family: 'Font Awesome 6 Solid';
-	padding-left: 5px
+	padding-left: 5px;
 }
 
 .load-more-button::after:hover {
 	padding-left: 10px;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 
 .title {
@@ -392,9 +388,8 @@
 	color: var(--primary-text);
 	line-height: 1;
 	margin: 0;
-	transition: background-size .3s
+	transition: background-size .3s;
 }
-
 
 .el-thum img {
 	height: 450px;
@@ -406,7 +401,6 @@
 	align-items: center;
 	justify-content: space-between;
 }
-
 
 .search-overlay {
 	height: 0;
@@ -427,7 +421,6 @@
 	text-align: center;
 	margin-top: 30px;
 	padding: 0px 30%;
-
 }
 
 .search-overlay form {
@@ -435,20 +428,6 @@
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
-
-}
-
-
-@media (max-width:800px) {
-	.search-overlay-content {
-		position: relative;
-		top: 40%;
-		width: 100%;
-		text-align: center;
-		margin-top: 30px;
-		padding: 0px 5%;
-
-	}
 }
 
 .closebtn {
@@ -459,8 +438,7 @@
 	color: black;
 }
 
-.closebtn:hover,
-.closebtn:focus {
+.closebtn:hover, .closebtn:focus {
 	color: #000000;
 	text-decoration: none;
 	cursor: pointer;
@@ -523,7 +501,7 @@
 }
 
 .nine-social-share a.share-linkedin {
-	background-color: #0073B0;
+	background-color: #0073b0;
 }
 
 .nine-social-share a.share-buffer {
@@ -551,15 +529,15 @@
 }
 
 .nine-social-share a.share-yummly {
-	background-color: #E16120;
+	background-color: #e16120;
 }
 
 .nine-social-share a.share-email {
-	background-color: #E84231;
+	background-color: #e84231;
 }
 
 .nine-social-share a.share-print {
-	background-color: #4982C3;
+	background-color: #4982c3;
 }
 
 .nine-social-share.shape-rounded a {
@@ -594,17 +572,12 @@
 	transform: translateX(100%);
 	transition: opacity 0.3s ease-in, transform 0.5s ease-in;
 	display: block;
-	/* Keep display as block, and use opacity to hide/show */
 }
 
-
-
-/* Add a class for the visible state */
 .el-nav-menu-wrapper.visible {
 	opacity: 1;
 	transform: translateX(0);
 }
-
 
 .el-nav-menu {
 	list-style: none;
@@ -615,11 +588,10 @@
 	color: black;
 }
 
-.el-menu-icon-wrapper svg,
-.el-close-icon-wrapper svg {
+.el-menu-icon-wrapper svg, .el-close-icon-wrapper svg {
 	width: 20px;
 	cursor: pointer;
-	fill: rgb(255, 0, 0);
+	fill: rgb(255,0,0);
 }
 
 .el-nine-menu-logo {
@@ -638,17 +610,25 @@
 	top: 0;
 	width: 100%;
 	z-index: 999;
-
 }
 
 .admin-bar .ovely-box {
 	top: 32px;
 }
 
-
-.el-nav-menu .sub-menu{
+.el-nav-menu .sub-menu {
 	list-style: none;
 	display: none;
 	margin-left: 10px;
 }
 
+@media (max-width:800px) {
+	.search-overlay-content {
+		position: relative;
+		top: 40%;
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+		padding: 0px 5%;
+	}
+}

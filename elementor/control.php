@@ -3,70 +3,87 @@
 class Elementor_Customizations {
 
     public function __construct() {
-        add_action( 'elementor/elements/categories_registered', [ $this, 'add_elementor_widget_categories' ] );
-
-        add_action( 'elementor/editor/after_enqueue_styles', [ $this, 'register_editor_styles' ] );
-
-        add_action( 'elementor/widgets/register', [ $this, 'nine_all_widget' ] );
+        add_action('elementor/elements/categories_registered', [$this, 'add_elementor_widget_categories']);
+        add_action('elementor/editor/after_enqueue_styles', [$this, 'register_editor_styles']);
+        add_action('elementor/widgets/register', [$this, 'register_widgets']);
     }
 
-    public function add_elementor_widget_categories( $elements_manager ) {
-        $categories = [];
+    public function add_elementor_widget_categories($elements_manager) {
+        $theme_name = sanitize_key(wp_get_theme()->get('Name'));
         
-        $categories[ sanitize_key( wp_get_theme()->name ) . '-posts'] = [
-            'title' => wp_get_theme()->name . ' - Posts & Taxonomy',
-            'icon'  => 'fa fa-plug'
+        $new_categories = [
+            "{$theme_name}-posts" => [
+                'title' => wp_get_theme()->get('Name') . ' - Posts & Taxonomy',
+                'icon'  => 'fa fa-plug'
+            ],
+            "{$theme_name}-widgets" => [
+                'title' => wp_get_theme()->get('Name') . ' - General',
+                'icon'  => 'fa fa-plug'
+            ]
         ];
-        $categories[ sanitize_key( wp_get_theme()->name ) . '-widgets'] = [
-            'title' => wp_get_theme()->name . ' - General',
-            'icon'  => 'fa fa-plug'
-        ];
 
-        $old_categories = $elements_manager->get_categories();
-        $categories = array_merge( $categories, $old_categories );
+        $categories = array_merge($new_categories, $elements_manager->get_categories());
 
-        $set_categories = function ( $categories ) {
-            $this->categories = $categories;
-        };
-
-        $set_categories->call( $elements_manager, $categories );
+        $reflection = new ReflectionClass($elements_manager);
+        $property = $reflection->getProperty('categories');
+        $property->setAccessible(true);
+        $property->setValue($elements_manager, $categories);
     }
 
     public function register_editor_styles() {
-        wp_register_style( 'nine-elementor-editor', plugins_url( 'main.css', __FILE__ ) );
-        wp_enqueue_style( 'nine-elementor-editor' );
+        wp_register_style('nine-elementor-editor', plugins_url('main.css', __FILE__));
+        wp_enqueue_style('nine-elementor-editor');
     }
 
-    public function nine_all_widget( $widgets_manager ) {
-        require_once( __DIR__ . '/widgets/post-grid-one.php' );
-        require_once( __DIR__ . '/widgets/post-list-one.php' );
-        require_once( __DIR__ . '/widgets/content.php' );
-        require_once( __DIR__ . '/widgets/comment.php' );
-        require_once( __DIR__ . '/widgets/search.php' );
-        require_once( __DIR__ . '/widgets/title.php' );
-        require_once( __DIR__ . '/widgets/menu.php' );
-        require_once( __DIR__ . '/widgets/menu-nav.php' );
-        require_once( __DIR__ . '/widgets/logo.php' );
-        require_once( __DIR__ . '/widgets/post-meta.php' );
-        require_once( __DIR__ . '/widgets/social-share.php' );
-        require_once( __DIR__ . '/widgets/heading.php' );
-        require_once( __DIR__ . '/widgets/copyright.php' );
-        require_once( __DIR__ . '/widgets/featured-img.php' );
-        require_once( __DIR__ . '/widgets/post-list-big.php' );
-        require_once( __DIR__ . '/block/block-grid-one.php' );
-        require_once( __DIR__ . '/block/block-list-one.php' );
-        require_once( __DIR__ . '/block/block-list-big.php' );
+    public function register_widgets($widgets_manager) {
+        $widgets = [
+            'widgets/post-grid-one.php',
+            'widgets/post-list-one.php',
+            'widgets/content.php',
+            'widgets/comment.php',
+            'widgets/search.php',
+            'widgets/title.php',
+            'widgets/menu.php',
+            'widgets/menu-nav.php',
+            'widgets/logo.php',
+            'widgets/post-meta.php',
+            'widgets/social-share.php',
+            'widgets/heading.php',
+            'widgets/copyright.php',
+            'widgets/featured-img.php',
+            'widgets/post-list-big.php',
+            'block/block-grid-one.php',
+            'block/block-list-one.php',
+            'block/block-list-big.php'
+        ];
 
-        $widgets_manager->register( new \post_grid_one() );
-        $widgets_manager->register( new \post_list_one() );
-        $widgets_manager->register( new \post_list_big() );
-        $widgets_manager->register( new \single_post_content() );
-        $widgets_manager->register( new \Single_Title() );
-        $widgets_manager->register( new \Copyright_Widget() );
-        $widgets_manager->register( new \Block_Heading_Widget() );
-        $widgets_manager->register( new \Single_Post_Meta_Widget() );
-        $widgets_manager->register( new \Search_Overlay_Widget() );
+        foreach ($widgets as $widget) {
+            require_once(__DIR__ . '/' . $widget);
+        }
+
+        $widget_classes = [
+            'post_grid_one',
+            'post_list_one',
+            'post_list_big',
+            'single_post_content',
+            'Single_Title',
+            'Copyright_Widget',
+            'Block_Heading_Widget',
+            'Single_Post_Meta_Widget',
+            'Search_Overlay_Widget',
+            'single_post_comment',
+            'Nine_SocialShare',
+            'Site_Logo',
+            'Nav_Menu',
+            'Nav_Menu_two',
+            'Single_Featured_Image'
+        ];
+
+        foreach ($widget_classes as $widget_class) {
+            $widgets_manager->register(new $widget_class());
+        }
     }
 }
 
 new Elementor_Customizations();
+
