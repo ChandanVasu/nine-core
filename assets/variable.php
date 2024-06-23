@@ -4,11 +4,11 @@ function generate_custom_css() {
     $options = get_option('nine_theme'); // Adjust 'nine_theme' to your actual Redux options name
 
     // Define CSS variables
-    $body_bg_color = isset($options['body_bg_color']) ? sanitize_hex_color($options['body_bg_color']) : '#ffffff';
-    $primary_color = isset($options['primary_color']) ? sanitize_hex_color($options['primary_color']) : '#007bff';
-    $primary_text_color = isset($options['primary_text_color']) ? sanitize_hex_color($options['primary_text_color']) : '#333333';
-    $header_bg_color = isset($options['header_bg_color']) ? sanitize_hex_color($options['header_bg_color']) : '#f8f9fa';
-    $box_color = isset($options['box_color']) ? sanitize_hex_color($options['box_color']) : '#eeeeee';
+    $body_bg_color = esc_attr(nine_get_opt('body_bg_color'));
+    $primary_color = esc_attr(nine_get_opt('primary_colors'));
+    $primary_text_color = esc_attr(nine_get_opt('primary_text'));
+    $header_bg_color = esc_attr(nine_get_opt('header_background_colors'));
+    $box_color = esc_attr(nine_get_opt('box_color'));
     $sticky_header = isset($options['sticky_header']) && $options['sticky_header'] === '1';
 
     // Start building CSS string
