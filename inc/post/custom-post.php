@@ -56,7 +56,7 @@ class nine_Custom_Post_Type {
             'capability_type'       => 'page',
             'hierarchical'          => false,
             'menu_position'         => 2,
-            'menu_icon'             => get_theme_file_uri('Assets/Images/template.svg'),
+            'menu_icon'             => 'dashicons-align-wide',
         );
 
         register_post_type('nine_theme', $args);
