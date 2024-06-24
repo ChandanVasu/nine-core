@@ -112,7 +112,6 @@ class Nav_Menu_two extends \Elementor\Widget_Base {
             'container'      => 'div',
             'container_class'=> 'nav-main-container',
             'menu_class'     => 'nav-main-menu',
-            'fallback_cb'    => false,
         ]);
         
 

@@ -57,7 +57,9 @@ class Elementor_Customizations {
             'block/block-grid-one.php',
             'block/block-list-one.php',
             'block/block-list-big.php',
-            'widgets/cat-colleaction.php'
+            'widgets/cat-colleaction.php',
+            'widgets/breadcrumbs.php',
+            'widgets/post-expert.php'
         ];
 
         foreach ($widgets as $widget) {
@@ -82,7 +84,9 @@ class Elementor_Customizations {
             'Single_Featured_Image',
             'Archive_Post_Title_Widget',
             'Date_And_Time_Module',
-            'CategoryCollation'
+            'CategoryCollation',
+            'Elementor_Breadcrumbs_Widget',
+            'Elementor_Custom_Excerpt_Widget'
         ];
 
         foreach ($widget_classes as $widget_class) {

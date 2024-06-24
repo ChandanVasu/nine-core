@@ -234,6 +234,9 @@ class Nav_Menu extends \Elementor\Widget_Base {
                     ]);
                     ?>
                 </div>
+                <script>
+                    
+                </script>
             </div>
         </div>
         <?php
