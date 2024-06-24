@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Custom Post
+ * @package nine-core
+ */
 // Ensure this code is added to a proper location like functions.php or a custom plugin.
 
 // Class to manage the custom post type

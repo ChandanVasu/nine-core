@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
+
 defined('ABSPATH') || exit;
 
 use Elementor\Controls_Manager;

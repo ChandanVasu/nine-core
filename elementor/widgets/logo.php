@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
@@ -61,33 +64,49 @@ class Site_Logo extends Widget_Base {
             ]
         );
 
-        $this->add_control(
-            'logo_alt',
+        $this->add_responsive_control(
+            'image_width',
             [
-                'label' => __( 'Logo Alt Text', 'nine-core' ),
-                'type' => Controls_Manager::TEXT,
-                'default' => __( 'Site Logo', 'nine-core' ),
-                'placeholder' => __( 'Enter alt text for the logo', 'nine-core' ),
+                'label' => esc_html__( 'Image Width', 'nine-core' ),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => [ 'px' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 400,
+                        'step' => 5,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 150,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .site-logo img' => 'width: {{SIZE}}{{UNIT}};',
+                ],
             ]
         );
 
-        $this->add_control(
-            'logo_width',
+        $this->add_responsive_control(
+            'image_height',
             [
-                'label' => __( 'Logo Width', 'nine-core' ),
-                'type' => Controls_Manager::NUMBER,
-                'default' => '',
-                'description' => __( 'Set the width of the logo in pixels (px). Leave empty for default.', 'nine-core' ),
-            ]
-        );
-
-        $this->add_control(
-            'logo_height',
-            [
-                'label' => __( 'Logo Height', 'nine-core' ),
-                'type' => Controls_Manager::NUMBER,
-                'default' => '',
-                'description' => __( 'Set the height of the logo in pixels (px). Leave empty for default.', 'nine-core' ),
+                'label' => esc_html__( 'Image Height', 'nine-core' ),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => [ 'px' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 400,
+                        'step' => 5,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 150,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .site-logo img' => 'height: {{SIZE}}{{UNIT}};',
+                ],
             ]
         );
 
@@ -96,19 +115,15 @@ class Site_Logo extends Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
-
-        $logo_image_url = ! empty( $settings['logo_image']['url'] ) ? $settings['logo_image']['url'] : '';
-        $logo_alt = ! empty( $settings['logo_alt'] ) ? $settings['logo_alt'] : get_bloginfo( 'name' );
-        $logo_width = ! empty( $settings['logo_width'] ) ? 'width="' . esc_attr( $settings['logo_width'] ) . '"' : '';
-        $logo_height = ! empty( $settings['logo_height'] ) ? 'height="' . esc_attr( $settings['logo_height'] ) . '"' : '';
-        $logo_link_url = ! empty( $settings['logo_url']['url'] ) ? $settings['logo_url']['url'] : home_url( '/' );
+        $logo_image_url = $settings['logo_image']['url'];
+        $logo_link_url = $settings['logo_url']['url'];
 
         if ( has_custom_logo() && empty( $logo_image_url ) ) {
             the_custom_logo();
         } else {
             if ( ! empty( $logo_image_url ) ) {
-                echo '<a href="' . esc_url( $logo_link_url ) . '">';
-                echo '<img src="' . esc_url( $logo_image_url ) . '" alt="' . esc_attr( $logo_alt ) . '" ' . $logo_width . ' ' . $logo_height . '>';
+                echo '<a class="site-logo" href="' . esc_url( $logo_link_url ) . '">';
+                echo '<img src="' . esc_url( $logo_image_url ) . '" alt="' . esc_attr( get_bloginfo('name') ) . '">';
                 echo '</a>';
             } else {
                 echo '<h1 class="nine-menu-text-logo logo-text">';
@@ -122,3 +137,4 @@ class Site_Logo extends Widget_Base {
 
 }
 
+// Register widget

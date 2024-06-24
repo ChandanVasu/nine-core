@@ -2,8 +2,8 @@
 /**
  * Header file in case of the elementor way
  *
- * @package header-footer-elementor
- * @since 1.2.0
+ * @package nine-core
+ * @since 1.0.0
  */
 
 ?><!DOCTYPE html>

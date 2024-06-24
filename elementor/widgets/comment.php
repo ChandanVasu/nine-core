@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
+
+ 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Register the custom Elementor widget

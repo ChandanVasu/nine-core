@@ -1,9 +1,7 @@
 <?php
 /**
- * Date and Time Module
- * 
- * @package News Kit Elementor Addons
- * @since 1.0.0
+ * Elementor Widget For Nine Theme
+ * @package nine-core
  */
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly

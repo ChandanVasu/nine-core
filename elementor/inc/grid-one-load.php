@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Elementor Render Part
+ * @package nine-core
+ */
 function g_1_load_more() {
     $page = $_POST['page'];
     $settings = $_POST['settings'];

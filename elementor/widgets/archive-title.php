@@ -1,4 +1,8 @@
 <?php
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
 
 use Elementor\Plugin;
 

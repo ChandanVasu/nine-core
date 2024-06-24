@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
+
+ 
 // Register the custom Elementor widget
 class single_post_content extends \Elementor\Widget_Base {
 

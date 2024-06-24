@@ -9,7 +9,6 @@ function generate_custom_css() {
     $primary_text_color = esc_attr(nine_get_opt('primary_text'));
     $header_bg_color = esc_attr(nine_get_opt('header_background_colors'));
     $box_color = esc_attr(nine_get_opt('box_color'));
-    $sticky_header = isset($options['sticky_header']) && $options['sticky_header'] === '1';
 
     // Start building CSS string
     $custom_css = "
@@ -21,18 +20,6 @@ function generate_custom_css() {
         --box-color: {$box_color};
     }
     ";
-
-    // Conditionally add styles based on options
-    if (!$sticky_header) {
-        $custom_css .= "
-        #main-header {
-            position: relative;
-        }
-        .admin-bar #main-header {
-            top: 0px; 
-        }
-        ";
-    }
 
     // Output CSS inside a style tag
     echo '<style>' . wp_strip_all_tags($custom_css) . '</style>';

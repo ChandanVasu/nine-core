@@ -1,9 +1,7 @@
 <?php
 /**
- * Date and Time Module
- * 
- * @package News Kit Elementor Addons
- * @since 1.0.0
+ * Elementor Widget For Nine Theme
+ * @package nine-core
  */
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -33,7 +31,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'general_section',
             [
-                'label' => esc_html__( 'General', 'news-kit-elementor-addons' ),
+                'label' => esc_html__( 'General', 'nine-core' ),
                 'tab'   => \Elementor\Controls_Manager::TAB_CONTENT
             ]
         );
@@ -42,15 +40,15 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
 			'items_orientation',
 			[
-				'label' => esc_html__( 'Items Orientation', 'news-kit-elementor-addons' ),
+				'label' => esc_html__( 'Items Orientation', 'nine-core' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
 				'options' => [
 					'horizontal' => [
-						'title' => esc_html__( 'Horizontal', 'news-kit-elementor-addons' ),
+						'title' => esc_html__( 'Horizontal', 'nine-core' ),
 						'icon' => 'eicon-navigation-horizontal'
 					],
 					'vertical' => [
-						'title' => esc_html__( 'Vertical', 'news-kit-elementor-addons' ),
+						'title' => esc_html__( 'Vertical', 'nine-core' ),
 						'icon' => 'eicon-navigation-vertical'
 					]
 				],
@@ -62,19 +60,19 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_responsive_control(
 			'elements_align',
 			[
-				'label' =>  esc_html__( 'Alignment', 'news-kit-elementor-addons' ),
+				'label' =>  esc_html__( 'Alignment', 'nine-core' ),
 				'type'  =>  \Elementor\Controls_Manager::CHOOSE,
 				'options'   =>  [
 					'left'  =>  [
-						'title' =>  esc_html__( 'Left', 'news-kit-elementor-addons' ),
+						'title' =>  esc_html__( 'Left', 'nine-core' ),
 						'icon'  =>   'eicon-text-align-left'
 					],
 					'center'    => [
-						'title' =>  esc_html__( 'Center', 'news-kit-elementor-addons' ),
+						'title' =>  esc_html__( 'Center', 'nine-core' ),
 						'icon'  =>  'eicon-text-align-center'
 					],
 					'right' =>  [
-						'title' =>  esc_html__( 'Right', 'news-kit-elementor-addons' ),
+						'title' =>  esc_html__( 'Right', 'nine-core' ),
 						'icon'  =>   'eicon-text-align-right'
 					]
 				],
@@ -90,7 +88,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'separator_text',
             [
-                'label' =>  esc_html__( 'Seperator', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Seperator', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::TEXT,
                 'default'   =>  '/',
                 'label_block'   =>  false
@@ -101,7 +99,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'icon_section',
             [
-                'label' =>  esc_html__( 'Icon', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Icon', 'nine-core' ),
                 'tab'   =>  \Elementor\Controls_Manager::TAB_CONTENT,
                 'condition' => apply_filters( 'nekit_date_time_icon_condition_filter', [
                     'elements_align'    => 'pro'
@@ -112,10 +110,10 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'show_date_time_icon',
             [
-                'label' =>  esc_html__( 'Show date time icon', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Show date time icon', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::SWITCHER,
-                'label_on'  => esc_html__( 'Show', 'news-kit-elementor-addons' ),
-                'label_off' => esc_html__( 'Hide', 'news-kit-elementor-addons' ),
+                'label_on'  => esc_html__( 'Show', 'nine-core' ),
+                'label_off' => esc_html__( 'Hide', 'nine-core' ),
                 'return_value'  => 'yes',
                 'default'   => 'yes'
             ]
@@ -124,7 +122,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
 		$this->add_control(
 			'date_time_icon',
 			[
-				'label' =>  esc_html__( 'Date Time Icon', 'news-kit-elementor-addons' ),
+				'label' =>  esc_html__( 'Date Time Icon', 'nine-core' ),
                 'label_block'   => false,
 				'type'  =>  \Elementor\Controls_Manager::ICONS,
 				'skin'	=>  'inline',
@@ -143,7 +141,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'date_time_icon_size',
             [
-                'label' =>  esc_html__( 'Icon Size', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Icon Size', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::SLIDER,
                 'range' =>  [
                     'px'    =>  [
@@ -165,7 +163,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'date_time_icon_distance',
             [
-                'label' =>  esc_html__( 'Icon Distance', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Icon Distance', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::SLIDER,
                 'range' =>   [
                     'px'    =>  [
@@ -190,7 +188,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'time_section',
             [
-                'label' =>  esc_html__('Time', 'news-kit-elementor-addons'),
+                'label' =>  esc_html__('Time', 'nine-core'),
                 'tab'   =>  \Elementor\Controls_Manager::TAB_CONTENT
             ]
         );
@@ -198,10 +196,10 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'show_time_count',
             [
-                'label' =>  esc_html__( 'Show time', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Show time', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::SWITCHER,
-                'label_on'  =>  esc_html__( 'Show', 'news-kit-elementor-addons' ),
-                'label_off' =>  esc_html__( 'Hide', 'news-kit-elementor-addons' ),
+                'label_on'  =>  esc_html__( 'Show', 'nine-core' ),
+                'label_off' =>  esc_html__( 'Hide', 'nine-core' ),
                 'return_value'  =>  'yes',
                 'default'   =>  'yes'
             ]
@@ -211,7 +209,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'date_section',
             [
-                'label' =>  esc_html__( 'Date', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Date', 'nine-core' ),
                 'tab'   =>  \Elementor\Controls_Manager::TAB_CONTENT
             ]
         );
@@ -219,10 +217,10 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'show_date_count',
             [
-                'label' =>  esc_html__( 'Show date', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Show date', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::SWITCHER,
-                'label_on'  =>  esc_html__( 'Show', 'news-kit-elementor-addons' ),
-                'label_off' =>  esc_html__( 'Hide', 'news-kit-elementor-addons' ),
+                'label_on'  =>  esc_html__( 'Show', 'nine-core' ),
+                'label_off' =>  esc_html__( 'Hide', 'nine-core' ),
                 'return_value'  =>  'yes',
                 'default'   =>  'yes'
             ]
@@ -231,7 +229,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'date_format',
             [
-                'label' =>  esc_html__( 'Date Format', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Date Format', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::SELECT,
                 'default'   =>  'M d, Y',
                 'options'   => apply_filters( 'nekit_date_time_format_filter', [
@@ -244,12 +242,12 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
 			'date_position',
 			[
-				'label' =>  esc_html__( 'Date Position', 'news-kit-elementor-addons' ),
+				'label' =>  esc_html__( 'Date Position', 'nine-core' ),
 				'type'  =>  \Elementor\Controls_Manager::SELECT,
                 'default'   =>  'after',
                 'options'   =>  [
-                    'after' =>  esc_html__( 'After', 'news-kit-elementor-addons' ),
-                    'before'    =>  esc_html__( 'Before', 'news-kit-elementor-addons' )
+                    'after' =>  esc_html__( 'After', 'nine-core' ),
+                    'before'    =>  esc_html__( 'Before', 'nine-core' )
                 ]
 			]
 		);
@@ -258,7 +256,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'general_styles_section',
             [
-                'label' =>  esc_html__( 'General', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'General', 'nine-core' ),
                 'tab'   =>  \Elementor\Controls_Manager::TAB_STYLE
             ]
         );
@@ -284,7 +282,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'border_radius',
             [
-                'label' =>  esc_html__( 'Border Radius (px)', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Border Radius (px)', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::NUMBER,
                 'min'   =>  0,
                 'max'   =>  500,
@@ -298,7 +296,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'widget_padding',
             [
-                'label' =>  esc_html__( 'Padding', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Padding', 'nine-core' ),
                 'type'  =>   \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em', 'custom' ],
                 'selectors' =>  [
@@ -310,7 +308,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'widget_margin',
             [
-                'label' =>  esc_html__('Margin', 'news-kit-elementor-addons'),
+                'label' =>  esc_html__('Margin', 'nine-core'),
                 'type'  =>  \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units'    =>  ['px', '%', 'em', 'custom'],
                 'selectors' =>  [
@@ -324,7 +322,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'style_icon_section',
             [
-                'label' =>  esc_html__( 'Icon', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Icon', 'nine-core' ),
                 'tab'   =>  \Elementor\Controls_Manager::TAB_STYLE,
                 'condition' => apply_filters( 'nekit_date_time_icon_condition_filter', [
                     'elements_align'    => 'pro'
@@ -335,7 +333,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'date_time_icon_color',
             [
-                'label' =>  esc_html__( 'Icon Color', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Icon Color', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::COLOR,
                 'default'   =>  '#8A8A8C',
                 'selectors' =>  [
@@ -349,7 +347,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'styles_time_section',
             [
-                'label' =>  esc_html__( 'Time', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Time', 'nine-core' ),
                 'tab'   =>  \Elementor\Controls_Manager::TAB_STYLE
             ]
         );
@@ -357,7 +355,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'label' =>  esc_html__( 'Typography', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Typography', 'nine-core' ),
                 'name'  =>  'style_time_typography',
                 'fields_options'    =>  [
                     'typography'    => [
@@ -383,7 +381,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'time_color',
             [
-                'label' =>  esc_html__( 'Time Color', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Time Color', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::COLOR,
                 'default'   =>  '#8A8A8C',
                 'selectors' =>  [
@@ -396,7 +394,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'date_style_section',
             [
-                'label' =>  esc_html__( 'Date', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Date', 'nine-core' ),
                 'tab'   =>  \Elementor\Controls_Manager::TAB_STYLE
             ]
         );
@@ -404,7 +402,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'label' =>  esc_html__( 'Typography', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Typography', 'nine-core' ),
                 'name'  =>  'date_typography',
                 'fields_options'    =>  [
                     'typography'    => [
@@ -430,7 +428,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         $this->add_control(
             'date_color',
             [
-                'label' =>  esc_html__( 'Date color', 'news-kit-elementor-addons' ),
+                'label' =>  esc_html__( 'Date color', 'nine-core' ),
                 'type'  =>  \Elementor\Controls_Manager::COLOR,
                 'default'   =>  '#8A8A8C',
                 'selectors' => [

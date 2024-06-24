@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Elementor Widget Control
+ * @package nine-core
+ */
 class Elementor_Customizations {
 
     public function __construct() {

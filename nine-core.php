@@ -63,3 +63,4 @@ function enqueue_load_more_script() {
     wp_enqueue_script('load-more-script');
 }
 add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
+

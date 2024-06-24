@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Elementor Render Part
+ * @package nine-core
+ */
 function grid_post_one($settings) {
     $defaults = [
         'posts_per_page' => 8,

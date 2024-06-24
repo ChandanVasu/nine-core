@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Elementor Footer over Ride
+ * @package nine-core
+ */
 // Get the 'nine_theme' option
 $nine_theme = get_option('nine_theme');
 

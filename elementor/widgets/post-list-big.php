@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
 class post_list_big extends \Elementor\Widget_Base {
     
     public function get_name()

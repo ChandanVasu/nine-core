@@ -1,4 +1,8 @@
 <?php
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
 class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
 
     public function get_name() {
@@ -6,7 +10,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
     }
 
     public function get_title() {
-        return esc_html__('Custom Excerpt', 'elementor-addon');
+        return esc_html__('Custom Excerpt', 'nine-core');
     }
 
     public function get_icon() {
@@ -25,7 +29,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => esc_html__('Content', 'elementor-addon'),
+                'label' => esc_html__('Content', 'nine-core'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -33,7 +37,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'excerpt_length',
             [
-                'label' => esc_html__('Excerpt Length (Words)', 'elementor-addon'),
+                'label' => esc_html__('Excerpt Length (Words)', 'nine-core'),
                 'type' => \Elementor\Controls_Manager::NUMBER,
                 'default' => 20,
                 'min' => 10,
@@ -44,7 +48,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'excerpt_color',
             [
-                'label' => esc_html__('Excerpt Color', 'elementor-addon'),
+                'label' => esc_html__('Excerpt Color', 'nine-core'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .custom-excerpt .post-excerpt' => 'color: {{VALUE}};',
@@ -56,7 +60,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'excerpt_typography',
-                'label' => esc_html__('Excerpt Typography', 'elementor-addon'),
+                'label' => esc_html__('Excerpt Typography', 'nine-core'),
                 'selector' => '{{WRAPPER}} .custom-excerpt .post-excerpt',
             ]
         );

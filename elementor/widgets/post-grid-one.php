@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
 class post_grid_one extends \Elementor\Widget_Base {
     
     public function get_name()

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Elementor Widget For Nine Theme
+ * @package nine-core
+ */
+
 class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
 
 	public function get_name() {
@@ -6,7 +11,7 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Breadcrumbs', 'elementor-addon' );
+		return esc_html__( 'Breadcrumbs', 'nine-core' );
 	}
 
 	public function get_icon() {
@@ -25,7 +30,7 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => esc_html__( 'Content', 'elementor-addon' ),
+                'label' => esc_html__( 'Content', 'nine-core' ),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -33,16 +38,16 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'home_label',
             [
-                'label' => esc_html__( 'Home Label', 'elementor-addon' ),
+                'label' => esc_html__( 'Home Label', 'nine-core' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Home', 'elementor-addon' ),
+                'default' => esc_html__( 'Home', 'nine-core' ),
             ]
         );
 
         $this->add_control(
             'breadcrumbs_color',
             [
-                'label' => esc_html__( 'Color', 'elementor-addon' ),
+                'label' => esc_html__( 'Color', 'nine-core' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .breadcrumbs' => 'color: {{VALUE}};',
@@ -56,7 +61,7 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'typography',
-                'label' => esc_html__( 'Typography', 'elementor-addon' ),
+                'label' => esc_html__( 'Typography', 'nine-core' ),
                 'selector' => '{{WRAPPER}} .breadcrumbs, {{WRAPPER}} .breadcrumbs a, {{WRAPPER}} .breadcrumbs .breadcrumb-delimiter',
             ]
         );
