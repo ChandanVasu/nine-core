@@ -16,7 +16,7 @@ class single_post_content extends \Elementor\Widget_Base {
 
     // Widget Title
     public function get_title() {
-        return __( 'Single Post', 'nine-core' );
+        return __( 'Post Content', 'nine-core' );
     }
 
     // Widget Icon
@@ -36,7 +36,7 @@ class single_post_content extends \Elementor\Widget_Base {
         // Check if it's a single post
         if ( is_singular( 'post' ) ) {
             setup_postdata( $post );
-            echo '<div class="el-single-post-content-nine">' . get_the_content() . '</div>';
+            echo '<div class="el-single-post-content-nine">' . the_content() . '</div>';
             wp_reset_postdata();
         } else {
             echo '
