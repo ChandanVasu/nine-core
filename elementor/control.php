@@ -37,6 +37,7 @@ class Elementor_Customizations {
 
     public function register_widgets($widgets_manager) {
         $widgets = [
+            'widgets/date-time.php',
             'widgets/post-grid-one.php',
             'widgets/post-list-one.php',
             'widgets/content.php',
@@ -55,7 +56,8 @@ class Elementor_Customizations {
             'widgets/post-list-big.php',
             'block/block-grid-one.php',
             'block/block-list-one.php',
-            'block/block-list-big.php'
+            'block/block-list-big.php',
+            'widgets/cat-colleaction.php'
         ];
 
         foreach ($widgets as $widget) {
@@ -78,7 +80,9 @@ class Elementor_Customizations {
             'Nav_Menu',
             'Nav_Menu_two',
             'Single_Featured_Image',
-            'Archive_Post_Title_Widget'
+            'Archive_Post_Title_Widget',
+            'Date_And_Time_Module',
+            'CategoryCollation'
         ];
 
         foreach ($widget_classes as $widget_class) {
