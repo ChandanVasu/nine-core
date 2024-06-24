@@ -40,7 +40,7 @@ class Copyright_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'copyright_text',
             [
                 'label' => __( 'Copyright Text', 'nine-core' ),
@@ -49,7 +49,7 @@ class Copyright_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'text_color',
             [
                 'label' => __( 'Text Color', 'nine-core' ),

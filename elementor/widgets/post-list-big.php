@@ -43,7 +43,7 @@ protected function _register_controls(){
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'dynamic_filtering',
         [
             'label' => esc_html__('Current Query', 'nine-core'),
@@ -54,7 +54,7 @@ protected function _register_controls(){
     );
 
     // Only show category selection if dynamic filtering is disabled
-    $this->add_control(
+    $this->add_responsive_control(
         'category',
         [
             'label' => esc_html__('Select Category', 'nine-core'),
@@ -68,7 +68,7 @@ protected function _register_controls(){
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'posts_per_page',
         [
             'label'   => esc_html__('Posts Per Page', 'nine-core'),
@@ -78,7 +78,7 @@ protected function _register_controls(){
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'offset',
         [
             'label'   => esc_html__('Post Offset', 'nine-core'),
@@ -88,7 +88,7 @@ protected function _register_controls(){
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'title_length',
         [
             'label'   => esc_html__('Title Length', 'nine-core'),
@@ -98,7 +98,7 @@ protected function _register_controls(){
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'content_length',
         [
             'label'   => esc_html__('Content Length', 'nine-core'),
@@ -125,7 +125,7 @@ $this->add_responsive_control(
 );
 
 
-    $this->add_control(
+    $this->add_responsive_control(
         'text_align',
         [
             'label' => esc_html__('Text Align', 'nine-core'),
@@ -152,7 +152,7 @@ $this->add_responsive_control(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'order',
         [
             'label' => esc_html__('Order', 'nine-core'),
@@ -298,7 +298,7 @@ $this->start_controls_section(
     ]
 );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'image_border_radius',
         [
             'label'     => esc_html__('  Radius', 'nine-core'),
@@ -311,7 +311,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'transform_hover',
         [
             'label' => esc_html__('Hover Transform', 'nine-core'),
@@ -407,7 +407,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'title_color',
         [
             'label'     => esc_html__('Title Color', 'nine-core'),
@@ -419,7 +419,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'title_color_toggle',
         [
             'label' => esc_html__('Title Hover Line', 'nine-core'),
@@ -434,7 +434,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'title_hover_text_color',
         [
             'label' => esc_html__('Title Text Color (Hover)', 'nine-core'),
@@ -467,7 +467,7 @@ $this->start_controls_section(
     ]
 );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'category_text_color',
         [
             'label'     => esc_html__('Category Text Color', 'nine-core'),
@@ -505,7 +505,7 @@ $this->start_controls_section(
 
     
 
-    $this->add_control(
+    $this->add_responsive_control(
         'border_radius',
         [
             'label' => esc_html__('Border Radius', 'nine-core'),
@@ -518,7 +518,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'border_padding',
         [
             'label' => esc_html__('Padding', 'nine-core'),
@@ -564,7 +564,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'author_color',
         [
             'label'     => esc_html__('Author Color', 'nine-core'),
@@ -617,7 +617,7 @@ $this->start_controls_section(
     ]
 );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'content_color',
         [
             'label'     => esc_html__('Content Color', 'nine-core'),
@@ -650,7 +650,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'border_color',
         [
             'label' => esc_html__('Border Color', 'nine-core'),
@@ -662,7 +662,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'border_width',
         [
             'label' => esc_html__('Border Width', 'nine-core'),
@@ -675,7 +675,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'border_style',
         [
             'label' => esc_html__('Border Style', 'nine-core'),
@@ -700,7 +700,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'background_border_radius',
         [
             'label' => esc_html__('Background Border Radius', 'nine-core'),
@@ -713,7 +713,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'list_padding',
         [
             'label' => esc_html__('Padding', 'nine-core'),
@@ -726,7 +726,7 @@ $this->start_controls_section(
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'background_color',
         [
             'label'     => esc_html__('Background Color', 'nine-core'),

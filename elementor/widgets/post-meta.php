@@ -135,7 +135,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'meta_bg_color',
             [
                 'label' => __( 'Background Color', 'nine-core' ),
@@ -146,7 +146,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'meta_padding',
             [
                 'label' => __( 'Padding', 'nine-core' ),
@@ -158,7 +158,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'meta_border_radius',
             [
                 'label' => __( 'Border Radius', 'nine-core' ),
@@ -170,7 +170,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'avatar_size',
             [
                 'label' => __( 'Author Avatar Size', 'nine-core' ),
@@ -191,7 +191,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'avatar_border_radius',
             [
                 'label' => __( 'Author Avatar Border Radius', 'nine-core' ),
@@ -212,7 +212,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'author_name_color',
             [
                 'label' => __( 'Author Name Color', 'nine-core' ),
@@ -223,7 +223,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'date_color',
             [
                 'label' => __( 'Date Color', 'nine-core' ),
@@ -234,7 +234,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'categories_color',
             [
                 'label' => __( 'Categories Color', 'nine-core' ),
@@ -245,7 +245,7 @@ class Single_Post_Meta_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'tags_color',
             [
                 'label' => __( 'Tags Color', 'nine-core' ),

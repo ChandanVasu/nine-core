@@ -42,7 +42,7 @@ class Nine_SocialShare extends \Elementor\Widget_Base{
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'social_share',
             [
                 'label' => __( 'Social Share Buttons', 'nine-core' ),
@@ -67,7 +67,7 @@ class Nine_SocialShare extends \Elementor\Widget_Base{
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'social_shape',
             [
                 'label' => __( 'Shape', 'nine-core' ),
@@ -119,7 +119,7 @@ class Nine_SocialShare extends \Elementor\Widget_Base{
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'select_color',
             [
                 'label' => __( 'Color', 'nine-core' ),
@@ -132,7 +132,7 @@ class Nine_SocialShare extends \Elementor\Widget_Base{
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'social_bgcolor',
             [
                 'label' => __( 'Primary Color', 'nine-core' ),
@@ -147,7 +147,7 @@ class Nine_SocialShare extends \Elementor\Widget_Base{
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'social_color',
             [
                 'label' => __( 'Secondary Color', 'nine-core' ),
@@ -213,14 +213,14 @@ class Nine_SocialShare extends \Elementor\Widget_Base{
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'hr',
             [
                 'type' => Controls_Manager::DIVIDER,
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'social_border_radius',
             [
                 'label' => __( 'Border Radius', 'nine-core' ),

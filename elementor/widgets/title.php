@@ -47,7 +47,7 @@ class Single_Title extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'title_color',
             [
                 'label'     => esc_html__('Title Color', 'nine-core'),

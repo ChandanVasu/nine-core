@@ -37,7 +37,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
         );
 
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'items_orientation',
 			[
 				'label' => esc_html__( 'Items Orientation', 'nine-core' ),
@@ -85,7 +85,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
             'separator_text',
             [
                 'label' =>  esc_html__( 'Seperator', 'nine-core' ),
@@ -107,7 +107,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'show_date_time_icon',
             [
                 'label' =>  esc_html__( 'Show date time icon', 'nine-core' ),
@@ -119,7 +119,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'date_time_icon',
 			[
 				'label' =>  esc_html__( 'Date Time Icon', 'nine-core' ),
@@ -193,7 +193,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'show_time_count',
             [
                 'label' =>  esc_html__( 'Show time', 'nine-core' ),
@@ -214,7 +214,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'show_date_count',
             [
                 'label' =>  esc_html__( 'Show date', 'nine-core' ),
@@ -226,7 +226,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'date_format',
             [
                 'label' =>  esc_html__( 'Date Format', 'nine-core' ),
@@ -239,7 +239,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'date_position',
 			[
 				'label' =>  esc_html__( 'Date Position', 'nine-core' ),
@@ -279,7 +279,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
             'border_radius',
             [
                 'label' =>  esc_html__( 'Border Radius (px)', 'nine-core' ),
@@ -330,7 +330,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'date_time_icon_color',
             [
                 'label' =>  esc_html__( 'Icon Color', 'nine-core' ),
@@ -378,7 +378,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'time_color',
             [
                 'label' =>  esc_html__( 'Time Color', 'nine-core' ),
@@ -425,7 +425,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'date_color',
             [
                 'label' =>  esc_html__( 'Date color', 'nine-core' ),

@@ -38,7 +38,7 @@ class Block_Heading_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_text',
             [
                 'label' => __( 'Heading Text', 'nine-core' ),
@@ -47,7 +47,7 @@ class Block_Heading_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'view_all_text',
             [
                 'label' => __( 'View All Text', 'nine-core' ),
@@ -56,7 +56,7 @@ class Block_Heading_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'view_all_url',
             [
                 'label' => __( 'View All URL', 'nine-core' ),
@@ -75,7 +75,7 @@ class Block_Heading_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_text_color',
             [
                 'label' => __( 'Text Color', 'nine-core' ),
@@ -86,7 +86,7 @@ class Block_Heading_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_background_color',
             [
                 'label' => __( 'Background Color', 'nine-core' ),
@@ -140,7 +140,7 @@ class Block_Heading_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'view_all_text_color',
             [
                 'label' => __( 'View All Text Color', 'nine-core' ),

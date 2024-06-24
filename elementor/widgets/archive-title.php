@@ -37,7 +37,7 @@ class Archive_Post_Title_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'title_color',
             [
                 'label'     => esc_html__('Title Color', 'nine-core'),

@@ -38,7 +38,7 @@ class Search_Overlay_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'icon',
             [
                 'label' => __( 'Icon', 'nine-core' ),
@@ -50,7 +50,7 @@ class Search_Overlay_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'placeholder_text',
             [
                 'label' => __( 'Placeholder Text', 'nine-core' ),
@@ -69,7 +69,7 @@ class Search_Overlay_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'icon_color',
             [
                 'label' => __( 'Icon Color', 'nine-core' ),
@@ -82,7 +82,7 @@ class Search_Overlay_Widget extends \Elementor\Widget_Base {
 
 
 
-        $this->add_control(
+        $this->add_responsive_control(
             'icon_height',
             [
                 'label' => __( 'Icon Size', 'nine-core' ),

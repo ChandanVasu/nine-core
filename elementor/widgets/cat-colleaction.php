@@ -47,7 +47,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'selected_categories',
             [
                 'label' => __('Select Categories', 'nine-core'),
@@ -59,7 +59,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'number_of_categories',
             [
                 'label' => __('Number of Categories', 'nine-core'),
@@ -84,7 +84,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'transform_hover',
             [
                 'label' => esc_html__('Hover Transform', 'nine-core'),
@@ -109,7 +109,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
         );
 
         // Control for title color
-        $this->add_control(
+        $this->add_responsive_control(
             'title_color',
             [
                 'label'     => esc_html__('Title Color', 'nine-core'),
@@ -122,7 +122,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
         );
 
         // Control for title hover color
-        $this->add_control(
+        $this->add_responsive_control(
             'title_hover_color',
             [
                 'label'     => esc_html__('Title Hover Color', 'nine-core'),

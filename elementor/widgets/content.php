@@ -152,7 +152,7 @@ class single_post_content extends \Elementor\Widget_Base {
         );
 
         // Heading Color Controls
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_color_h1',
             [
                 'label'     => __( 'H1 Color', 'nine-core' ),
@@ -163,7 +163,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_color_h2',
             [
                 'label'     => __( 'H2 Color', 'nine-core' ),
@@ -174,7 +174,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_color_h3',
             [
                 'label'     => __( 'H3 Color', 'nine-core' ),
@@ -185,7 +185,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_color_h4',
             [
                 'label'     => __( 'H4 Color', 'nine-core' ),
@@ -196,7 +196,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_color_h5',
             [
                 'label'     => __( 'H5 Color', 'nine-core' ),
@@ -207,7 +207,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_color_h6',
             [
                 'label'     => __( 'H6 Color', 'nine-core' ),
@@ -219,7 +219,7 @@ class single_post_content extends \Elementor\Widget_Base {
         );
 
         // Paragraph Color Control
-        $this->add_control(
+        $this->add_responsive_control(
             'paragraph_color',
             [
                 'label'     => __( 'Paragraph Color', 'nine-core' ),
@@ -231,7 +231,7 @@ class single_post_content extends \Elementor\Widget_Base {
         );
 
         // Link Color Control
-        $this->add_control(
+        $this->add_responsive_control(
             'link_color',
             [
                 'label'     => __( 'Link Color', 'nine-core' ),
@@ -254,7 +254,7 @@ class single_post_content extends \Elementor\Widget_Base {
         );
 
         // Heading Margin Controls
-        $this->add_control(
+        $this->add_responsive_control(
             'h1_margin',
             [
                 'label' => __( 'Heading 1 Margin', 'nine-core' ),
@@ -266,7 +266,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'h2_margin',
             [
                 'label' => __( 'Heading 2 Margin', 'nine-core' ),
@@ -278,7 +278,7 @@ class single_post_content extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'h3_margin',
             [
                 'label' => __( 'Heading 3 Margin', 'nine-core' ),
@@ -291,7 +291,7 @@ class single_post_content extends \Elementor\Widget_Base {
         );
 
         // Paragraph Margin Control
-        $this->add_control(
+        $this->add_responsive_control(
             'paragraph_margin',
             [
                 'label' => __( 'Paragraph Margin', 'nine-core' ),
@@ -315,7 +315,7 @@ class single_post_content extends \Elementor\Widget_Base {
         );
 
         // Image Margin Control
-        $this->add_control(
+        $this->add_responsive_control(
             'image_margin',
             [
                 'label' => __( 'Image Margin', 'nine-core' ),
@@ -370,7 +370,7 @@ class single_post_content extends \Elementor\Widget_Base {
         );
 
         // Image Border Radius Control
-        $this->add_control(
+        $this->add_responsive_control(
             'image_border_radius',
             [
                 'label' => __( 'Image Border Radius', 'nine-core' ),

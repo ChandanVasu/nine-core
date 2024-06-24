@@ -35,7 +35,7 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'home_label',
             [
                 'label' => esc_html__( 'Home Label', 'nine-core' ),
@@ -44,7 +44,7 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'breadcrumbs_color',
             [
                 'label' => esc_html__( 'Color', 'nine-core' ),

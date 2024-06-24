@@ -41,7 +41,7 @@ class Single_Featured_Image extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'image_width',
             [
                 'label' => esc_html__('Width', 'nine-core'),
@@ -68,7 +68,7 @@ class Single_Featured_Image extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'image_height',
             [
                 'label' => esc_html__('Height', 'nine-core'),
@@ -119,7 +119,7 @@ class Single_Featured_Image extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'image_border_radius',
             [
                 'label' => esc_html__('Border Radius', 'nine-core'),

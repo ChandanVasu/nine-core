@@ -41,7 +41,7 @@ class single_post_comment extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'title',
             [
                 'label' => __( 'Title', 'nine-core' ),

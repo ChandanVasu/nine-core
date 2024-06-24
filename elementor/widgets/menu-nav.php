@@ -43,7 +43,7 @@ class Nav_Menu_two extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'menu',
             [
                 'label' => __( 'Menu', 'nine-core' ),
@@ -64,7 +64,7 @@ class Nav_Menu_two extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'menu_color',
             [
                 'label' => __( 'Menu Color', 'nine-core' ),

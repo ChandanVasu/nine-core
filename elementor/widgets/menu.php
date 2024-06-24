@@ -43,7 +43,7 @@ class Nav_Menu extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'menu',
             [
                 'label' => __( 'Menu', 'nine-core' ),
@@ -53,7 +53,7 @@ class Nav_Menu extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'icon',
             [
                 'label' => esc_html__( 'Icon', 'textdomain' ),
@@ -77,7 +77,7 @@ class Nav_Menu extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'close_icon',
             [
                 'label' => esc_html__( 'Close Icon', 'textdomain' ),
@@ -112,7 +112,7 @@ class Nav_Menu extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'icon_color',
             [
                 'label' => __( 'Icon Color', 'nine-core' ),
@@ -124,7 +124,7 @@ class Nav_Menu extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'icon_size',
             [
                 'label' => __( 'Icon Size', 'nine-core' ),
@@ -155,7 +155,7 @@ class Nav_Menu extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'menu_color',
             [
                 'label' => __( 'Menu Color', 'nine-core' ),

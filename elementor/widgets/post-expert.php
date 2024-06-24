@@ -34,7 +34,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'excerpt_length',
             [
                 'label' => esc_html__('Excerpt Length (Words)', 'nine-core'),
@@ -45,7 +45,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'excerpt_color',
             [
                 'label' => esc_html__('Excerpt Color', 'nine-core'),

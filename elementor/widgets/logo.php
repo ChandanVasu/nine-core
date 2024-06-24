@@ -39,7 +39,7 @@ class Site_Logo extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'logo_image',
             [
                 'label' => __( 'Choose Logo Image', 'nine-core' ),
@@ -50,7 +50,7 @@ class Site_Logo extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'logo_url',
             [
                 'label' => __( 'Logo Link URL', 'nine-core' ),
