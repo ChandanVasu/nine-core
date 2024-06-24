@@ -108,6 +108,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
             ]
         );
 
+        // Control for title color
         $this->add_control(
             'title_color',
             [
@@ -115,10 +116,24 @@ class CategoryCollation extends \Elementor\Widget_Base {
                 'type'      => \Elementor\Controls_Manager::COLOR,
                 'description' => esc_html__('Set the color of post titles.', 'nine-core'),
                 'selectors' => [
-                    '{{WRAPPER}} .el-g-1-title a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .el-badge-item a' => 'color: {{VALUE}};',
                 ],
             ]
         );
+
+        // Control for title hover color
+        $this->add_control(
+            'title_hover_color',
+            [
+                'label'     => esc_html__('Title Hover Color', 'nine-core'),
+                'type'      => \Elementor\Controls_Manager::COLOR,
+                'description' => esc_html__('Set the hover color of post titles.', 'nine-core'),
+                'selectors' => [
+                    '{{WRAPPER}} .el-badge-item a:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        
 
         $this->add_group_control(
             \Elementor\Group_Control_Background::get_type(),
