@@ -178,7 +178,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
                 if ($cc_post_query->have_posts()) {
                     $cc_post_query->the_post();
                     $thumbnail_post_id = get_the_ID();
-                    $thumbnail = get_the_post_thumbnail($thumbnail_post_id, 'thumbnail', [
+                    $thumbnail = get_the_post_thumbnail($thumbnail_post_id, 'full', [
                         'title' => esc_attr($category->name)
                     ]);
                     $category_link = esc_url(get_term_link($category->term_id));
