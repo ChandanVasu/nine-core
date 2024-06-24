@@ -10,7 +10,7 @@ class Elementor_Custom_Excerpt_Widget extends \Elementor\Widget_Base {
     }
 
     public function get_icon() {
-        return 'eicon-post';
+        return 'eicon-text';
     }
 
     public function get_categories() {

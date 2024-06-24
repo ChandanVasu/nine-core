@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
         var container = $('#' + settings.uuid + ' .el-g-1-grid-container');
 
         $.ajax({
-            url: ajaxurl,
+            url: ajax_object.ajaxurl,
             type: 'POST',
             data: {
                 action: 'load_more_posts',
@@ -54,3 +54,5 @@ jQuery(document).ready(function($) {
         });
     }
 });
+
+

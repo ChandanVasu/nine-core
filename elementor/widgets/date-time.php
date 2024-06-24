@@ -21,7 +21,7 @@ class Date_And_Time_Module extends \Elementor\Widget_Base {
 
     // Widget Icon
     public function get_icon() {
-        return 'eicon-info';
+        return 'eicon-date';
     }
 
     // Widget Category

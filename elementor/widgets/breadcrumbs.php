@@ -10,7 +10,7 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-code';
+		return 'eicon-mega-menu';
 	}
 
 	public function get_categories() {
@@ -18,7 +18,7 @@ class Elementor_Breadcrumbs_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_keywords() {
-		return [ 'hello', 'world' ];
+		return [ 'Breadcrumbs', 'world' ];
 	}
 
     protected function _register_controls() {

@@ -21,7 +21,7 @@ class CategoryCollation extends \Elementor\Widget_Base {
 
     // Widget Icon
     public function get_icon() {
-        return 'eicon-info';
+        return 'eicon-call-to-action';
     }
 
     // Widget Category
