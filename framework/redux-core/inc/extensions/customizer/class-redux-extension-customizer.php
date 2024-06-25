@@ -601,7 +601,7 @@ if ( ! class_exists( 'Redux_Extension_Customizer', false ) ) {
 						continue;
 					}
 
-					$wp_customize->add_responsive_control(
+					$wp_customize->add_control(
 						new $class_name(
 							$wp_customize,
 							$option['id'],
