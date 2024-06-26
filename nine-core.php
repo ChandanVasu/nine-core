@@ -22,17 +22,27 @@ if (!class_exists('ReduxFramework')) {
 }
 
 // Check if the active theme is 'Nine'
-$current_theme = wp_get_theme();
-if ($current_theme->get('Name') == 'Nine') {
-    $plugin_path = plugin_dir_path(__FILE__);
-    require_once $plugin_path . 'inc/template/override/header.php';
-    require_once $plugin_path . 'assets/variable.php';
-    require_once $plugin_path . 'inc/post/custom-post.php';
-    require_once $plugin_path . 'inc/inc.php';
-    require_once $plugin_path . 'inc/template/override/footer.php';
-    require_once $plugin_path . 'framework/meta-box/init.php';
-    require_once $plugin_path . 'elementor/control.php';
-    require_once $plugin_path . 'elementor/inc/grid-one-load.php';
+
+$plugin_path = plugin_dir_path(__FILE__);
+$files = [
+    'header.php',
+    'assets/variable.php',
+    'inc/post/custom-post.php',
+    'inc/inc.php',
+    'inc/template/override/footer.php',
+    'framework/meta-box/init.php',
+    'elementor/control.php',
+    'elementor/inc/grid-one-load.php'
+];
+
+foreach ($files as $file) {
+    $file_path = $plugin_path . $file;
+    if ( file_exists( $file_path ) ) {
+        require_once $file_path;
+    } else {
+        // Handle file not found error (e.g., log, notify admin, etc.)
+        error_log( "File not found: $file_path" );
+    }
 }
 
 

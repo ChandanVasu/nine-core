@@ -51,17 +51,17 @@ if( ! function_exists('nine_get_posts_id') ) {
 }
 
 
-// Add custom CSS to admin area
-function my_custom_admin_css() {
-    echo '
-    <style>
-        #adminmenu #menu-posts-nine_theme .wp-menu-name, #adminmenu .toplevel_page_nine-options .wp-menu-name {
-            color: #01FFDD; 
-        }
-    </style>
-    ';
-}
-add_action( 'admin_head', 'my_custom_admin_css' );
+// // Add custom CSS to admin area
+// function my_custom_admin_css() {
+//     echo '
+//     <style>
+//         #adminmenu #menu-posts-nine_theme .wp-menu-name, #adminmenu .toplevel_page_nine-options .wp-menu-name {
+//             color: #01FFDD; 
+//         }
+//     </style>
+//     ';
+// }
+// add_action( 'admin_head', 'my_custom_admin_css' );
 
 
 
